@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.logo);
 
-        logo.animate().translationY(-1600).setDuration(1000).setStartDelay(2000);
+        logo.animate().translationY(-1600).setDuration(1000).setStartDelay(3000);
 
 
 
