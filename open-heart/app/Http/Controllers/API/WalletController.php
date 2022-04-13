@@ -45,7 +45,7 @@ class WalletController extends Controller
 
 
             return response()
-                ->json(['msg' => 'Top up success', 'data' => Wallet::find(auth()->user()->wallet->id), 'history' => Historywallet::find(auth()->user()->wallet->id)]);
+                ->json(['msg' => 'Top up success', 'data' => Wallet::find(auth()->user()->wallet->id)]);
         } else {
             return response()
                 ->json(['msg' => 'Top up failed']);
