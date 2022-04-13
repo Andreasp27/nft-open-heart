@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.logo);
 
+
         email = findViewById(R.id.username);
         password = findViewById(R.id.password);
 
@@ -39,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         click = findViewById(R.id.clickhere);
 
         btnLogin = findViewById(R.id.login);
-
 
         logo.animate().translationY(-600).setDuration(1000).setStartDelay(1000);
 
@@ -51,17 +54,26 @@ public class MainActivity extends AppCompatActivity {
         dont.startAnimation(animFadeIn);
         click.startAnimation(animFadeIn);
 
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//
-//            }
-//        }, 2000);
+                Editable Email = email.getEditText().getText();
+                Editable pass = password.getEditText().getText();
 
+                if(TextUtils.isEmpty(Email)){
+                    email.getEditText().setError("Email is Empty");
 
+                } else if (TextUtils.isEmpty(pass)){
+                    password.getEditText().setError("Password is Empty");
+                } else {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
 
     }
 }

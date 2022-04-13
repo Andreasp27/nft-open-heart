@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -22,6 +23,7 @@
         android:layout_marginTop="296dp"
         android:fontFamily="@font/roboto_bold"
         android:hint="Email"
+        app:errorEnabled="true"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -52,6 +54,7 @@
         app:passwordToggleDrawable="@drawable/password_selector"
         app:boxStrokeColor="#FF9A62"
         app:hintTextColor="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +67,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingEnd="40dp"
             android:fontFamily="@font/roboto_bold"
             android:inputType="textPassword"/>
 
@@ -77,6 +81,7 @@
         android:backgroundTint="#FF9A62"
         android:fontFamily="@font/roboto_bold"
         android:text="Login"
+        android:onClick="login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
