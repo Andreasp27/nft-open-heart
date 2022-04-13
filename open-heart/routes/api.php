@@ -33,6 +33,14 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/wallet/send', [App\Http\Controllers\API\WalletController::class, 'sendWallet']);
     Route::get('/wallet', [App\Http\Controllers\API\WalletController::class, 'index']);
 
+    Route::get('/collection', [App\Http\Controllers\API\CollectionController::class, 'index']);
+    Route::get('/collection/mycollection', [App\Http\Controllers\API\CollectionController::class, 'showById']);
+    Route::post('/collection/create', [App\Http\Controllers\API\CollectionController::class, 'create']);
+    Route::post('/collection/item', [App\Http\Controllers\API\CollectionController::class, 'cariKoleksi']);
+    Route::post('/collection/bid', [App\Http\Controllers\API\CollectionController::class, 'bid']);
+    Route::post('/collection/terimabid', [App\Http\Controllers\API\CollectionController::class, 'terimaBid']);
+    Route::post('/collection/updatebid', [App\Http\Controllers\API\CollectionController::class, 'updateBid']);
+
 
     // API route for logout user
     Route::post('/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);

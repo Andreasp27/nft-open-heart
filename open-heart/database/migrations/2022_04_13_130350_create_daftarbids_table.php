@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('koleksis', function (Blueprint $table) {
+        Schema::create('daftarbids', function (Blueprint $table) {
             $table->id();
-            $table->string('pembuat');
-            $table->string('nama_item');
-            $table->float('harga');
-            $table->string('image_path');
-            $table->string('deskripsi');
-            $table->string('status');
-            $table->foreignId('user_id');
+            $table->string('nomor_user');
+            $table->float('harga_bid');
+            $table->foreignId('koleksi_id');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('koleksis');
+        Schema::dropIfExists('daftarbids');
     }
 };

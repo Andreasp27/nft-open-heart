@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -121,5 +122,15 @@ class AuthController extends Controller
             return response()
                 ->json(['msg' => 'Update Password failed']);
         }
+    }
+
+    public function suka(Request $request)
+    {
+        $user = User::find($request->id)->update([
+            'suka' => DB::Raw('suka+1'),
+        ]);
+
+        return response()
+            ->json(['msg' => 'liked']);
     }
 }

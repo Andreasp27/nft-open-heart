@@ -42,4 +42,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Wallet::class);
     }
+    public function koleksi()
+    {
+        return $this->hasMany(Koleksi::class);
+    }
 }
