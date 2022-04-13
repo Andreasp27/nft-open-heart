@@ -97,7 +97,7 @@ class WalletController extends Controller
 
 
             return response()
-                ->json(['msg' => 'Send success', 'data' => Wallet::find(auth()->user()->wallet->id)]);
+                ->json(['msg' => 'Send successss', 'data' => Wallet::find(auth()->user()->wallet->id)]);
         } else {
             return response()
                 ->json(['msg' => 'Send failed']);
