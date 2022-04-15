@@ -28,8 +28,6 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeColor="#FF9A62"
-        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +37,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:includeFontPadding="false"
             android:fontFamily="@font/roboto_bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -53,7 +54,6 @@
         app:passwordToggleEnabled="true"
         app:passwordToggleDrawable="@drawable/password_selector"
         app:boxStrokeColor="#FF9A62"
-        app:hintTextColor="@color/black"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -68,6 +68,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingEnd="40dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:includeFontPadding="false"
             android:fontFamily="@font/roboto_bold"
             android:inputType="textPassword"/>
 
@@ -81,7 +84,7 @@
         android:backgroundTint="#FF9A62"
         android:fontFamily="@font/roboto_bold"
         android:text="Login"
-        android:onClick="login"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +110,6 @@
         android:layout_marginTop="528dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Click Here"
-        android:onClick=""
         android:textColor="#FF9A62"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.726"

@@ -3,13 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable-night/ic_logo1.xml" value="0.2005" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/edittextborder.xml" value="0.1" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/fadein.xml" value="0.3815" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_account_balance_wallet_24.xml" value="0.327" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.327" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1355" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.1" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_logo1.xml" value="0.2005" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/password_selector.xml" value="0.188" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/selector_nav.xml" value="0.1" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/font/roboto.xml" value="0.33" />
-        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_home.xml" value="0.27037037037037037" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_collection.xml" value="0.38179347826086957" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_home.xml" value="0.36367753623188404" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_market.xml" value="0.38179347826086957" />
