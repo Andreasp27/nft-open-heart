@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return auth()->user();
     });
     Route::post('/update', [App\Http\Controllers\API\AuthController::class, 'data']);
+    Route::post('/updateimg', [App\Http\Controllers\API\AuthController::class, 'updateImg']);
     Route::post('/updatepass', [App\Http\Controllers\API\AuthController::class, 'updatePass']);
     Route::post('/wallet/topup', [App\Http\Controllers\API\WalletController::class, 'topUpWallet']);
     Route::post('/wallet/send', [App\Http\Controllers\API\WalletController::class, 'sendWallet']);

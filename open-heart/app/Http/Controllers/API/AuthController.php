@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -76,31 +77,82 @@ class AuthController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
+            'name' => 'required|string',
             'email' => 'required|string',
             'jenis_kelamin' => 'required|string',
             'alamat' => 'required|string',
             'nomor_telepon' => 'required|string',
             'bio' => 'required|string',
-            'gambar_path' => 'string|nullable',
-            'banner_path' => 'string|nullable',
+            'gambar_path' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg',
+            'banner_path' => 'nullable',
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors());
         }
 
-        User::firstWhere('id', auth()->user()->id)->update([
+        if ($request->gambar_path != null) {
+            $imageName = time() . '.' . $request->gambar_path->extension();
+            $request->gambar_path->move(public_path('images'), $imageName);
+
+            $image_path = 'images/' . $imageName;
+        } else {
+            $image_path = auth()->user()->gambar_path;
+        }
+
+        if ($request->banner_path != null) {
+            $imageBanner = time() + 1 . '.' . $request->banner_path->extension();
+            $request->banner_path->move(public_path('images'), $imageBanner);
+
+            $image_banner_path = 'images/' . $imageBanner;
+        } else {
+            $image_banner_path = auth()->user()->banner_path;
+        }
+
+        $user = User::firstWhere('id', auth()->user()->id)->update([
+            'name' => $request->name,
             'email' => $request->email,
             'jenis_kelamin' => $request->jenis_kelamin,
             'alamat' => $request->alamat,
             'nomor_telepon' => $request->nomor_telepon,
             'bio' => $request->bio,
-            'gambar_path' => $request->gambar_path,
-            'banner_path' => $request->banner_path,
+            'gambar_path' => $image_path,
+            'banner_path' => $image_banner_path,
         ]);
 
         return response()
-            ->json(['data' => auth()->user()]);
+            ->json(['data' => User::find(auth()->user()->id)]);
+    }
+
+    public function updateImg(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'gambar_path' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg',
+            'banner_path' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors());
+        }
+
+
+        if ($request->gambar_path != null) {
+            $imageName = time() . '.' . $request->gambar_path->extension();
+            $request->gambar_path->move(public_path('images'), $imageName);
+
+            $image_path = 'images/' . $imageName;
+        } else {
+            $image_path = auth()->user()->gambar_path;
+        }
+
+
+        User::firstWhere('id', auth()->user()->id)->update([
+            'gambar_path' => $image_path,
+            'banner_path' => $image_path,
+        ]);
+
+        return response()
+            ->json(['data' => User::find(auth()->user()->id)]);
     }
 
     public function updatePass(Request $request)
@@ -117,10 +169,10 @@ class AuthController extends Controller
             User::where('id', auth()->user()->id)
                 ->update($validatedData);
             return response()
-                ->json(['msg' => 'Update Password success']);
+                ->json(['message' => 'success']);
         } else {
             return response()
-                ->json(['msg' => 'Update Password failed']);
+                ->json(['message' => 'failed']);
         }
     }
 
