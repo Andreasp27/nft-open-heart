@@ -164,8 +164,8 @@
         android:layout_marginTop="556dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Have an Account ?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintEnd_toStartOf="@+id/clickhere"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

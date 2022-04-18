@@ -8,18 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="changePassword">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="781" />
-                            <option name="y" value="21" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="collection">
                     <value>
                       <LayoutPositions>
@@ -63,18 +51,6 @@
                           <Point>
                             <option name="x" value="439" />
                             <option name="y" value="20" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="profile2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="614" />
-                            <option name="y" value="23" />
                           </Point>
                         </option>
                       </LayoutPositions>

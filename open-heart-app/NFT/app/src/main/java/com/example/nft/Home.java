@@ -2,63 +2,108 @@ package com.example.nft;
 
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Home#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Home extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public Home() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Home.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Home newInstance(String param1, String param2) {
-        Home fragment = new Home();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private RecyclerView recyclerView;
+    private MyAdapter adapter;
+    private MyAdapterTrend adapterTrend;
+    private ArrayList<Recom> recomArrayList;
+    private ArrayList<Trend> trendArrayList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //Trend Creator
+        recyclerView = view.findViewById(R.id.recycler);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recomArrayList = new ArrayList<>();
+
+        addData();
+        recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
+
+        //Trend item
+        recyclerView = view.findViewById(R.id.recyclerTrend);
+        GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(gridLayoutManager2);
+        trendArrayList = new ArrayList<>();
+
+        addData2();
+        recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+
+
+        ImageSlider imageSlider = (ImageSlider) view.findViewById(R.id.banner);
+        ArrayList <SlideModel> imageList = new ArrayList<>();
+
+        imageList.add(new SlideModel(R.drawable.orang, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.naruto, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.akatzuki, ScaleTypes.CENTER_CROP));
+        imageSlider.setImageList(imageList);
+
+
+
+//        recyclerView = view.findViewById(R.id.recycler);
+//        addData();
+//
+//        adapter = new MyAdapter(recomArrayList,getContext());
+//
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+//
+//        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setAdapter(adapter);
+
+        return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+    }
+
+    void addData() {
+        Recom ob1 = new Recom("Akatzuki", "TOP 1 BINANCE ARTIST\n" +
+                "▵Best and profitable NFT on Binance \n" +
+                "https://www.instagram.com/nft.pride/\n" +
+                "https://discord.gg/BV2gsuSz2A", R.drawable.akatzuki, R.drawable.orang);
+        recomArrayList.add(ob1);
+        Recom ob2 = new Recom("Bambank", "FEKIKI is the Secret Key to unlock more FEKIRA UNIVERSE benefits in the near futur..", R.drawable.akatzuki, R.drawable.naruto);
+        recomArrayList.add(ob2);
+    }
+
+//    void addDatabanner() {
+//        SlideModel ob1 = new SlideModel("https://public.nftstatic.com/static/nft/res/nft-cex/S3/1649823900545_6jn5ubar1ajr28zb2py05z7lvsprhcmh.png");
+//        SlideModel.add(ob1);
+//    }
+
+    void addData2() {
+        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
+        trendArrayList.add(ob1);
+        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob2);
+    }
+
 }

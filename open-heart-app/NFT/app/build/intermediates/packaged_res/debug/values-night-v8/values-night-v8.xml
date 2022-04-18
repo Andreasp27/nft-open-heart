@@ -20,4 +20,8 @@
         <item name="boxStrokeColor">@color/orange</item>
         <item name="hintTextColor">@color/orange</item>
     </style>
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
