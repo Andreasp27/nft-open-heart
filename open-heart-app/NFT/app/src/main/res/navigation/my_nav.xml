@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_collection" />
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.nft.Profile"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:name="com.example.nft.profilOption"
+        android:label="fragment_profil_option"
+        tools:layout="@layout/fragment_profil_option" />
 </navigation>

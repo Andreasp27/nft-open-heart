@@ -96,10 +96,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="528dp"
+        android:textSize="16sp"
         android:fontFamily="@font/roboto_bold"
         android:text="Dont Have an Account ?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintEnd_toEndOf="@id/clickhere"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,13 +108,15 @@
         android:id="@+id/clickhere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="528dp"
+        android:textSize="16sp"
         android:fontFamily="@font/roboto_bold"
         android:text="Click Here"
         android:textColor="#FF9A62"
+        app:layout_constraintHorizontal_bias=".668"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/donthave"
         app:layout_constraintTop_toTopOf="parent" />
 
 

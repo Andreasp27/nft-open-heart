@@ -8,6 +8,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 
+import com.example.nft.api.Session;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,11 +17,24 @@ public class HomeActivity extends AppCompatActivity {
     BottomNavigationView nav;
     NavController navController;
     AppBarConfiguration appbar;
+    private String access_token;
+    private Session session;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //get access token
+        access_token = getIntent().getExtras().getString("key");
+
+        //save access token
+        Bundle bundle = new Bundle();
+        bundle.putString("access_token", access_token);
+        session = new Session(this);
+        session.setAccessToken(access_token);
+
         setContentView(R.layout.activity_home);
 
         getSupportActionBar().hide();
@@ -34,6 +48,8 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.navHost);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(nav, navController);
+//        navController.navigate(R.id.profile, bundle);
+
 
 
     }

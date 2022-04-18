@@ -1,8 +1,13 @@
 package com.example.nft;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -15,9 +20,19 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.LoginRequest;
+import com.example.nft.api.LoginResponse;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (ContextCompat.checkSelfPermission(
+                MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE);
+        }
 
         getSupportActionBar().hide();
 
@@ -68,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(pass)){
                     password.getEditText().setError("Password is Empty");
                 } else {
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(intent);
+                    login();
+
                 }
 
             }
@@ -86,5 +107,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+    }
+    ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+
+                } else {
+                    finish();
+                }
+            });
+    public void login(){
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail(email.getEditText().getText().toString());
+        loginRequest.setPassword(password.getEditText().getText().toString());
+
+        Call<LoginResponse> loginResponseCall = ApiClient.getUserService().userLogin(loginRequest);
+        loginResponseCall.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.isSuccessful()){
+
+                    LoginResponse access_token = response.body();
+
+                    Toast.makeText(MainActivity.this, "Login success" , Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("key", access_token.getAccess_token());
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_LONG).show();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "Throwable: " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+
+
+            }
+        });
     }
 }

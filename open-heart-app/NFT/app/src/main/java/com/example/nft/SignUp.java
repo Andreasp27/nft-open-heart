@@ -14,7 +14,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.LoginResponse;
 import com.google.android.material.textfield.TextInputLayout;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignUp extends AppCompatActivity {
 
@@ -76,9 +82,10 @@ public class SignUp extends AppCompatActivity {
                 } else if (!firstPass.equals(secPass)){
                     Toast.makeText(SignUp.this,"Passowrd and Confirm Password Does not Match", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(SignUp.this,"Sign Up Success", Toast.LENGTH_SHORT).show();
+                    register();
 
-                    finish();
+
+
                 }
             }
         });
@@ -86,5 +93,74 @@ public class SignUp extends AppCompatActivity {
     }
     public void login (View v) {
         finish();
+    }
+
+    public void register(){
+            RegisterRequest registerRequest = new RegisterRequest();
+            registerRequest.setEmail(emailSign.getEditText().getText().toString());
+            registerRequest.setName(name.getEditText().getText().toString());
+            registerRequest.setPassword(passwordSign.getEditText().getText().toString());
+
+            Call<RegisterResponse> registerResponseCall = ApiClient.getUserService().userRegister(registerRequest);
+            registerResponseCall.enqueue(new Callback<RegisterResponse>() {
+                @Override
+                public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                    if (response.isSuccessful()){
+                        Toast.makeText(SignUp.this,"Sign Up Success", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }else{
+                        Toast.makeText(SignUp.this,"Sign Up Failed", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<RegisterResponse> call, Throwable t) {
+                    Toast.makeText(getApplicationContext(), "Throwable: " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+    }
+
+    public class RegisterRequest{
+        private String email;
+        private String name;
+        private String password;
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+    }
+    public class RegisterResponse{
+        private String msg;
+
+        public String getMsg() {
+            return msg;
+        }
+
+        public void setMsg(String msg) {
+            this.msg = msg;
+        }
     }
 }
