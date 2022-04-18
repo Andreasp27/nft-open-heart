@@ -26,10 +26,17 @@ public interface UserService {
     @GET("profile")
     Call<EditProfile.ProfileRR> getUserProfile(@Header("Authorization") String auth);
 
+    @Multipart
     @POST("update")
     Call<EditProfile.ProfileRR> updateDataProfile(@Header("Authorization") String auth,
-                                                  @Body EditProfile.ProfileRR profileRR
-                                                  );
+                                                  @Part("name") RequestBody name,
+                                                  @Part("email") RequestBody email,
+                                                  @Part("jenis_kelamin") RequestBody jenis_kelamin,
+                                                  @Part("alamat") RequestBody alamat,
+                                                  @Part("nomor_telepon") RequestBody nomor_telepon,
+                                                  @Part("bio") RequestBody bio,
+                                                  @Part MultipartBody.Part fileImg,
+                                                  @Part MultipartBody.Part fileBanner);
 
     @POST("logout")
     Call<MessageResponse> logout(@Header("Authorization") String auth);

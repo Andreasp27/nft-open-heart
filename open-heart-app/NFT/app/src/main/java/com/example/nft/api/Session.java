@@ -20,4 +20,13 @@ public class Session {
         String accessToken = prefs.getString("access_token","");
         return accessToken;
     }
+
+    public void setBase(String base) {
+        prefs.edit().putString("base", base).commit();
+    }
+
+    public String getBase() {
+        String base = prefs.getString("base","");
+        return base;
+    }
 }

@@ -34,6 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         bundle.putString("access_token", access_token);
         session = new Session(this);
         session.setAccessToken(access_token);
+        session.setBase("http://10.0.2.2:8000/");
 
         setContentView(R.layout.activity_home);
 

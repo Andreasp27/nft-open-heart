@@ -70,23 +70,6 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/profiles"-->
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/profile"-->
-<!--        android:textStyle="bold"-->
-<!--        android:fontFamily="@font/roboto_bold"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/profile_img"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profile_banner"
         android:layout_marginTop="70dp"
@@ -118,7 +101,7 @@
         android:layout_width="95dp"
         android:layout_height="95dp"
         android:padding="5dp"
-        android:src="@mipmap/orang"
+        android:src="@mipmap/profile"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
