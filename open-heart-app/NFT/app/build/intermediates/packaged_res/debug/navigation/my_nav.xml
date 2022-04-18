@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.nft.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/market"
+        android:name="com.example.nft.Market"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_market" />
+    <fragment
+        android:id="@+id/trending"
+        android:name="com.example.nft.Trending"
+        android:label="fragment_trending"
+        tools:layout="@layout/fragment_trending" />
+    <fragment
+        android:id="@+id/collection"
+        android:name="com.example.nft.Collection"
+        android:label="fragment_collection"
+        tools:layout="@layout/fragment_collection" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.nft.profilOption"
+        android:label="fragment_profil_option"
+        tools:layout="@layout/fragment_profil_option" />
+</navigation>

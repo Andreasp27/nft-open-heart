@@ -1,0 +1,4 @@
+#Mon Apr 18 23:28:50 SGT 2022
+base.0=D\:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\nft\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
