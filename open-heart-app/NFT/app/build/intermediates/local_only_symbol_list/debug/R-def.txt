@@ -46,6 +46,7 @@ id Cpassword
 id add_profile_banner
 id add_profile_img
 id appBarLayout
+id appBarLayout2
 id banner
 id bottomNavigationView
 id btn_back

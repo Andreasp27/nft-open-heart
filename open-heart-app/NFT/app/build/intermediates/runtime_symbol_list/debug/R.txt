@@ -2695,6 +2695,7 @@ int id animateToStart 0x7f090052
 int id antiClockwise 0x7f090053
 int id anticipate 0x7f090054
 int id appBarLayout 0x7f090055
+int id appBarLayout2 0x7f090232
 int id arc 0x7f090056
 int id asConfigured 0x7f090057
 int id async 0x7f090058
