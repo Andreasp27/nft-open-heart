@@ -130,6 +130,7 @@
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
         android:text="Top UP"
+        android:textColor="@color/orange"
         android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -146,16 +147,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
+
     <TextView
-        android:layout_width="40dp"
+        android:layout_width="45dp"
         android:layout_height="19dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginRight="137dp"
-        android:text="Top UP"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:text="Send To"
+        android:textColor="@color/orange"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/historu"
@@ -173,15 +175,62 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:text="History"
                 android:textSize="25dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerhistory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Token"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Amount"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerhistory"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

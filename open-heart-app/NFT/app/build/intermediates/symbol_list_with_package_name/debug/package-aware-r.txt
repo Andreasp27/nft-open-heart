@@ -2508,6 +2508,7 @@ drawable abc_vector_test
 drawable akatzuki
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottom_stroke
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2871,6 +2872,7 @@ id item3
 id item4
 id item_touch_helper_previous_elevation
 id itemname
+id jumlah
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3014,6 +3016,7 @@ id recommend
 id rectangles
 id recycler
 id recyclerTrend
+id recyclerhistory
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3055,6 +3058,7 @@ id signup
 id sin
 id skipCollapsed
 id skipped
+id sks
 id slide
 id sliding_pane_detail_container
 id sliding_pane_layout
@@ -3117,6 +3121,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3287,6 +3292,7 @@ layout fragment_home
 layout fragment_market
 layout fragment_profil_option
 layout fragment_trending
+layout historywallet
 layout image_slider
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4558,6 +4564,7 @@ style Widget_Support_CoordinatorLayout
 style bannerProfile
 style circular
 style roundedImageViewRounded
+style stroke
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

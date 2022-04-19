@@ -2507,6 +2507,7 @@ int drawable abc_vector_test 0x7f070055
 int drawable akatzuki 0x7f070056
 int drawable avd_hide_password 0x7f070057
 int drawable avd_show_password 0x7f070058
+int drawable bottom_stroke 0x7f0700bc
 int drawable btn_checkbox_checked_mtrl 0x7f070059
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07005a
 int drawable btn_checkbox_unchecked_mtrl 0x7f07005b
@@ -2870,6 +2871,7 @@ int id item3 0x7f090100
 int id item4 0x7f090101
 int id item_touch_helper_previous_elevation 0x7f090102
 int id itemname 0x7f090103
+int id jumlah 0x7f090233
 int id jumpToEnd 0x7f090104
 int id jumpToStart 0x7f090105
 int id labeled 0x7f090106
@@ -3013,6 +3015,7 @@ int id recommend 0x7f09018f
 int id rectangles 0x7f090190
 int id recycler 0x7f090191
 int id recyclerTrend 0x7f090192
+int id recyclerhistory 0x7f090234
 int id reverseSawtooth 0x7f090193
 int id right 0x7f090194
 int id rightToLeft 0x7f090195
@@ -3054,6 +3057,7 @@ int id signup 0x7f0901b8
 int id sin 0x7f0901b9
 int id skipCollapsed 0x7f0901ba
 int id skipped 0x7f0901bb
+int id sks 0x7f090235
 int id slide 0x7f0901bc
 int id sliding_pane_detail_container 0x7f0901bd
 int id sliding_pane_layout 0x7f0901be
@@ -3116,6 +3120,7 @@ int id textView2 0x7f0901f6
 int id textView3 0x7f0901f7
 int id textView4 0x7f0901f8
 int id textView5 0x7f0901f9
+int id textView6 0x7f090236
 int id text_input_end_icon 0x7f0901fa
 int id text_input_error_icon 0x7f0901fb
 int id text_input_start_icon 0x7f0901fc
@@ -3286,6 +3291,7 @@ int layout fragment_home 0x7f0c0034
 int layout fragment_market 0x7f0c0035
 int layout fragment_profil_option 0x7f0c0036
 int layout fragment_trending 0x7f0c0037
+int layout historywallet 0x7f0c008b
 int layout image_slider 0x7f0c0038
 int layout m3_alert_dialog 0x7f0c0039
 int layout m3_alert_dialog_actions 0x7f0c003a
@@ -4557,6 +4563,7 @@ int style Widget_Support_CoordinatorLayout 0x7f120400
 int style bannerProfile 0x7f120401
 int style circular 0x7f120402
 int style roundedImageViewRounded 0x7f120403
+int style stroke 0x7f120404
 int[] styleable ActionBar { 0x7f030045, 0x7f03004c, 0x7f03004d, 0x7f03010f, 0x7f030110, 0x7f030111, 0x7f030112, 0x7f030113, 0x7f030114, 0x7f03013a, 0x7f03014f, 0x7f030150, 0x7f03016f, 0x7f0301dc, 0x7f0301e3, 0x7f0301e9, 0x7f0301ea, 0x7f0301ee, 0x7f0301ff, 0x7f03021f, 0x7f030299, 0x7f0302fc, 0x7f030333, 0x7f03033b, 0x7f03033c, 0x7f0303a7, 0x7f0303ab, 0x7f03042a, 0x7f030437 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1
