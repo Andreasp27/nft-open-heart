@@ -4,7 +4,7 @@
         <item name="cornerSize">50%</item>
     </style>
     <style name="bannerProfile">
-        <item name="cornerSizeTopLeft">10%</item>
-        <item name="cornerSizeTopRight">10%</item>
+        <item name="cornerSizeTopLeft">5%</item>
+        <item name="cornerSizeTopRight">5%</item>
     </style>
 </resources>

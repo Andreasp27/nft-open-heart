@@ -214,10 +214,10 @@
                     "to": {
                         "startLines": "5724,6154,7780,7917",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "386254,416235,519969,527862",
+                        "startOffsets": "386254,416235,519969,527860",
                         "endLines": "5736,6156,7783,7920",
                         "endColumns": "12,12,12,12",
-                        "endOffsets": "386835,416391,520169,528005"
+                        "endOffsets": "386835,416391,520169,528003"
                     }
                 },
                 {
@@ -284,11 +284,9 @@
                 {
                     "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "-1,12,15,19,14,-1,17,16,18,4,8,11,10,6,5,9,7,13",
-                        "startColumns": "-1,4,4,4,4,-1,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "-1,575,705,905,651,-1,803,761,855,185,367,518,474,275,229,419,323,613",
-                        "endColumns": "-1,37,55,57,53,-1,51,41,49,43,51,56,43,47,45,54,43,37",
-                        "endOffsets": "-1,608,756,958,700,-1,850,798,900,224,414,570,513,318,270,469,362,646"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "1619,1621,1624,1630,1631,1636,1640,1642,1726,1732,1733,1734,1735,1736,1737,1738,1739,1740",
@@ -346,20 +344,20 @@
                 {
                     "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\values\\imageProfile.xml",
                     "from": {
-                        "startLines": "5,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "144,57",
-                        "endLines": "8,4",
-                        "endColumns": "12,12",
-                        "endOffsets": "289,138"
+                        "startLines": "5,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "144,-1",
+                        "endLines": "8,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "287,-1"
                     },
                     "to": {
                         "startLines": "7910,7914",
                         "startColumns": "4,4",
-                        "startOffsets": "527631,527778",
+                        "startOffsets": "527631,527776",
                         "endLines": "7913,7916",
                         "endColumns": "12,12",
-                        "endOffsets": "527773,527857"
+                        "endOffsets": "527771,527855"
                     }
                 },
                 {
