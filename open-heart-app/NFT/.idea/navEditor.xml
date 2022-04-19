@@ -44,13 +44,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="profile">
+                  <entry key="profilOption">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="439" />
-                            <option name="y" value="20" />
+                            <option name="x" value="440" />
+                            <option name="y" value="24" />
                           </Point>
                         </option>
                       </LayoutPositions>

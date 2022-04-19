@@ -2527,6 +2527,8 @@ drawable design_snackbar_background
 drawable error
 drawable gradient
 drawable ic_baseline_abc_24
+drawable ic_baseline_add_24
+drawable ic_baseline_arrow_back_24
 drawable ic_baseline_arrow_circle_right_24
 drawable ic_baseline_collections_24
 drawable ic_baseline_email_24
@@ -2554,6 +2556,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_wallet
+drawable image_profil
 drawable loading
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2680,6 +2683,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_profile_banner
+id add_profile_img
 id alertTitle
 id aligned
 id all
@@ -2711,6 +2716,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_back
+id btn_back_pass
+id btn_change_pass
+id btn_profile
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2725,6 +2734,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id change_pass
 id checkbox
 id checked
 id chip
@@ -2744,6 +2754,7 @@ id collapseActionView
 id collection
 id compress
 id confirm_button
+id confirm_pass
 id constraint
 id container
 id content
@@ -2793,6 +2804,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit_profile
 id edit_query
 id elastic
 id email
@@ -2861,6 +2873,7 @@ id itemname
 id jumpToEnd
 id jumpToStart
 id labeled
+id last_pass
 id layout
 id left
 id leftToRight
@@ -2875,6 +2888,7 @@ id locale
 id login
 id logo
 id logocenter
+id logout
 id ltr
 id market
 id masked
@@ -2950,6 +2964,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id new_pass
 id noScroll
 id noState
 id none
@@ -2982,6 +2997,14 @@ id position
 id postLayout
 id price
 id profile
+id profile_address
+id profile_banner
+id profile_bio
+id profile_email
+id profile_img
+id profile_name
+id profile_phone
+id profile_sex
 id progress_circular
 id progress_horizontal
 id radio
@@ -3110,6 +3133,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id top_bar
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3137,6 +3161,8 @@ id viewall
 id visible
 id visible_removing_fragment_view_tag
 id wallet
+id wallet_pass
+id wallet_profile
 id west
 id withText
 id withinBounds
@@ -3232,6 +3258,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_change_pass
+layout activity_edit_profile
 layout activity_home
 layout activity_main
 layout activity_sign_up
@@ -3256,7 +3284,7 @@ layout design_text_input_start_icon
 layout fragment_collection
 layout fragment_home
 layout fragment_market
-layout fragment_profile
+layout fragment_profil_option
 layout fragment_trending
 layout image_slider
 layout m3_alert_dialog
@@ -3346,6 +3374,7 @@ menu example_menu
 menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap profile
 navigation my_nav
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -3378,13 +3407,17 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string back
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string change_pass
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string confirm_pass
+string edit_profile
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3393,7 +3426,9 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string last_pass
 string left
+string logout
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -3477,11 +3512,21 @@ string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string new_pass
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string profile
+string profile_address
+string profile_banner
+string profile_bio
+string profile_email
+string profile_name
+string profile_phone
+string profile_sex
+string save
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -4509,6 +4554,8 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style bannerProfile
+style circular
 style roundedImageViewRounded
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
@@ -4676,6 +4723,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml network_security_config
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start
