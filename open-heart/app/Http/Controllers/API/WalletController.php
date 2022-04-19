@@ -15,9 +15,15 @@ class WalletController extends Controller
 {
     public function index()
     {
-        $saldo = Wallet::where('id', auth()->user()->wallet->id)->latest()->get();
+        $saldo = Wallet::find(auth()->user()->wallet->id);
         return response()
-            ->json([WalletResource::collection($saldo)]);
+            ->json($saldo);
+    }
+    public function history()
+    {
+        $saldo = Wallet::find(auth()->user()->wallet->id);
+        return response()
+            ->json($saldo->historywallet);
     }
     public function topUpWallet(Request $request)
     {

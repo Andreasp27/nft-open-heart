@@ -2705,6 +2705,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id balance
 id banner
 id barrier
 id baseline
@@ -3535,7 +3536,10 @@ string profile_phone
 string profile_sex
 string save
 string search_menu_title
+string send
 string status_bar_notification_info_overflow
+string top_up
+string wallet
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

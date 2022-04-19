@@ -48,6 +48,7 @@ id add_profile_banner
 id add_profile_img
 id appBarLayout
 id appBarLayout2
+id balance
 id banner
 id bottomNavigationView
 id btn_back
@@ -152,6 +153,9 @@ string profile_name
 string profile_phone
 string profile_sex
 string save
+string send
+string top_up
+string wallet
 style Theme.NFT
 style ToolBarStyle
 style Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense

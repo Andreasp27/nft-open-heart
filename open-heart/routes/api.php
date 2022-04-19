@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/wallet/topup', [App\Http\Controllers\API\WalletController::class, 'topUpWallet']);
     Route::post('/wallet/send', [App\Http\Controllers\API\WalletController::class, 'sendWallet']);
     Route::get('/wallet', [App\Http\Controllers\API\WalletController::class, 'index']);
+    Route::get('/wallet/history', [App\Http\Controllers\API\WalletController::class, 'history']);
 
     Route::get('/collection', [App\Http\Controllers\API\CollectionController::class, 'index']);
     Route::get('/collection/mycollection', [App\Http\Controllers\API\CollectionController::class, 'showById']);

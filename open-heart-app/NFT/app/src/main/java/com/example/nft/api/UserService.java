@@ -3,6 +3,7 @@ package com.example.nft.api;
 import com.example.nft.ChangePass;
 import com.example.nft.EditProfile;
 import com.example.nft.SignUp;
+import com.example.nft.wallet;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -47,4 +48,7 @@ public interface UserService {
     Call<EditProfile.ProfileRR> updateImageProfile(@Header("Authorization") String auth,
                                                    @Part MultipartBody.Part file
     );
+
+    @GET("wallet")
+    Call<wallet.walletResponse> getBalance(@Header("Authorization") String auth);
 }
