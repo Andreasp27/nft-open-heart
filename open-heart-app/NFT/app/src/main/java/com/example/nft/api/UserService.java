@@ -2,11 +2,17 @@ package com.example.nft.api;
 
 import com.example.nft.ChangePass;
 import com.example.nft.EditProfile;
+import com.example.nft.HistoryWallet;
+import com.example.nft.Send;
 import com.example.nft.SignUp;
+import com.example.nft.TopUp;
 import com.example.nft.wallet;
+
+import java.util.ArrayList;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -51,4 +57,15 @@ public interface UserService {
 
     @GET("wallet")
     Call<wallet.walletResponse> getBalance(@Header("Authorization") String auth);
+
+    @GET("wallet/history")
+    Call<ArrayList<wallet.historyResponse>> getHistory(@Header("Authorization") String auth);
+
+    @POST("wallet/topup")
+    Call<MessageResponse> topUp(@Header("Authorization") String auth,
+                                @Body TopUp.TopUpRequest body);
+
+    @POST("wallet/send")
+    Call<MessageResponse> send(@Header("Authorization") String auth,
+                               @Body Send.SendRequest body);
 }

@@ -28,8 +28,13 @@
         android:theme="@style/Theme.NFT"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.nft.Send"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
             android:name="com.example.nft.TopUp"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name="com.example.nft.EditProfile"
             android:exported="false" />

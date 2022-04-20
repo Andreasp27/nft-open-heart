@@ -18,7 +18,9 @@ import com.example.nft.api.ApiClient;
 import com.example.nft.api.Session;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,7 +32,10 @@ public class wallet extends AppCompatActivity {
     private ArrayList<HistoryWallet> historyWallet;
     private String access_token;
     private Session session;
+
     ImageView btnsend, btntopup, back;
+
+    List<String> jumlah = new ArrayList<>();
     TextView balance;
 
     @Override
@@ -53,9 +58,11 @@ public class wallet extends AppCompatActivity {
         addData();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
+        history(layoutManager);
         //recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new MyAdapterHistory(historyWallet, this));
+
+
+//        Toast.makeText(getApplicationContext(), (CharSequence) jumlah, Toast.LENGTH_LONG).show();
 
         //get view item
         balance = findViewById(R.id.balance);
@@ -70,7 +77,8 @@ public class wallet extends AppCompatActivity {
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), Send.class);
+                startActivity(intent);
             }
         });
 
@@ -92,17 +100,21 @@ public class wallet extends AppCompatActivity {
 
 
     }
-    //andreas gibran nethanel paat
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     void addData() {
-        HistoryWallet ob1 = new HistoryWallet("SKS", "+ 230", R.drawable.ic_ethereum_eth);
-        historyWallet.add(ob1);
-        HistoryWallet ob2 = new HistoryWallet("SKS", "+ 200", R.drawable.ic_ethereum_eth);
-        historyWallet.add(ob2);
-        HistoryWallet ob3 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
-        historyWallet.add(ob3);
-        HistoryWallet ob4 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
-        historyWallet.add(ob4);
+//        HistoryWallet ob1 = new HistoryWallet("SKS", "+ 230", R.drawable.ic_ethereum_eth);
+//        historyWallet.add(ob1);
+//        HistoryWallet ob2 = new HistoryWallet("SKS", "+ 200", R.drawable.ic_ethereum_eth);
+//        historyWallet.add(ob2);
+//        HistoryWallet ob3 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
+//        historyWallet.add(ob3);
+//        HistoryWallet ob4 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
+//        historyWallet.add(ob4);
     }
 
     public class walletResponse{
@@ -125,7 +137,6 @@ public class wallet extends AppCompatActivity {
 
                 if (response.isSuccessful()){
                     balance.setText(Float.toString(response.body().getSaldo()));
-                    Toast.makeText(getApplicationContext(), "Fetch data success", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
                 }
@@ -136,6 +147,62 @@ public class wallet extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Fetch data failed" + t, Toast.LENGTH_LONG).show();
             }
         });
+
+    }
+
+    public void history(RecyclerView.LayoutManager layoutManager){
+        Call<ArrayList<historyResponse>> responseBodyCall = ApiClient.getUserService().getHistory("Bearer "+ access_token);
+        responseBodyCall.enqueue(new Callback<ArrayList<historyResponse>>() {
+            @Override
+            public void onResponse(Call<ArrayList<historyResponse>> call, Response<ArrayList<historyResponse>> response) {
+                if (response.isSuccessful()) {
+                    ArrayList<historyResponse> data = response.body();
+                    String sign;
+                    for (historyResponse item : data) {
+                        jumlah.add(Float.toString(item.getJumlah()));
+                        System.out.println(item.getJumlah());
+                        if (item.getStatus().equals("masuk")) {
+                            sign = "+";
+                        } else {
+                            sign = "-";
+                        }
+                        HistoryWallet obj = new HistoryWallet("SKS",sign + item.getJumlah(), R.drawable.ic_ethereum_eth);
+                        historyWallet.add(obj);
+                    }
+                    recyclerView.setLayoutManager(layoutManager);
+                    recyclerView.setAdapter(new MyAdapterHistory(historyWallet, getApplicationContext()));
+                }else{
+                    Toast.makeText(getApplicationContext(), "Fetch data history failed", Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onFailure(Call<ArrayList<historyResponse>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Fetch data history failed" + t, Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+    }
+
+    public class historyResponse{
+        private float jumlah;
+        private String status;
+
+        public float getJumlah() {
+            return jumlah;
+        }
+
+        public void setJumlah(float jumlah) {
+            this.jumlah = jumlah;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
 
     }
 }

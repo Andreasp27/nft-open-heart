@@ -24,4 +24,5 @@
     <string name="send">Send</string>
     <string name="nominal">Nominal Transfer</string>
     <string name="topsales">Top Sales NFTs</string>
+    <string name="no_user">User Number</string>
 </resources>
