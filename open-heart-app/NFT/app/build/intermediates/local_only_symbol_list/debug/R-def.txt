@@ -56,10 +56,13 @@ id banner
 id bottomNavigationView
 id btn_back
 id btn_back_pass
+id btn_back_send
 id btn_back_topup
 id btn_back_wallet
 id btn_change_pass
 id btn_profile
+id btn_send
+id btn_top_up
 id cardView
 id cardView2
 id change_pass
@@ -92,6 +95,8 @@ id name
 id navHost
 id new_pass
 id nominal
+id nominal_send
+id pass_send
 id pass_top_up
 id password
 id price
@@ -110,6 +115,7 @@ id recyclerMarket
 id recyclerTrend
 id recyclerhistory
 id searchView
+id sendTxt
 id signup
 id sks
 id textView
@@ -122,6 +128,7 @@ id tokenTxt
 id top_bar
 id topupTxt
 id trending
+id user_send
 id username
 id viewall
 id wallet
@@ -131,6 +138,7 @@ layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
 layout activity_main
+layout activity_send
 layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
@@ -156,6 +164,7 @@ string hello_blank_fragment
 string last_pass
 string logout
 string new_pass
+string no_user
 string nominal
 string pass
 string profile

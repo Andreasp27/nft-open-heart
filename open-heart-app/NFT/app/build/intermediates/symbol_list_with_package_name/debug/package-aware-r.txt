@@ -2724,10 +2724,13 @@ id bounceEnd
 id bounceStart
 id btn_back
 id btn_back_pass
+id btn_back_send
 id btn_back_topup
 id btn_back_wallet
 id btn_change_pass
 id btn_profile
+id btn_send
+id btn_top_up
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2977,6 +2980,7 @@ id new_pass
 id noScroll
 id noState
 id nominal
+id nominal_send
 id none
 id normal
 id north
@@ -2996,6 +3000,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pass_send
 id pass_top_up
 id password
 id password_toggle
@@ -3058,6 +3063,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id sendTxt
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3167,6 +3173,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_send
 id username
 id vertical_only
 id view_offset_helper
@@ -3280,6 +3287,7 @@ layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
 layout activity_main
+layout activity_send
 layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
@@ -3533,6 +3541,7 @@ string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string new_pass
+string no_user
 string nominal
 string pass
 string password_toggle_content_description

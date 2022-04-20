@@ -18,6 +18,7 @@
     <string name="last_pass">Last Password</string>
     <string name="logout">Logout</string>
     <string name="new_pass">New Password</string>
+    <string name="no_user">User Number</string>
     <string name="nominal">Nominal Transfer</string>
     <string name="pass">Password</string>
     <string name="profile">Profile</string>

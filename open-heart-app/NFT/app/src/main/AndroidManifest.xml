@@ -18,8 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NFT">
         <activity
+            android:name=".Send"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
             android:name=".TopUp"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".EditProfile"
             android:exported="false" />

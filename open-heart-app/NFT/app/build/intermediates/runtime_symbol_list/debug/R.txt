@@ -2723,10 +2723,13 @@ int id bounceEnd 0x7f09006a
 int id bounceStart 0x7f09006b
 int id btn_back 0x7f09006c
 int id btn_back_pass 0x7f09006d
+int id btn_back_send 0x7f090247
 int id btn_back_topup 0x7f09023d
 int id btn_back_wallet 0x7f09023a
 int id btn_change_pass 0x7f09006e
 int id btn_profile 0x7f09006f
+int id btn_send 0x7f090246
+int id btn_top_up 0x7f090241
 int id buttonPanel 0x7f090070
 int id cache_measures 0x7f090071
 int id callMeasure 0x7f090072
@@ -2976,6 +2979,7 @@ int id new_pass 0x7f090165
 int id noScroll 0x7f090166
 int id noState 0x7f090167
 int id nominal 0x7f09023e
+int id nominal_send 0x7f090242
 int id none 0x7f090168
 int id normal 0x7f090169
 int id north 0x7f09016a
@@ -2995,6 +2999,7 @@ int id parent 0x7f090177
 int id parentPanel 0x7f090178
 int id parentRelative 0x7f090179
 int id parent_matrix 0x7f09017a
+int id pass_send 0x7f090243
 int id pass_top_up 0x7f09023f
 int id password 0x7f09017b
 int id password_toggle 0x7f09017c
@@ -3057,6 +3062,7 @@ int id search_voice_btn 0x7f0901b4
 int id select_dialog_listview 0x7f0901b5
 int id selected 0x7f0901b6
 int id selection_type 0x7f0901b7
+int id sendTxt 0x7f090244
 int id sharedValueSet 0x7f0901b8
 int id sharedValueUnset 0x7f0901b9
 int id shortcut 0x7f0901ba
@@ -3166,6 +3172,7 @@ int id uniform 0x7f09021f
 int id unlabeled 0x7f090220
 int id up 0x7f090221
 int id useLogo 0x7f090222
+int id user_send 0x7f090245
 int id username 0x7f090223
 int id vertical_only 0x7f090224
 int id view_offset_helper 0x7f090225
@@ -3279,6 +3286,7 @@ int layout activity_change_pass 0x7f0c001c
 int layout activity_edit_profile 0x7f0c001d
 int layout activity_home 0x7f0c001e
 int layout activity_main 0x7f0c001f
+int layout activity_send 0x7f0c008d
 int layout activity_sign_up 0x7f0c0020
 int layout activity_top_up 0x7f0c008c
 int layout activity_wallet 0x7f0c0021
@@ -3532,6 +3540,7 @@ int string mtrl_timepicker_confirm 0x7f110084
 int string nav_app_bar_navigate_up_description 0x7f110085
 int string nav_app_bar_open_drawer_description 0x7f110086
 int string new_pass 0x7f110087
+int string no_user 0x7f11009d
 int string nominal 0x7f11009b
 int string pass 0x7f11009c
 int string password_toggle_content_description 0x7f110088
