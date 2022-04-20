@@ -80,8 +80,9 @@ public class TopUp extends AppCompatActivity {
                             if (response.isSuccessful()){
                                 if (message.equals("success")){
                                     Toast.makeText(getApplicationContext(), "Top Up Success", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(getApplicationContext(), wallet.class);
-                                    startActivity(intent);
+//                                    Intent intent = new Intent(getApplicationContext(), wallet.class);
+//                                    startActivity(intent);
+                                    refreshActivity();
                                 }else{
                                     Toast.makeText(getApplicationContext(), "Top Up Failed", Toast.LENGTH_LONG).show();
                                 }
@@ -123,6 +124,14 @@ public class TopUp extends AppCompatActivity {
         public void setPassword(String password) {
             this.password = password;
         }
+    }
+
+    public void refreshActivity() {
+        Intent i = new Intent(this, wallet.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        finish();
+
     }
 
 }

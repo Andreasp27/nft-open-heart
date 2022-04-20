@@ -3032,6 +3032,7 @@ id rectangles
 id recycler
 id recyclerMarket
 id recyclerTrend
+id recyclerTrend2
 id recyclerhistory
 id reverseSawtooth
 id right

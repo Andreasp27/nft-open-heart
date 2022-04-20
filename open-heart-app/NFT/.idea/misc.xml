@@ -36,7 +36,7 @@
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_market.xml" value="0.24719101123595505" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_profil_option.xml" value="0.18819655521783182" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_profile.xml" value="0.38179347826086957" />
-        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_trending.xml" value="0.3080260303687636" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_trending.xml" value="0.22" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/historywallet.xml" value="0.18226600985221675" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/layout_banner.xml" value="0.19791666666666666" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/top_item.xml" value="0.3676190476190476" />
@@ -44,28 +44,12 @@
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/menu/bottom_menu.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/rafae/AndroidStudioProjects/NFT/app/src/main/res/drawable/logo.xml" value="0.3345" />
         <entry key="..\:/Users/rafae/AndroidStudioProjects/NFT/app/src/main/res/layout/activity_main.xml" value="0.38333333333333336" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable-night/ic_baseline_person_24.xml" value="0.1675" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24.xml" value="0.1" />
-<<<<<<< HEAD
-=======
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_abc_24.xml" value="0.1675" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1675" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_ethereum_eth.xml" value="0.1675" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/ic_ethereum_eth_mini.xml" value="0.1675" />
->>>>>>> 1cf6fa0aaddf077c17364c74e7a9f56b6712eb3a
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/drawable/image_profile.xml" value="0.1" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_change_pass.xml" value="0.10511651469098278" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_edit_profile.xml" value="0.10916919959473151" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_home.xml" value="0.10916919959473151" />
-<<<<<<< HEAD
-=======
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_send.xml" value="0.22447916666666667" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_sign_up.xml" value="0.22447916666666667" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_top_up.xml" value="0.22447916666666667" />
-        <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_wallet.xml" value="0.2" />
->>>>>>> 1cf6fa0aaddf077c17364c74e7a9f56b6712eb3a
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_edit_profile.xml" value="0.10916919959473151" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_profil_option.xml" value="0.1" />
         <entry key="..\:/dokumen/KULIAH/Semester 8/Pengembangan Aplikasi Mobile/Tugas/open-heart/nft-open-heart/open-heart-app/NFT/app/src/main/res/menu/bottom_menu.xml" value="0.22447916666666667" />

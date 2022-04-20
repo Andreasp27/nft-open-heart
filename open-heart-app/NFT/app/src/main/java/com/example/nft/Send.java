@@ -77,8 +77,9 @@ public class Send extends AppCompatActivity {
                             if (response.isSuccessful()){
                                 if (message.equals("success")){
                                     Toast.makeText(getApplicationContext(), "Send Success", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(getApplicationContext(), wallet.class);
-                                    startActivity(intent);
+//                                    Intent intent = new Intent(getApplicationContext(), wallet.class);
+//                                    startActivity(intent);
+                                    refreshActivity();
                                 }else if (message.equals("failed_1")){
                                     Toast.makeText(getApplicationContext(), "Not enough balance", Toast.LENGTH_LONG).show();
                                 }else{
@@ -127,5 +128,13 @@ public class Send extends AppCompatActivity {
         public void setPassword(String password) {
             this.password = password;
         }
+    }
+
+    public void refreshActivity() {
+        Intent i = new Intent(this, wallet.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        finish();
+
     }
 }

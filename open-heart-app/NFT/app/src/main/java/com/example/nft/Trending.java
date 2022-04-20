@@ -3,6 +3,7 @@ package com.example.nft;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +19,8 @@ public class Trending extends Fragment {
     MyAdapterTopSales myAdapterTopSales;
     RecyclerView recyclerView;
     ArrayList<TopSales> topSales;
+    MyAdapterTrend myAdapterTrend;
+    ArrayList<Trend> trendArrayList;
 
 
     @Override
@@ -31,6 +34,7 @@ public class Trending extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_trending, container, false);
 
+        //recycler view top sales
         recyclerView = view.findViewById(R.id.recyclerTrend);
         topSales = new ArrayList<>();
 
@@ -42,6 +46,15 @@ public class Trending extends Fragment {
         myAdapterTopSales = new MyAdapterTopSales(topSales, getContext());
         recyclerView.setAdapter(new MyAdapterTopSales(topSales, getContext()));
 
+        //recycler view trend item
+        recyclerView = view.findViewById(R.id.recyclerTrend2);
+        GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(gridLayoutManager2);
+        trendArrayList = new ArrayList<>();
+
+        addData2();
+        recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+
         return  view;
     }
 
@@ -52,5 +65,24 @@ public class Trending extends Fragment {
         topSales.add(ob2);
         TopSales ob3 = new TopSales(R.drawable.naruto, "3", "Naruto Shipuden", "120,99", "46.5 %");
         topSales.add(ob3);
+    }
+
+    void addData2() {
+        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
+        trendArrayList.add(ob1);
+        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob2);
+        Trend ob3 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob3);
+        Trend ob4 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob4);
+        Trend ob5 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob5);
+        Trend ob6 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob6);
+        Trend ob7 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob7);
+        Trend ob8 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        trendArrayList.add(ob8);
     }
 }
