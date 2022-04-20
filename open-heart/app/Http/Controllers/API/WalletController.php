@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\HistoryResource;
 use App\Http\Resources\WalletResource;
 use App\Models\Historywallet;
 use App\Models\User;
@@ -21,9 +22,9 @@ class WalletController extends Controller
     }
     public function history()
     {
-        $saldo = Wallet::find(auth()->user()->wallet->id);
+        $saldo = Historywallet::where('wallet_id', auth()->user()->wallet->id)->latest()->get();
         return response()
-            ->json($saldo->historywallet);
+            ->json($saldo);
     }
     public function topUpWallet(Request $request)
     {
@@ -51,10 +52,10 @@ class WalletController extends Controller
 
 
             return response()
-                ->json(['msg' => 'Top up success', 'data' => Wallet::find(auth()->user()->wallet->id)]);
+                ->json(['message' => 'success']);
         } else {
             return response()
-                ->json(['msg' => 'Top up failed']);
+                ->json(['message' => 'failed']);
         }
     }
 
@@ -71,7 +72,7 @@ class WalletController extends Controller
         $old_saldoUser = auth()->user()->wallet->saldo;
         if ($old_saldoUser < $request->saldo) {
             return response()
-                ->json(['msg' => 'Send failed']);
+                ->json(['message' => 'failed_1']);
         }
         $old_saldo = $nomor_user->wallet->saldo;
         $pass = auth()->user()->password;
@@ -83,7 +84,7 @@ class WalletController extends Controller
             // user yg nerima
             Historywallet::create([
                 'jumlah' => $request->saldo,
-                'status' => 'Masuk',
+                'status' => 'masuk',
                 'wallet_id' => Wallet::find($nomor_user->wallet->id)->id,
             ]);
 
@@ -96,17 +97,15 @@ class WalletController extends Controller
             //user yg send
             Historywallet::create([
                 'jumlah' => $request->saldo,
-                'status' => 'Keluar',
+                'status' => 'keluar',
                 'wallet_id' => auth()->user()->wallet->id,
             ]);
 
-
-
             return response()
-                ->json(['msg' => 'Send success', 'data' => Wallet::find(auth()->user()->wallet->id)]);
+                ->json(['message' => 'success']);
         } else {
             return response()
-                ->json(['msg' => 'Send failed']);
+                ->json(['message' => 'failed']);
         }
     }
 }
