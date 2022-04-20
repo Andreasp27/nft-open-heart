@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+            "outputFile": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\acer\\.gradle\\caches\\transforms-3\\96a8459cc55356d65de57437416e5b5d\\transformed\\material-1.5.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\rafae\\.gradle\\caches\\transforms-3\\96a8459cc55356d65de57437416e5b5d\\transformed\\material-1.5.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

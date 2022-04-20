@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 public class TopUp extends AppCompatActivity {
 
-    private ImageButton back;
+    private ImageView back;
     private Button topUp;
     private TextInputLayout nominal, pass;
     @Override

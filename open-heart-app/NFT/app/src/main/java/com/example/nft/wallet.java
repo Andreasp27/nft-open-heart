@@ -30,8 +30,7 @@ public class wallet extends AppCompatActivity {
     private ArrayList<HistoryWallet> historyWallet;
     private String access_token;
     private Session session;
-    ImageView btnsend, btntopup;
-    ImageButton back;
+    ImageView btnsend, btntopup, back;
     TextView balance;
 
     @Override

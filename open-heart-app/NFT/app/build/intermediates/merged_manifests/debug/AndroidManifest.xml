@@ -25,7 +25,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.NFT" >
+        android:theme="@style/Theme.NFT"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.nft.TopUp"
             android:exported="false" />

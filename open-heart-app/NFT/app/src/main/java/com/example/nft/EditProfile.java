@@ -35,7 +35,8 @@ import retrofit2.Response;
 public class EditProfile extends AppCompatActivity {
 
     TextInputLayout editName, editEmail, editSex, editAddress, editPhone, editBio;
-    ImageButton backBtn, addProfileImg, addProfileBanner;
+    ImageButton addProfileImg, addProfileBanner;
+    ImageView backBtn;
     private Integer statusImg = 0, statusBanner = 0;
     ImageView imageProfile, imageBanner;
     private String access_token, base;

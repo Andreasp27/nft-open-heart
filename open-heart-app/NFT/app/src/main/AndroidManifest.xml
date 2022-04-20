@@ -16,7 +16,8 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NFT">
+        android:theme="@style/Theme.NFT"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".TopUp"
             android:exported="false" />

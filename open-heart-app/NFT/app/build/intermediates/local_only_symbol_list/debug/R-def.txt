@@ -60,6 +60,7 @@ id btn_back_topup
 id btn_back_wallet
 id btn_change_pass
 id btn_profile
+id btn_top_up
 id cardView
 id cardView2
 id change_pass
@@ -71,9 +72,11 @@ id desc
 id donthave
 id edit_profile
 id email
+id growth
 id haveAcc
-id historu
+id history
 id home2
+id image
 id imageView
 id imageView2
 id imageView3
@@ -91,6 +94,7 @@ id nama
 id name
 id navHost
 id new_pass
+id noitem
 id nominal
 id pass_top_up
 id password
@@ -141,6 +145,7 @@ layout fragment_market
 layout fragment_profil_option
 layout fragment_trending
 layout historywallet
+layout top_item
 layout trend_item
 menu bottom_menu
 mipmap ic_launcher
@@ -169,6 +174,7 @@ string profile_sex
 string save
 string send
 string top_up
+string topsales
 string wallet
 style Theme.NFT
 style ToolBarStyle

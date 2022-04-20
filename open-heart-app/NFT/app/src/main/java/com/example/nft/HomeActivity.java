@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         bundle.putString("access_token", access_token);
         session = new Session(this);
         session.setAccessToken(access_token);
-        session.setBase("http://192.168.1.8/");
+        session.setBase("http://10.0.2.2:8000/");
 
        nav = findViewById(R.id.bottomNavigationView);
 //        navController = Navigation.findNavController(this, R.id.navHost);
