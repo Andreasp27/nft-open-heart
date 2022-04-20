@@ -15,10 +15,12 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="change_pass">Change Password</string>
     <string name="logout">Logout</string>
+    <string name="pass">Password</string>
     <string name="last_pass">Last Password</string>
     <string name="new_pass">New Password</string>
     <string name="confirm_pass">Confirm Password</string>
     <string name="wallet">Wallet</string>
     <string name="top_up">Top Up</string>
     <string name="send">Send</string>
+    <string name="nominal">Nominal Transfer</string>
 </resources>

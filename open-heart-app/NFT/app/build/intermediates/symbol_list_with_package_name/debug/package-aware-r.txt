@@ -2545,6 +2545,7 @@ drawable ic_baseline_visibility_off_24
 drawable ic_baseline_warning_24
 drawable ic_clock_black_24dp
 drawable ic_ethereum_eth
+drawable ic_ethereum_eth_mini
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2692,6 +2693,7 @@ id aligned
 id all
 id allStates
 id always
+id amountTxt
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
@@ -2722,6 +2724,8 @@ id bounceEnd
 id bounceStart
 id btn_back
 id btn_back_pass
+id btn_back_topup
+id btn_back_wallet
 id btn_change_pass
 id btn_profile
 id buttonPanel
@@ -2972,6 +2976,7 @@ id neverCompleteToStart
 id new_pass
 id noScroll
 id noState
+id nominal
 id none
 id normal
 id north
@@ -2991,6 +2996,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pass_top_up
 id password
 id password_toggle
 id path
@@ -3141,9 +3147,11 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id tokenTxt
 id top
 id topPanel
 id top_bar
+id topupTxt
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3273,6 +3281,7 @@ layout activity_edit_profile
 layout activity_home
 layout activity_main
 layout activity_sign_up
+layout activity_top_up
 layout activity_wallet
 layout card_item
 layout custom_dialog
@@ -3524,6 +3533,8 @@ string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string new_pass
+string nominal
+string pass
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

@@ -27,6 +27,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.NFT" >
         <activity
+            android:name="com.example.nft.TopUp"
+            android:exported="false" />
+        <activity
             android:name="com.example.nft.EditProfile"
             android:exported="false" />
         <activity

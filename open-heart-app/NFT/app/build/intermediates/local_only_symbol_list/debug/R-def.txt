@@ -32,6 +32,7 @@ drawable ic_baseline_visibility_24
 drawable ic_baseline_visibility_off_24
 drawable ic_baseline_warning_24
 drawable ic_ethereum_eth
+drawable ic_ethereum_eth_mini
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logo
@@ -47,6 +48,7 @@ font roboto_medium
 id Cpassword
 id add_profile_banner
 id add_profile_img
+id amountTxt
 id appBarLayout
 id appBarLayout2
 id balance
@@ -54,6 +56,8 @@ id banner
 id bottomNavigationView
 id btn_back
 id btn_back_pass
+id btn_back_topup
+id btn_back_wallet
 id btn_change_pass
 id btn_profile
 id cardView
@@ -87,6 +91,8 @@ id nama
 id name
 id navHost
 id new_pass
+id nominal
+id pass_top_up
 id password
 id price
 id profile
@@ -112,7 +118,9 @@ id textView3
 id textView4
 id textView5
 id textView6
+id tokenTxt
 id top_bar
+id topupTxt
 id trending
 id username
 id viewall
@@ -124,6 +132,7 @@ layout activity_edit_profile
 layout activity_home
 layout activity_main
 layout activity_sign_up
+layout activity_top_up
 layout activity_wallet
 layout card_item
 layout fragment_collection
@@ -147,6 +156,8 @@ string hello_blank_fragment
 string last_pass
 string logout
 string new_pass
+string nominal
+string pass
 string profile
 string profile_address
 string profile_banner

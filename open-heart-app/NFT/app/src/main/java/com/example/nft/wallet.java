@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,9 +30,8 @@ public class wallet extends AppCompatActivity {
     private ArrayList<HistoryWallet> historyWallet;
     private String access_token;
     private Session session;
-
     ImageView btnsend, btntopup;
-
+    ImageButton back;
     TextView balance;
 
     @Override
@@ -63,8 +64,9 @@ public class wallet extends AppCompatActivity {
         //get balance
         balance();
 
-        btnsend = findViewById(R.id.imageView2);
-        btntopup = findViewById(R.id.imageView3);
+        btnsend = findViewById(R.id.imageView3);
+        btntopup = findViewById(R.id.imageView2);
+        back = findViewById(R.id.btn_back_wallet);
 
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +78,16 @@ public class wallet extends AppCompatActivity {
         btntopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TopUp.class);
+                startActivity(intent);
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
