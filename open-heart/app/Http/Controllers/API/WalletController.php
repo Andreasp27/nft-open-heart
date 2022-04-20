@@ -22,9 +22,9 @@ class WalletController extends Controller
     }
     public function history()
     {
-        $saldo = Historywallet::where('wallet_id', auth()->user()->wallet->id)->latest()->get();
+        $saldoo = Historywallet::where('wallet_id', auth()->user()->wallet->id)->latest()->get();
         return response()
-            ->json($saldo);
+            ->json($saldoo);
     }
     public function topUpWallet(Request $request)
     {
