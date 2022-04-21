@@ -21,6 +21,7 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
     private ArrayList<Collected> collectedArrayList;
     private Context context;
 
+
     public MyAdapterCollection(ArrayList<Collected> collectedArrayList, Context context) {
 
         this.collectedArrayList = collectedArrayList;
@@ -54,10 +55,6 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
 
     @Override
     public int getItemCount() {
-
-        if(collectedArrayList.size() == 0) {
-            Toast.makeText(context.getApplicationContext(), "kososng", Toast.LENGTH_SHORT).show();
-        }
 
         return collectedArrayList.size();
     }

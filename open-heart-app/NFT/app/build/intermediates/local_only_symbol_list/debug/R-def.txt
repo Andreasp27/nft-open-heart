@@ -16,6 +16,7 @@ drawable akatzuki
 drawable boredape
 drawable bottom_stroke
 drawable buttonradius
+drawable bx_collection
 drawable harimau
 drawable harimauungu
 drawable ic_baseline_abc_24
@@ -52,7 +53,9 @@ drawable password_selector
 font roboto
 font roboto_bold
 font roboto_medium
+id CollectedCollection
 id Cpassword
+id addCollection
 id add_profile_banner
 id add_profile_img
 id amountTxt
@@ -76,11 +79,13 @@ id change_pass
 id clickhere
 id collection
 id confirm_pass
+id createdCollected
 id creator
 id desc
 id donthave
 id edit_profile
 id email
+id emptyrecycler
 id growth
 id haveAcc
 id history
@@ -138,6 +143,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textempty
 id tokenTxt
 id top_bar
 id topupTxt

@@ -1,5 +1,6 @@
 package com.example.nft;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -104,6 +105,10 @@ public class Home extends Fragment {
         trendArrayList.add(ob1);
         Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
         trendArrayList.add(ob2);
+    }
+
+    public void discover (View v) {
+
     }
 
 }
