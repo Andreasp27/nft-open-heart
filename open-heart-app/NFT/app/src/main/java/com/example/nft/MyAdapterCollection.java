@@ -55,6 +55,10 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
     @Override
     public int getItemCount() {
 
+        if(collectedArrayList.size() == 0) {
+            Toast.makeText(context.getApplicationContext(), "kososng", Toast.LENGTH_SHORT).show();
+        }
+
         return collectedArrayList.size();
     }
 

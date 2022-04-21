@@ -43,9 +43,9 @@ public class Collection extends Fragment {
     }
 
     void addData2() {
-        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob1);
-        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob2);
+//        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob1);
+//        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob2);
     }
 }
