@@ -2,6 +2,7 @@ package com.example.nft;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ public class MyAdapterHistory extends RecyclerView.Adapter<MyAdapterHistory.Hist
 
     private ArrayList<HistoryWallet> historyWallet;
     private Context context;
+
 
     public MyAdapterHistory(ArrayList<HistoryWallet> historyWallet, Context context) {
 
@@ -38,6 +40,13 @@ public class MyAdapterHistory extends RecyclerView.Adapter<MyAdapterHistory.Hist
         holder.sks.setText(historyWallet.get(position).getSks());
         holder.jumlah.setText(historyWallet.get(position).getJumlah());
         holder.image.setImageResource(historyWallet.get(position).getLogo());
+
+        String sign = "+";
+        if((Character.compare(sign.charAt(0), historyWallet.get(position).getJumlah().charAt(0)) == 0)) {
+            holder.jumlah.setTextColor(Color.parseColor("#00CD5E"));
+        } else {
+            holder.jumlah.setTextColor(Color.parseColor("#FF0000"));
+        }
 
 
     }

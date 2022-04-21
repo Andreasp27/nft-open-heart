@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -32,6 +33,7 @@ public class wallet extends AppCompatActivity {
     private ArrayList<HistoryWallet> historyWallet;
     private String access_token;
     private Session session;
+    TextView amount;
 
     ImageView btnsend, btntopup, back;
 
@@ -158,11 +160,14 @@ public class wallet extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ArrayList<historyResponse> data = response.body();
                     String sign;
+
+                    amount = findViewById(R.id.jumlah);
                     for (historyResponse item : data) {
-                        jumlah.add(Float.toString(item.getJumlah()));
-                        System.out.println(item.getJumlah());
+//                        jumlah.add(Float.toString(item.getJumlah()));
+//                        System.out.println(item.getJumlah());
                         if (item.getStatus().equals("masuk")) {
                             sign = "+";
+
                         } else {
                             sign = "-";
                         }

@@ -70,19 +70,19 @@ public class Trending extends Fragment {
     void addData2() {
         Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
         trendArrayList.add(ob1);
-        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.ninja);
         trendArrayList.add(ob2);
-        Trend ob3 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob3 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.boredape);
         trendArrayList.add(ob3);
-        Trend ob4 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob4 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.harimau);
         trendArrayList.add(ob4);
-        Trend ob5 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob5 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.orang);
         trendArrayList.add(ob5);
-        Trend ob6 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob6 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.harimauungu);
         trendArrayList.add(ob6);
-        Trend ob7 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob7 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.kucing);
         trendArrayList.add(ob7);
-        Trend ob8 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+        Trend ob8 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.monkey);
         trendArrayList.add(ob8);
     }
 }

@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Bored Ape #1003"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                style="@style/Theme.NFT"
                 android:padding="5dp"/>
 
             <LinearLayout
@@ -43,6 +43,7 @@
                     android:text="Current Bid"
                     android:paddingLeft="5dp"
                     android:fontFamily="@font/roboto"
+                    style="@style/Theme.NFT"
                     android:paddingRight="50dp"/>
                 <ImageView
                     android:layout_width="15dp"
@@ -54,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto"
+                    style="@style/Theme.NFT"
                     android:text="25 SKS"/>
             </LinearLayout>
 
@@ -70,6 +72,7 @@
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
                     android:fontFamily="@font/roboto"
+                    style="@style/Theme.NFT"
                     android:paddingRight="66dp"/>
 
                 <TextView
@@ -78,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="Bored Ape"
                     android:fontFamily="@font/roboto"
+                    style="@style/Theme.NFT"
                     android:paddingRight="1dp"/>
             </LinearLayout>
 

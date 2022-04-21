@@ -26,17 +26,20 @@
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_send.xml" value="0.18819655521783182" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_top_up.xml" value="0.25407608695652173" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/activity_wallet.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/card_item.xml" value="0.25" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/collection.xml" value="0.25" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/collection_item.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_banner.xml" value="0.19791666666666666" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_collection.xml" value="0.38179347826086957" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_market.xml" value="0.24719101123595505" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_profil_option.xml" value="0.18819655521783182" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_profile.xml" value="0.38179347826086957" />
-        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_trending.xml" value="0.22" />
+        <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/fragment_trending.xml" value="0.25" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/historywallet.xml" value="0.18226600985221675" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/layout_banner.xml" value="0.19791666666666666" />
         <entry key="..\:/NFT-OpenHeart(VS)/nft-open-heart/open-heart-app/NFT/app/src/main/res/layout/top_item.xml" value="0.3676190476190476" />

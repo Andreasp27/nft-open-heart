@@ -13,8 +13,11 @@ color teal_200
 color teal_700
 color white
 drawable akatzuki
+drawable boredape
 drawable bottom_stroke
 drawable buttonradius
+drawable harimau
+drawable harimauungu
 drawable ic_baseline_abc_24
 drawable ic_baseline_add_24
 drawable ic_baseline_arrow_back_24
@@ -39,8 +42,12 @@ drawable ic_logo
 drawable ic_logo1
 drawable ic_wallet
 drawable image_profil
+drawable kucing
+drawable monkey
 drawable naruto
+drawable ninja
 drawable orang
+drawable orangkribo
 drawable password_selector
 font roboto
 font roboto_bold
@@ -83,6 +90,7 @@ id imageView
 id imageView2
 id imageView3
 id item
+id itemcolection
 id itemname
 id jumlah
 id last_pass
@@ -114,6 +122,8 @@ id profile_phone
 id profile_sex
 id recommend
 id recycler
+id recyclerCollected
+id recyclerCreated
 id recyclerMarket
 id recyclerTrend
 id recyclerTrend2
@@ -147,6 +157,7 @@ layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
 layout card_item
+layout collection_item
 layout fragment_collection
 layout fragment_home
 layout fragment_market

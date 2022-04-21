@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
@@ -25,7 +26,7 @@ public class Send extends AppCompatActivity {
     private String access_token;
     private Button sendBtn;
     private TextInputLayout userNum, nominal, pass;
-    private ImageButton back;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

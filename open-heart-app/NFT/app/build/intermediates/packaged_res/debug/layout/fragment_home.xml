@@ -42,6 +42,7 @@
                 android:layout_marginTop="48dp"
                 android:fontFamily="@font/roboto"
                 android:text="Recommend Creators"
+                style="@style/Theme.NFT"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/banner" />
@@ -57,6 +58,7 @@
                 android:fontFamily="@font/roboto"
                 android:text="View All"
                 android:textStyle="bold"
+                style="@style/Theme.NFT"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/banner" />
 
@@ -91,6 +93,7 @@
                 android:fontFamily="@font/roboto"
                 android:text="Trending"
                 android:textStyle="bold"
+                style="@style/Theme.NFT"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/creator" />
 
@@ -105,6 +108,7 @@
                 android:fontFamily="@font/roboto"
                 android:text="Discover More NFTs"
                 android:textStyle="bold"
+                style="@style/Theme.NFT"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/creator" />
 
