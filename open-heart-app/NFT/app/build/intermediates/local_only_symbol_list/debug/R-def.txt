@@ -52,6 +52,7 @@ drawable password_selector
 font roboto
 font roboto_bold
 font roboto_medium
+id CollectedCollection
 id Cpassword
 id add_profile_banner
 id add_profile_img
@@ -76,6 +77,7 @@ id change_pass
 id clickhere
 id collection
 id confirm_pass
+id createdCollected
 id creator
 id desc
 id donthave
