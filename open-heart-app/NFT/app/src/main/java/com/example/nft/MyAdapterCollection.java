@@ -21,6 +21,7 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
     private ArrayList<Collected> collectedArrayList;
     private Context context;
 
+
     public MyAdapterCollection(ArrayList<Collected> collectedArrayList, Context context) {
 
         this.collectedArrayList = collectedArrayList;

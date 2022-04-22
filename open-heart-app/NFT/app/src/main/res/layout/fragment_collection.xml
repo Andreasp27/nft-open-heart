@@ -44,6 +44,8 @@
         android:id="@+id/recyclerCollected"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CollectedCollection"/>
@@ -89,6 +91,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/createdCollected"/>
 
+    //empty Recycler collected
+    <ImageView
+        android:id="@+id/emptyrecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/bx_collection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textempty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Collection Is Empty"
+        android:visibility="invisible"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emptyrecycler"/>
+
+    //empty Recycler created
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addCollection"
         android:layout_width="wrap_content"
@@ -108,5 +137,6 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
@@ -21,7 +22,7 @@ public class ChangePass extends AppCompatActivity {
 
     private TextInputLayout editLastPass, editNewPass, editConfPass;
     private Button changeBtn;
-    private ImageButton backBtn;
+    private ImageView backBtn;
     private Session session;
     private String access_token;
 

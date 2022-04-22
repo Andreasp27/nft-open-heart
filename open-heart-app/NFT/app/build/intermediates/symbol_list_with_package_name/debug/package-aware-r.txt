@@ -2519,6 +2519,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable buttonradius
+drawable bx_collection
 drawable default_selected_dot
 drawable default_unselected_dot
 drawable design_fab_background
@@ -2694,6 +2695,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addCollection
 id add_profile_banner
 id add_profile_img
 id alertTitle
@@ -2828,6 +2830,7 @@ id edit_profile
 id edit_query
 id elastic
 id email
+id emptyrecycler
 id end
 id endToStart
 id end_padder
@@ -3157,6 +3160,7 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_view
+id textempty
 id textinput_counter
 id textinput_error
 id textinput_helper_text
