@@ -5,7 +5,41 @@
       <map>
         <entry key="vectorWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/image/baseline_image_24.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="autoMirrored" value="true" />
+                            <entry key="color" value="d1d1d1" />
+                            <entry key="outputName" value="ic_baseline_image_24" />
+                            <entry key="sourceFile" value="D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
       </map>

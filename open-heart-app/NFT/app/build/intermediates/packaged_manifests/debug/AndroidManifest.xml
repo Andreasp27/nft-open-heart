@@ -28,6 +28,9 @@
         android:theme="@style/Theme.NFT"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.nft.AddCollection"
+            android:exported="false" />
+        <activity
             android:name="com.example.nft.Send"
             android:exported="false"
             android:noHistory="true" />

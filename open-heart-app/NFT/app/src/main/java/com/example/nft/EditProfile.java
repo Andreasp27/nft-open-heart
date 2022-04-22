@@ -6,6 +6,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +39,7 @@ public class EditProfile extends AppCompatActivity {
     ImageButton addProfileImg, addProfileBanner;
     ImageView backBtn;
     private Integer statusImg = 0, statusBanner = 0;
-    ImageView imageProfile, imageBanner;
+    ImageView imageProfile, imageBanner, imageWallet;
     private String access_token, base;
     private Session session;
     Uri imgUri, bannerUri;
@@ -68,6 +69,7 @@ public class EditProfile extends AppCompatActivity {
         backBtn = findViewById(R.id.btn_back);
         imageProfile = findViewById(R.id.profile_img);
         imageBanner = findViewById(R.id.profile_banner);
+        imageWallet = findViewById(R.id.wallet_profile);
 
 
         //add image profile
@@ -82,6 +84,14 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getImgBanner.launch("image/*");
+            }
+        });
+
+        imageWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EditProfile.this, wallet.class);
+                startActivity(intent);
             }
         });
 

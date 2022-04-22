@@ -25,4 +25,11 @@
     <string name="nominal">Nominal Transfer</string>
     <string name="topsales">Top Sales NFTs</string>
     <string name="no_user">User Number</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_price">Price</string>
+    <string name="item_desc">Item Description</string>
+    <string name="add_img">Add Image</string>
+    <string name="publish">Publish</string>
+    <string name="add_coll">Add New Collection</string>
+
 </resources>

@@ -2539,6 +2539,7 @@ drawable ic_baseline_arrow_circle_right_25
 drawable ic_baseline_collections_24
 drawable ic_baseline_email_24
 drawable ic_baseline_home_24
+drawable ic_baseline_image_24
 drawable ic_baseline_key_24
 drawable ic_baseline_person_24
 drawable ic_baseline_store_24
@@ -2563,6 +2564,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_wallet
+drawable image_border
 drawable image_profil
 drawable kucing
 drawable loading
@@ -2696,6 +2698,8 @@ id actions
 id activity_chooser_view_content
 id add
 id addCollection
+id add_img
+id add_new_collectionTxt
 id add_profile_banner
 id add_profile_img
 id alertTitle
@@ -2711,6 +2715,7 @@ id antiClockwise
 id anticipate
 id appBarLayout
 id appBarLayout2
+id appBarLayout_add_coll
 id arc
 id asConfigured
 id async
@@ -2733,6 +2738,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_back
+id btn_back_add_coll
 id btn_back_pass
 id btn_back_send
 id btn_back_topup
@@ -2881,6 +2887,7 @@ id imageView
 id imageView2
 id imageView3
 id image_view
+id img_collection
 id immediateStop
 id included
 id info
@@ -2892,6 +2899,9 @@ id item1
 id item2
 id item3
 id item4
+id item_desc
+id item_name
+id item_price
 id item_touch_helper_previous_elevation
 id itemcolection
 id itemname
@@ -3038,6 +3048,7 @@ id profile_phone
 id profile_sex
 id progress_circular
 id progress_horizontal
+id publish
 id radio
 id ratio
 id recommend
@@ -3205,6 +3216,7 @@ id viewall
 id visible
 id visible_removing_fragment_view_tag
 id wallet
+id wallet_add_coll
 id wallet_pass
 id wallet_profile
 id west
@@ -3302,6 +3314,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_collection
 layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
@@ -3453,6 +3466,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_coll
+string add_img
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3474,6 +3489,9 @@ string fab_transformation_sheet_behavior
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string item_desc
+string item_name
+string item_price
 string item_view_role_description
 string last_pass
 string left
@@ -3578,6 +3596,7 @@ string profile_email
 string profile_name
 string profile_phone
 string profile_sex
+string publish
 string save
 string search_menu_title
 string send
