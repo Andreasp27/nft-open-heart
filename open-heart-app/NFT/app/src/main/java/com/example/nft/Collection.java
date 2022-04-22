@@ -3,6 +3,7 @@ package com.example.nft;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,8 +23,8 @@ public class Collection extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<Collected> collectedArrayList;
-    ImageView emptyI;
-    TextView emptyT;
+    ArrayList<Created> createdArrayList;
+    CardView cardCreated, cardCollected;
     FloatingActionButton addCollection;
 
 
@@ -39,8 +40,8 @@ public class Collection extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_collection, container, false);
 
-        emptyI = view.findViewById(R.id.emptyrecycler);
-        emptyT = view.findViewById(R.id.textempty);
+        cardCreated = view.findViewById(R.id.emptyCard);
+        cardCollected = view.findViewById(R.id.emptyCard2);
         addCollection = view.findViewById(R.id.addCollection);
 
         recyclerView = view.findViewById(R.id.recyclerCollected);
@@ -48,14 +49,14 @@ public class Collection extends Fragment {
         recyclerView.setLayoutManager(gridLayoutManager);
 
         collectedArrayList = new ArrayList<>();
-        addData2();
+        addData();
 
         recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
 
         if (collectedArrayList.size() == 0) {
 //            Toast.makeText(getContext(), "kososng", Toast.LENGTH_SHORT).show();
-            emptyI.setVisibility(View.VISIBLE);
-            emptyT.setVisibility(View.VISIBLE);
+            cardCollected.setVisibility(View.VISIBLE);
+
         }
 
         addCollection.setOnClickListener(new View.OnClickListener() {
@@ -66,13 +67,34 @@ public class Collection extends Fragment {
             }
         });
 
+        //created section
+        recyclerView = view.findViewById(R.id.recyclerCreated);
+        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(gridLayoutManager1);
+
+        createdArrayList = new ArrayList<>();
+        addData2();
+
+        recyclerView.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
+
+        if (createdArrayList.size() == 0) {
+            cardCreated.setVisibility(View.VISIBLE);
+        }
+
 
         return view;
     }
 
+    void addData() {
+        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+        collectedArrayList.add(ob1);
+//        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob2);
+    }
+
     void addData2() {
-//        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob1);
+//        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
+//        createdArrayList.add(ob1);
 //        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
 //        collectedArrayList.add(ob2);
     }

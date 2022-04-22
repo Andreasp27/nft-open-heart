@@ -16,16 +16,16 @@
         "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_store_24.png"
     },
     {
-        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_logo1.xml.flat",
-        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_logo1.xml"
+        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_verified_user_24.png.flat",
+        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_verified_user_24.png"
     },
     {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_visibility_off_24.png.flat",
         "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_visibility_off_24.png"
     },
     {
-        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_verified_user_24.png.flat",
-        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_verified_user_24.png"
+        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_logo1.xml.flat",
+        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_logo1.xml"
     },
     {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_baseline_visibility_off_24.xml.flat",
@@ -50,6 +50,10 @@
     {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_logo.png.flat",
         "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_created_item.xml.flat",
+        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\created_item.xml"
     },
     {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_arrow_circle_right_24.png.flat",
@@ -1108,12 +1112,12 @@
         "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_arrow_back_24.png"
     },
     {
-        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_change_pass.xml.flat",
-        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_change_pass.xml"
-    },
-    {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_image_upload.xml.flat",
         "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_image_upload.xml"
+    },
+    {
+        "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_change_pass.xml.flat",
+        "source": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_change_pass.xml"
     },
     {
         "merged": "D:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_collections_24.png.flat",
