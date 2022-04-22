@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.TopSalesViewHolder> {
@@ -38,8 +40,7 @@ public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.To
         holder.nameitem.setText(topSalesArrayList.get(position).getItemname());
         holder.price.setText(topSalesArrayList.get(position).getPrice());
         holder.growth.setText(topSalesArrayList.get(position).getGrowth());
-        holder.image.setImageResource(topSalesArrayList.get(position).getImage());
-
+        Picasso.get().load(topSalesArrayList.get(position).getImage()).into(holder.image);
 
     }
 

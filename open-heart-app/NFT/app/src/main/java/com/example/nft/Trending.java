@@ -10,17 +10,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.Session;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Trending extends Fragment {
 
     MyAdapterTopSales myAdapterTopSales;
-    RecyclerView recyclerView;
+    RecyclerView recyclerView, recyclerTop;
     ArrayList<TopSales> topSales;
     MyAdapterTrend myAdapterTrend;
     ArrayList<Trend> trendArrayList;
+    private String access_token, base;
+    private Session session;
 
 
     @Override
@@ -34,55 +44,67 @@ public class Trending extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_trending, container, false);
 
+        //get access token
+        session = new Session(getActivity().getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
+
         //recycler view top sales
-        recyclerView = view.findViewById(R.id.recyclerTrend);
+        recyclerTop = view.findViewById(R.id.recyclerTrend);
         topSales = new ArrayList<>();
 
-        addData();
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext());
 
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerTop.setLayoutManager(layoutManager);
 
         myAdapterTopSales = new MyAdapterTopSales(topSales, getContext());
-        recyclerView.setAdapter(new MyAdapterTopSales(topSales, getContext()));
 
-        //recycler view trend item
         recyclerView = view.findViewById(R.id.recyclerTrend2);
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-        addData2();
-        recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+        getData();
+
 
         return  view;
     }
 
-    void addData() {
-        TopSales ob1 = new TopSales(R.drawable.naruto, "1", "Naruto Shipuden", "120,99", "46.5 %");
-        topSales.add(ob1);
-        TopSales ob2 = new TopSales(R.drawable.naruto, "2", "Naruto Shipuden", "120,99", "46.5 %");
-        topSales.add(ob2);
-        TopSales ob3 = new TopSales(R.drawable.naruto, "3", "Naruto Shipuden", "120,99", "46.5 %");
-        topSales.add(ob3);
-    }
 
-    void addData2() {
-        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
-        trendArrayList.add(ob1);
-        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.ninja);
-        trendArrayList.add(ob2);
-        Trend ob3 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.boredape);
-        trendArrayList.add(ob3);
-        Trend ob4 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.harimau);
-        trendArrayList.add(ob4);
-        Trend ob5 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.orang);
-        trendArrayList.add(ob5);
-        Trend ob6 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.harimauungu);
-        trendArrayList.add(ob6);
-        Trend ob7 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.kucing);
-        trendArrayList.add(ob7);
-        Trend ob8 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.monkey);
-        trendArrayList.add(ob8);
-    }
+void getData(){
+    Call<ArrayList<Market.CollectionResponse>> collectionResponseCall = ApiClient.getUserService().getAllTrending("Bearer "+ access_token);
+    collectionResponseCall.enqueue(new Callback<ArrayList<Market.CollectionResponse>>() {
+        @Override
+        public void onResponse(Call<ArrayList<Market.CollectionResponse>> call, Response<ArrayList<Market.CollectionResponse>> response) {
+            if (response.isSuccessful()){
+                ArrayList<Market.CollectionResponse> data = response.body();
+                int no = 1;
+                for (Market.CollectionResponse item : data){
+                    if (no <= 3){
+                        TopSales ob1 = new TopSales(base + item.getImage_path(), Integer.toString(no), item.getNama_item(), Float.toString(item.getHarga()), Float.toString(item.getKenaikan()));
+                        topSales.add(ob1);
+
+                    }
+
+                    Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path());
+                    trendArrayList.add(obj);
+                    System.out.println("item name: " + item.getNama_item());
+
+                    no++;
+                }
+
+                recyclerTop.setAdapter(new MyAdapterTopSales(topSales, getContext()));
+                recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+            }else{
+                Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
+            }
+        }
+
+        @Override
+        public void onFailure(Call<ArrayList<Market.CollectionResponse>> call, Throwable t) {
+            Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed: "+t, Toast.LENGTH_LONG).show();
+        }
+    });
+}
 }

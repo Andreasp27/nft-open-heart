@@ -31,5 +31,7 @@
     <string name="add_img">Add Image</string>
     <string name="publish">Publish</string>
     <string name="add_coll">Add New Collection</string>
+    <string name="required">*required</string>
+    <string name="add_img_txt">click here</string>
 
 </resources>

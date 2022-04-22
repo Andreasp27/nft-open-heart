@@ -1,4 +1,4 @@
-#Fri Apr 22 17:13:24 SGT 2022
+#Sat Apr 23 00:20:00 SGT 2022
 base.1=D\:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
 base.0=D\:\\dokumen\\KULIAH\\Semester 8\\Pengembangan Aplikasi Mobile\\Tugas\\open-heart\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex

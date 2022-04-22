@@ -39,6 +39,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
+
                 <ImageView
                     android:id="@+id/logocenter"
                     android:layout_width="wrap_content"
@@ -69,6 +70,8 @@
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <TextView
         android:id="@+id/add_new_collectionTxt"
@@ -168,41 +171,58 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/add_img"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#FF9A62"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/add_img"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/item_desc"
-        app:layout_constraintTop_toBottomOf="@id/item_desc" />
-
     <ImageView
+        android:id="@+id/add_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_image_upload"
+        app:layout_constraintEnd_toEndOf="@id/img_collection"
+        app:layout_constraintTop_toTopOf="@id/img_collection"
+        app:layout_constraintStart_toStartOf="@id/img_collection"
+        app:layout_constraintBottom_toBottomOf="@id/img_collection"
+        app:layout_constraintWidth_percent="0.2"/>
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_collection"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:padding="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_img"
+        app:layout_constraintTop_toBottomOf="@id/item_desc"
         app:layout_constraintWidth_percent="0.90"
-        android:background="@drawable/image_border"
-        android:src="@drawable/ic_baseline_image_24"
-        android:padding="70dp"
+        app:layout_constraintDimensionRatio="1:0.7"
+        app:shapeAppearanceOverlay="@style/collection"
+        app:strokeColor="#FF9A62"
+        app:strokeWidth="1dp"
         />
+    <TextView
+        android:id="@+id/required_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/required"
+        android:textColor="#FF0000"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/img_collection"
+        app:layout_constraintStart_toStartOf="@id/img_collection"
+        app:layout_constraintWidth_percent=".4"/>
     <Button
         android:id="@+id/publish"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#FF9A62"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/publish"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/img_collection"
-        app:layout_constraintTop_toBottomOf="@id/img_collection" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/required_txt"
+        app:layout_constraintWidth_percent="0.90"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

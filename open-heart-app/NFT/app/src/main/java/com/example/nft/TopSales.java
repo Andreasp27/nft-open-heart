@@ -2,10 +2,10 @@ package com.example.nft;
 
 public class TopSales {
 
-    int image;
-    String noitem,itemname, price, growth;
 
-    public TopSales(int image, String noitem, String itemname, String price, String growth) {
+    String noitem,itemname, price, growth, image;
+
+    public TopSales(String image, String noitem, String itemname, String price, String growth) {
         this.image = image;
         this.noitem = noitem;
         this.itemname = itemname;
@@ -13,11 +13,11 @@ public class TopSales {
         this.growth = growth;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

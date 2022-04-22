@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
+import com.example.nft.api.RealPath;
 import com.example.nft.api.Session;
 import com.google.android.material.textfield.TextInputLayout;
 import com.squareup.picasso.Picasso;
@@ -258,14 +259,14 @@ public class EditProfile extends AppCompatActivity {
 
             //set image profil for update
             if(statusImg == 1){
-                File file = new File(getRealPathFromURI(this, imgUri));
+                File file = new File(new RealPath().getRealPathFromURI(this, imgUri));
                 RequestBody requestFile = RequestBody.create(file, MediaType.parse("image/*"));
                 body = MultipartBody.Part.createFormData("gambar_path", file.getName(), requestFile);
             }
 
             //set image profil for update
             if(statusBanner == 1){
-                File file2 = new File(getRealPathFromURI(this, bannerUri));
+                File file2 = new File(new RealPath().getRealPathFromURI(this, bannerUri));
                 RequestBody requestFile = RequestBody.create(file2, MediaType.parse("image/*"));
                 body2 = MultipartBody.Part.createFormData("banner_path", file2.getName(), requestFile);
             }
@@ -292,22 +293,6 @@ public class EditProfile extends AppCompatActivity {
         }
     }
 
-    //get the path of image
-    private String getRealPathFromURI(Context context, Uri contentUri) {
-        Cursor cursor = null;
-        try {
-            String[] proj = { MediaStore.Images.Media.DATA };
-            cursor = context.getContentResolver().query(contentUri,  proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        } catch (Exception e) {
-            Log.e("EditActivity", "getRealPathFromURI Exception : " + e.toString());
-            return "";
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
-    }
+
+
 }

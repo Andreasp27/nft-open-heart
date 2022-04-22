@@ -2551,6 +2551,7 @@ drawable ic_baseline_warning_24
 drawable ic_clock_black_24dp
 drawable ic_ethereum_eth
 drawable ic_ethereum_eth_mini
+drawable ic_image_upload
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2959,6 +2960,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id more_trending
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3060,6 +3062,7 @@ id recyclerMarket
 id recyclerTrend
 id recyclerTrend2
 id recyclerhistory
+id required_txt
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3468,6 +3471,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string add_coll
 string add_img
+string add_img_txt
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3597,6 +3601,7 @@ string profile_name
 string profile_phone
 string profile_sex
 string publish
+string required
 string save
 string search_menu_title
 string send
@@ -4631,6 +4636,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style bannerProfile
 style circular
+style collection
 style roundedImageViewRounded
 style stroke
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle

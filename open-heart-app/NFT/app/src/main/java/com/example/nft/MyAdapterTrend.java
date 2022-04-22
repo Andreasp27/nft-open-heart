@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendViewHolder> {
@@ -37,7 +39,7 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
         holder.creator.setText(trendArrayList.get(position).getCreator());
         holder.nameitem.setText(trendArrayList.get(position).getItemname());
         holder.price.setText(trendArrayList.get(position).getPrice());
-        holder.image.setImageResource(trendArrayList.get(position).getImage());
+        Picasso.get().load(trendArrayList.get(position).getImage()).into(holder.image);
 
 
     }
