@@ -7,6 +7,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -29,6 +32,7 @@ public class Home extends Fragment {
     private MyAdapterTrend adapterTrend;
     private ArrayList<Recom> recomArrayList;
     private ArrayList<Trend> trendArrayList;
+    TextView more;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,6 +66,17 @@ public class Home extends Fragment {
         imageList.add(new SlideModel(R.drawable.naruto, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.akatzuki, ScaleTypes.CENTER_CROP));
         imageSlider.setImageList(imageList);
+
+        more = view.findViewById(R.id.discover);
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController controller = Navigation.findNavController(view);
+                controller.popBackStack(R.id.home2, true);
+                controller.navigate(R.id.trending);
+            }
+        });
 
 
 

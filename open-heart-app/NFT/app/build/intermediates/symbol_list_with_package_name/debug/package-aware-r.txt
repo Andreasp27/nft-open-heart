@@ -2541,6 +2541,7 @@ drawable ic_baseline_email_24
 drawable ic_baseline_home_24
 drawable ic_baseline_image_24
 drawable ic_baseline_key_24
+drawable ic_baseline_keyboard_arrow_down_24
 drawable ic_baseline_person_24
 drawable ic_baseline_store_24
 drawable ic_baseline_trending_up_24
@@ -2793,6 +2794,7 @@ id cos
 id counterclockwise
 id createdCollected
 id creator
+id current
 id currentState
 id custom
 id customPanel
@@ -2817,6 +2819,7 @@ id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
+id discover
 id disjoint
 id donthave
 id dragAnticlockwise
@@ -2845,6 +2848,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
+id expand
 id expand_activities_button
 id expanded_menu
 id fade
@@ -3322,6 +3326,7 @@ layout activity_add_collection
 layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
+layout activity_item_preview
 layout activity_main
 layout activity_send
 layout activity_sign_up

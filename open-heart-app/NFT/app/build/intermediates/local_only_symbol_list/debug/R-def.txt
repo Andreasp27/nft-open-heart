@@ -29,6 +29,7 @@ drawable ic_baseline_email_24
 drawable ic_baseline_home_24
 drawable ic_baseline_image_24
 drawable ic_baseline_key_24
+drawable ic_baseline_keyboard_arrow_down_24
 drawable ic_baseline_person_24
 drawable ic_baseline_store_24
 drawable ic_baseline_trending_up_24
@@ -87,13 +88,16 @@ id collection
 id confirm_pass
 id createdCollected
 id creator
+id current
 id desc
+id discover
 id donthave
 id edit_profile
 id email
 id emptyCard
 id emptyCard2
 id emptyrecycler
+id expand
 id growth
 id haveAcc
 id history
@@ -174,6 +178,7 @@ layout activity_add_collection
 layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
+layout activity_item_preview
 layout activity_main
 layout activity_send
 layout activity_sign_up
