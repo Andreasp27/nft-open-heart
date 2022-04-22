@@ -106,6 +106,6 @@ public class Home extends Fragment {
         Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
         trendArrayList.add(ob2);
     }
-    
+
 
 }
