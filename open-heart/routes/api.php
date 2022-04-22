@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/wallet/history', [App\Http\Controllers\API\WalletController::class, 'history']);
 
     Route::get('/collection', [App\Http\Controllers\API\CollectionController::class, 'index']);
+    Route::get('/collection/trending', [App\Http\Controllers\API\CollectionController::class, 'trending']);
     Route::get('/collection/mycollection', [App\Http\Controllers\API\CollectionController::class, 'showById']);
     Route::post('/collection/create', [App\Http\Controllers\API\CollectionController::class, 'create']);
     Route::post('/collection/item', [App\Http\Controllers\API\CollectionController::class, 'cariKoleksi']);

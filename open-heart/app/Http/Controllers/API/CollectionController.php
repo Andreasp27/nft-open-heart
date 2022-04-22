@@ -20,7 +20,7 @@ class CollectionController extends Controller
     {
         $koleksi = Koleksi::latest()->get();
         return response()
-            ->json([CollectionResource::collection($koleksi)]);
+            ->json($koleksi);
     }
 
     public function cariKoleksi(Request $request)
@@ -29,6 +29,17 @@ class CollectionController extends Controller
 
         return response()
             ->json([CollectionResource::collection($koleksi)]);
+    }
+
+    public function trending()
+    {
+        $koleksi = Koleksi::with('trending')->join('trendings', 'koleksis.id', '=', 'trendings.koleksi_id')
+            ->select('koleksis.*', 'trendings.kenaikan');
+
+        $koleksi = $koleksi->orderByDesc('trendings.kenaikan')->get();
+
+        return response()
+            ->json($koleksi);
     }
 
     public function showById()
@@ -52,11 +63,16 @@ class CollectionController extends Controller
             return response()->json($validator->errors());
         }
 
+        $imageName = time() . '.' . $request->image_path->extension();
+        $request->image_path->move(public_path('images'), $imageName);
+
+        $path = 'images/' . $imageName;
+
         $koleksi = Koleksi::Create([
             'pembuat' => auth()->user()->name,
             'nama_item' => $request->nama_item,
             'harga' => $request->harga,
-            'image_path' => $request->image_path,
+            'image_path' => $path,
             'deskripsi' => $request->deskripsi,
             'status' => 'Created',
             'user_id' => auth()->user()->id,
@@ -76,7 +92,7 @@ class CollectionController extends Controller
         ]);
 
         return response()
-            ->json(['msg' => 'Create success', 'data' => Koleksi::find($koleksi->id)]);
+            ->json(['message' => 'success']);
     }
 
     public function bid(Request $request)
