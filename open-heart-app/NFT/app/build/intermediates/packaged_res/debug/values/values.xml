@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
     <string name="add_coll">Add New Collection</string>
     <string name="add_img">Add Image</string>
+    <string name="add_img_txt">click here</string>
     <string name="app_name">NFT</string>
     <string name="back">Back</string>
     <string name="change_pass">Change Password</string>
@@ -35,6 +36,7 @@
     <string name="profile_phone">Phone Number</string>
     <string name="profile_sex">Sex</string>
     <string name="publish">Publish</string>
+    <string name="required">*required</string>
     <string name="save">Save</string>
     <string name="send">Send</string>
     <string name="top_up">Top Up</string>
@@ -66,6 +68,9 @@
     </style>
     <style name="circular">
         <item name="cornerSize">50%</item>
+    </style>
+    <style name="collection">
+        <item name="cornerSize">5%</item>
     </style>
     <style name="roundedImageViewRounded">
         <item name="cornerFamily">rounded</item>

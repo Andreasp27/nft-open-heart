@@ -18,27 +18,44 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import android.widget.Toast;
+
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.Session;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class Home extends Fragment {
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView, recyclerTrend;
     private MyAdapter adapter;
     private MyAdapterTrend adapterTrend;
     private ArrayList<Recom> recomArrayList;
     private ArrayList<Trend> trendArrayList;
-    TextView more;
+
+    private String access_token, base;
+    private Session session;
+    private TextView more;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //get access token
+        session = new Session(getActivity().getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
 
         //Trend Creator
         recyclerView = view.findViewById(R.id.recycler);
@@ -50,13 +67,14 @@ public class Home extends Fragment {
         recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
 
         //Trend item
-        recyclerView = view.findViewById(R.id.recyclerTrend);
+        recyclerTrend = view.findViewById(R.id.recyclerTrend);
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(gridLayoutManager2);
+        recyclerTrend.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-        addData2();
-        recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+//        addData2();
+//        recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+        getData();
 
 
         ImageSlider imageSlider = (ImageSlider) view.findViewById(R.id.banner);
@@ -67,7 +85,7 @@ public class Home extends Fragment {
         imageList.add(new SlideModel(R.drawable.akatzuki, ScaleTypes.CENTER_CROP));
         imageSlider.setImageList(imageList);
 
-        more = view.findViewById(R.id.discover);
+        more = view.findViewById(R.id.more_trending);
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,18 +95,6 @@ public class Home extends Fragment {
                 controller.navigate(R.id.trending);
             }
         });
-
-
-
-//        recyclerView = view.findViewById(R.id.recycler);
-//        addData();
-//
-//        adapter = new MyAdapter(recomArrayList,getContext());
-//
-//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-//
-//        recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setAdapter(adapter);
 
         return view;
     }
@@ -115,11 +121,40 @@ public class Home extends Fragment {
 //        SlideModel.add(ob1);
 //    }
 
-    void addData2() {
-        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
-        trendArrayList.add(ob1);
-        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
-        trendArrayList.add(ob2);
+//    void addData2() {
+//        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
+//        trendArrayList.add(ob1);
+//        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
+//        trendArrayList.add(ob2);
+//    }
+
+    void getData(){
+        Call<ArrayList<Market.CollectionResponse>> collectionResponseCall = ApiClient.getUserService().getAllTrending("Bearer "+ access_token);
+        collectionResponseCall.enqueue(new Callback<ArrayList<Market.CollectionResponse>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Market.CollectionResponse>> call, Response<ArrayList<Market.CollectionResponse>> response) {
+                if (response.isSuccessful()){
+                    ArrayList<Market.CollectionResponse> data = response.body();
+                    int no = 1;
+                    for (Market.CollectionResponse item : data){
+                        if (no <= 2){
+                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), "Bored APE",base + item.getImage_path());
+                            trendArrayList.add(ob1);
+
+                        }
+                        no++;
+                    }
+                    recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+                }else{
+                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Market.CollectionResponse>> call, Throwable t) {
+                Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed: "+t, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 

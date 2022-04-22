@@ -39,6 +39,7 @@ drawable ic_baseline_visibility_off_24
 drawable ic_baseline_warning_24
 drawable ic_ethereum_eth
 drawable ic_ethereum_eth_mini
+drawable ic_image_upload
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logo
@@ -90,7 +91,6 @@ id createdCollected
 id creator
 id current
 id desc
-id discover
 id donthave
 id edit_profile
 id email
@@ -121,6 +121,7 @@ id logo
 id logocenter
 id logout
 id market
+id more_trending
 id my_nav
 id nama
 id name
@@ -152,6 +153,7 @@ id recyclerMarket
 id recyclerTrend
 id recyclerTrend2
 id recyclerhistory
+id required_txt
 id searchView
 id sendTxt
 id signup
@@ -202,6 +204,7 @@ mipmap profile
 navigation my_nav
 string add_coll
 string add_img
+string add_img_txt
 string app_name
 string back
 string change_pass
@@ -226,6 +229,7 @@ string profile_name
 string profile_phone
 string profile_sex
 string publish
+string required
 string save
 string send
 string top_up
@@ -236,6 +240,7 @@ style ToolBarStyle
 style Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense
 style bannerProfile
 style circular
+style collection
 style roundedImageViewRounded
 style stroke
 xml network_security_config
