@@ -91,6 +91,8 @@ id desc
 id donthave
 id edit_profile
 id email
+id emptyCard
+id emptyCard2
 id emptyrecycler
 id growth
 id haveAcc
@@ -106,6 +108,7 @@ id item_desc
 id item_name
 id item_price
 id itemcolection
+id itemcreated
 id itemname
 id jumlah
 id last_pass
@@ -122,6 +125,7 @@ id new_pass
 id noitem
 id nominal
 id nominal_send
+id owner
 id pass_send
 id pass_top_up
 id password
@@ -177,6 +181,7 @@ layout activity_top_up
 layout activity_wallet
 layout card_item
 layout collection_item
+layout created_item
 layout fragment_collection
 layout fragment_home
 layout fragment_market

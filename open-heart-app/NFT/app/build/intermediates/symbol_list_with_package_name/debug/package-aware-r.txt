@@ -2836,6 +2836,8 @@ id edit_profile
 id edit_query
 id elastic
 id email
+id emptyCard
+id emptyCard2
 id emptyrecycler
 id end
 id endToStart
@@ -2904,6 +2906,7 @@ id item_name
 id item_price
 id item_touch_helper_previous_elevation
 id itemcolection
+id itemcreated
 id itemname
 id jumlah
 id jumpToEnd
@@ -3018,6 +3021,7 @@ id onInterceptTouchReturnSwipe
 id outline
 id outward
 id overshoot
+id owner
 id packed
 id pager_dots
 id parallax
@@ -3325,6 +3329,7 @@ layout activity_top_up
 layout activity_wallet
 layout card_item
 layout collection_item
+layout created_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -2835,6 +2835,8 @@ int id edit_profile 0x7f0900d1
 int id edit_query 0x7f0900d2
 int id elastic 0x7f0900d3
 int id email 0x7f0900d4
+int id emptyCard 0x7f09025f
+int id emptyCard2 0x7f090260
 int id emptyrecycler 0x7f0900d5
 int id end 0x7f0900d6
 int id endToStart 0x7f0900d7
@@ -2903,6 +2905,7 @@ int id item_name 0x7f090115
 int id item_price 0x7f090116
 int id item_touch_helper_previous_elevation 0x7f090117
 int id itemcolection 0x7f090118
+int id itemcreated 0x7f09025d
 int id itemname 0x7f090119
 int id jumlah 0x7f09011a
 int id jumpToEnd 0x7f09011b
@@ -3017,6 +3020,7 @@ int id onInterceptTouchReturnSwipe 0x7f090187
 int id outline 0x7f090188
 int id outward 0x7f090189
 int id overshoot 0x7f09018a
+int id owner 0x7f09025e
 int id packed 0x7f09018b
 int id pager_dots 0x7f09018c
 int id parallax 0x7f09018d
@@ -3324,6 +3328,7 @@ int layout activity_top_up 0x7f0c0023
 int layout activity_wallet 0x7f0c0024
 int layout card_item 0x7f0c0025
 int layout collection_item 0x7f0c0026
+int layout created_item 0x7f0c0091
 int layout custom_dialog 0x7f0c0027
 int layout design_bottom_navigation_item 0x7f0c0028
 int layout design_bottom_sheet_dialog 0x7f0c0029
