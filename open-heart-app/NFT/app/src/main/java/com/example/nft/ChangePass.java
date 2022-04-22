@@ -2,6 +2,7 @@ package com.example.nft;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ public class ChangePass extends AppCompatActivity {
 
     private TextInputLayout editLastPass, editNewPass, editConfPass;
     private Button changeBtn;
-    private ImageView backBtn;
+    private ImageView backBtn, wallet;
     private Session session;
     private String access_token;
 
@@ -42,11 +43,21 @@ public class ChangePass extends AppCompatActivity {
         editConfPass = findViewById(R.id.confirm_pass);
         backBtn = findViewById(R.id.btn_back_pass);
         changeBtn = findViewById(R.id.btn_change_pass);
+        wallet = findViewById(R.id.wallet_pass);
+
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChangePass.this, wallet.class);
+                startActivity(intent);
             }
         });
 

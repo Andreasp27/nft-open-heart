@@ -1,5 +1,6 @@
 package com.example.nft;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class Collection extends Fragment {
@@ -21,6 +24,7 @@ public class Collection extends Fragment {
     ArrayList<Collected> collectedArrayList;
     ImageView emptyI;
     TextView emptyT;
+    FloatingActionButton addCollection;
 
 
     @Override
@@ -37,6 +41,7 @@ public class Collection extends Fragment {
 
         emptyI = view.findViewById(R.id.emptyrecycler);
         emptyT = view.findViewById(R.id.textempty);
+        addCollection = view.findViewById(R.id.addCollection);
 
         recyclerView = view.findViewById(R.id.recyclerCollected);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
@@ -52,6 +57,14 @@ public class Collection extends Fragment {
             emptyI.setVisibility(View.VISIBLE);
             emptyT.setVisibility(View.VISIBLE);
         }
+
+        addCollection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), AddCollection.class);
+                startActivity(intent);
+            }
+        });
 
 
         return view;
