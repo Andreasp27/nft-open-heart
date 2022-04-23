@@ -1,6 +1,7 @@
 package com.example.nft;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -39,6 +41,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
         holder.imgcreator.setImageResource(recomArrayList.get(position).getImagecrea());
         holder.imgbanner.setImageResource(recomArrayList.get(position).getImagebann());
 
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                view.getContext().startActivity(new Intent(context, ItemPreviewCollection.class));
+            }
+        });
     }
 
 
@@ -51,6 +59,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
     public class RecomViewHolder  extends  RecyclerView.ViewHolder{
         private TextView creator, desc;
         private ImageView imgcreator, imgbanner;
+        private CardView cardView;
 
         public RecomViewHolder(View itemView) {
             super(itemView);
@@ -58,6 +67,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
             desc = itemView.findViewById(R.id.desc);
             imgcreator = itemView.findViewById(R.id.creator);
             imgbanner = itemView.findViewById(R.id.recommend);
+            cardView = itemView.findViewById(R.id.recomcreator);
 
         }
     }

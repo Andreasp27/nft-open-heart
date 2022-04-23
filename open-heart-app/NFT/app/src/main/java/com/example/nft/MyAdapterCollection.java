@@ -49,7 +49,7 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
             @Override
             public void onClick(View view) {
 //                Toast.makeText(view.getContext(), "ini", Toast.LENGTH_SHORT).show();
-                view.getContext().startActivity(new Intent(context, ItemPreview.class));
+                view.getContext().startActivity(new Intent(context, ItemPreviewCollection.class));
 
             }
         });
