@@ -1,4 +1,4 @@
-#Sat Apr 23 00:11:07 ICT 2022
+#Sat Apr 23 17:14:48 ICT 2022
 base.1=D\:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
 base.0=D\:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex

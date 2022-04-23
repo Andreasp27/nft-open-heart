@@ -67,7 +67,6 @@ public class Trending extends Fragment {
 
         getData();
 
-
         return  view;
     }
 
