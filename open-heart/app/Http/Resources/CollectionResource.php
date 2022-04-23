@@ -23,6 +23,7 @@ class CollectionResource extends JsonResource
             'deskripsi' => $this->deskripsi,
             'status' => $this->status,
             'user_id' => $this->user_id,
+            'pemilik' => $this->user->name,
             'trending_id' => $this->trending_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

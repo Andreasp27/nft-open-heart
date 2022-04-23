@@ -25,10 +25,11 @@ class CollectionController extends Controller
 
     public function cariKoleksi(Request $request)
     {
-        $koleksi = Koleksi::where('id', $request->id)->get();
+        $koleksi = Koleksi::with('trending', 'user', 'history');
+        $koleksi = $koleksi->find($request->id);
 
         return response()
-            ->json([CollectionResource::collection($koleksi)]);
+            ->json($koleksi);
     }
 
     public function trending()
