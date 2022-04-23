@@ -69,7 +69,7 @@ public class Market extends Fragment {
                 if (response.isSuccessful()){
                     ArrayList<CollectionResponse> data = response.body();
                     for (CollectionResponse item : data){
-                        Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path());
+                        Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path(), item.getId());
                         trendArrayList.add(obj);
                         System.out.println("item name: " + item.getNama_item());
                     }
@@ -88,12 +88,39 @@ public class Market extends Fragment {
     }
 
     public class CollectionResponse{
+        private int id;
         private String pembuat;
         private String nama_item;
         private float harga;
         private String deskripsi;
         private String image_path;
         private float kenaikan;
+        private EditProfile.ProfileRR user;
+        private ArrayList<ItemPreview.History> history;
+
+        public ArrayList<ItemPreview.History> getHistory() {
+            return history;
+        }
+
+        public void setHistory(ArrayList<ItemPreview.History> history) {
+            this.history = history;
+        }
+
+        public EditProfile.ProfileRR getUser() {
+            return user;
+        }
+
+        public void setUser(EditProfile.ProfileRR user) {
+            this.user = user;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
 
         public float getKenaikan() {
             return kenaikan;

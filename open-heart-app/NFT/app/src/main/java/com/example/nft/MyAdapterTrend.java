@@ -1,13 +1,16 @@
 package com.example.nft;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -41,6 +44,16 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
         holder.price.setText(trendArrayList.get(position).getPrice());
         Picasso.get().load(trendArrayList.get(position).getImage()).into(holder.image);
 
+        int post = position;
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ItemPreview.class);
+                intent.putExtra("id", trendArrayList.get(post).getId());
+                view.getContext().startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -54,6 +67,7 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
     public class TrendViewHolder  extends  RecyclerView.ViewHolder{
         private TextView creator, nameitem, price;
         private ImageView image;
+        private CardView cardView;
 
         public TrendViewHolder(View itemView) {
             super(itemView);
@@ -61,6 +75,7 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
             nameitem = itemView.findViewById(R.id.itemname);
             price = itemView.findViewById(R.id.price);
             image = itemView.findViewById(R.id.item);
+            cardView = itemView.findViewById(R.id.itemcolection);
 
         }
     }

@@ -23,6 +23,7 @@ public class ApiClient {
 
                 .baseUrl("http://192.168.1.7/api/")
 
+
                 .client(okHttpClient)
                 .build();
         return  retrofit;

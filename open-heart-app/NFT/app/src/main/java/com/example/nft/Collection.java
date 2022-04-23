@@ -81,7 +81,6 @@ public class Collection extends Fragment {
             cardCreated.setVisibility(View.VISIBLE);
         }
 
-
         return view;
     }
 
@@ -93,9 +92,7 @@ public class Collection extends Fragment {
     }
 
     void addData2() {
-//        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
-//        createdArrayList.add(ob1);
-//        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob2);
+        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
+        createdArrayList.add(ob1);
     }
 }

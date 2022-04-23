@@ -15,8 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -39,6 +41,7 @@ public class Home extends Fragment {
     private MyAdapterTrend adapterTrend;
     private ArrayList<Recom> recomArrayList;
     private ArrayList<Trend> trendArrayList;
+
     private String access_token, base;
     private Session session;
     private TextView more;
@@ -64,6 +67,7 @@ public class Home extends Fragment {
         addData();
         recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
 
+
         //Trend item
         recyclerTrend = view.findViewById(R.id.recyclerTrend);
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
@@ -72,6 +76,7 @@ public class Home extends Fragment {
 
         //Trending data
         getData();
+
 
         ImageSlider imageSlider = (ImageSlider) view.findViewById(R.id.banner);
         ArrayList <SlideModel> imageList = new ArrayList<>();
@@ -134,7 +139,7 @@ public class Home extends Fragment {
                     int no = 1;
                     for (Market.CollectionResponse item : data){
                         if (no <= 2){
-                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), "Bored APE",base + item.getImage_path());
+                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(),base + item.getImage_path(), item.getId() );
                             trendArrayList.add(ob1);
 
                         }

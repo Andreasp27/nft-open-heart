@@ -1,6 +1,7 @@
 package com.example.nft;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -42,6 +44,13 @@ public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.To
         holder.growth.setText(topSalesArrayList.get(position).getGrowth());
         Picasso.get().load(topSalesArrayList.get(position).getImage()).into(holder.image);
 
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.getContext().startActivity(new Intent(context, ItemPreview.class));
+            }
+        });
+
     }
 
 
@@ -54,6 +63,7 @@ public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.To
     public class TopSalesViewHolder  extends  RecyclerView.ViewHolder{
         private TextView noitem, nameitem, price, growth;
         private ImageView image;
+        private CardView cardView;
 
         public TopSalesViewHolder(View itemView) {
             super(itemView);
@@ -62,6 +72,7 @@ public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.To
             price = itemView.findViewById(R.id.price);
             growth = itemView.findViewById(R.id.growth);
             image = itemView.findViewById(R.id.image);
+            cardView = itemView.findViewById(R.id.topcard);
 
         }
     }

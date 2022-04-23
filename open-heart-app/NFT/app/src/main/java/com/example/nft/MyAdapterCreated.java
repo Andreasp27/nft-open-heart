@@ -1,6 +1,7 @@
 package com.example.nft;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +48,7 @@ public class MyAdapterCreated extends RecyclerView.Adapter<MyAdapterCreated.Crea
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "ini1", Toast.LENGTH_SHORT).show();
+                view.getContext().startActivity(new Intent(context, ItemPreviewCollection.class));
             }
         });
     }

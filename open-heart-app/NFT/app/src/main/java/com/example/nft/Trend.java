@@ -2,12 +2,14 @@ package com.example.nft;
 
 public class Trend {
     String creator, price, itemname, image;
+    int id;
 
-    public Trend (String itemname, String price, String creator, String image){
+    public Trend (String itemname, String price, String creator, String image, int id){
         this.creator = creator;
         this.itemname = itemname;
         this.price = price;
         this.image = image;
+        this.id = id;
     }
 
     public String getCreator() {
@@ -40,5 +42,13 @@ public class Trend {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

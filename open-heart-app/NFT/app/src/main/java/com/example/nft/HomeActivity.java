@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         session = new Session(this);
         session.setBase("http://192.168.1.7/");
 
+
        nav = findViewById(R.id.bottomNavigationView);
 //        navController = Navigation.findNavController(this, R.id.navHost);
 

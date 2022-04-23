@@ -29,6 +29,7 @@ drawable ic_baseline_email_24
 drawable ic_baseline_home_24
 drawable ic_baseline_image_24
 drawable ic_baseline_key_24
+drawable ic_baseline_keyboard_arrow_down_24
 drawable ic_baseline_person_24
 drawable ic_baseline_store_24
 drawable ic_baseline_trending_up_24
@@ -58,6 +59,7 @@ font roboto_bold
 font roboto_medium
 id CollectedCollection
 id Cpassword
+id acceptbid
 id addCollection
 id add_img
 id add_new_collectionTxt
@@ -69,6 +71,7 @@ id appBarLayout2
 id appBarLayout_add_coll
 id balance
 id banner
+id bidder
 id bottomNavigationView
 id btn_back
 id btn_back_add_coll
@@ -80,14 +83,15 @@ id btn_change_pass
 id btn_profile
 id btn_send
 id btn_top_up
-id cardView
 id cardView2
 id change_pass
 id clickhere
 id collection
+id collection_image
 id confirm_pass
 id createdCollected
 id creator
+id current
 id desc
 id donthave
 id edit_profile
@@ -95,6 +99,7 @@ id email
 id emptyCard
 id emptyCard2
 id emptyrecycler
+id expand
 id growth
 id haveAcc
 id history
@@ -142,11 +147,14 @@ id profile_name
 id profile_phone
 id profile_sex
 id publish
+id recomcreator
 id recommend
 id recycler
 id recyclerCollected
 id recyclerCreated
+id recyclerItemPreviewCollection
 id recyclerMarket
+id recyclerProvenance
 id recyclerTrend
 id recyclerTrend2
 id recyclerhistory
@@ -155,6 +163,7 @@ id searchView
 id sendTxt
 id signup
 id sks
+id status
 id textView
 id textView2
 id textView3
@@ -162,8 +171,10 @@ id textView4
 id textView5
 id textView6
 id textempty
+id time
 id tokenTxt
 id top_bar
+id topcard
 id topupTxt
 id trending
 id user_send
@@ -177,11 +188,14 @@ layout activity_add_collection
 layout activity_change_pass
 layout activity_edit_profile
 layout activity_home
+layout activity_item_preview
+layout activity_item_preview_collection
 layout activity_main
 layout activity_send
 layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
+layout bidder
 layout card_item
 layout collection_item
 layout created_item
@@ -191,6 +205,7 @@ layout fragment_market
 layout fragment_profil_option
 layout fragment_trending
 layout historywallet
+layout provenance
 layout top_item
 layout trend_item
 menu bottom_menu

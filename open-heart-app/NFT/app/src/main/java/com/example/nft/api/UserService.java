@@ -3,6 +3,7 @@ package com.example.nft.api;
 import com.example.nft.ChangePass;
 import com.example.nft.EditProfile;
 import com.example.nft.HistoryWallet;
+import com.example.nft.ItemPreview;
 import com.example.nft.Market;
 import com.example.nft.Send;
 import com.example.nft.SignUp;
@@ -83,4 +84,8 @@ public interface UserService {
                                                   @Part("harga") RequestBody harga,
                                                   @Part("deskripsi") RequestBody deskripsi,
                                                   @Part MultipartBody.Part fileImg);
+
+    @POST("collection/item")
+    Call<Market.CollectionResponse> getCollection(@Header("Authorization") String auth,
+                                                  @Body ItemPreview.IdRequest id);
 }
