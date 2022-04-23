@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.nft.api.ApiClient;
 import com.example.nft.api.LoginRequest;
 import com.example.nft.api.LoginResponse;
+import com.example.nft.api.Session;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout email, password;
     Button btnLogin;
     TextView dont, click;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,8 +129,10 @@ public class MainActivity extends AppCompatActivity {
                     LoginResponse access_token = response.body();
 
                     Toast.makeText(MainActivity.this, "Login success" , Toast.LENGTH_LONG).show();
+                    session = new Session(MainActivity.this);
+                    session.setAccessToken(access_token.getAccess_token());
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    intent.putExtra("key", access_token.getAccess_token());
+//                    intent.putExtra("key", access_token.getAccess_token());
                     startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_LONG).show();

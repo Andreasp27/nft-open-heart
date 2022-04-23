@@ -70,10 +70,8 @@ public class Home extends Fragment {
         recyclerTrend.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-//        addData2();
-//        recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+        //Trending data
         getData();
-
 
         ImageSlider imageSlider = (ImageSlider) view.findViewById(R.id.banner);
         ArrayList <SlideModel> imageList = new ArrayList<>();
@@ -93,10 +91,6 @@ public class Home extends Fragment {
                 controller.navigate(R.id.trending);
             }
         });
-
-
-
-
 
         return view;
     }
@@ -148,7 +142,7 @@ public class Home extends Fragment {
                     }
                     recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
-                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed " + response.body(), Toast.LENGTH_LONG).show();
                 }
             }
 

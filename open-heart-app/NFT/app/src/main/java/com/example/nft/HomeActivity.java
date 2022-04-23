@@ -38,16 +38,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         getSupportActionBar().hide();
-        //get access token
-        access_token = getIntent().getExtras().getString("key");
 
-        //save access token
-        Bundle bundle = new Bundle();
-        bundle.putString("access_token", access_token);
+        //set base
         session = new Session(this);
-        session.setAccessToken(access_token);
-
-        session.setBase("http://192.168.1.8/");
+        session.setBase("http://192.168.1.7/");
 
        nav = findViewById(R.id.bottomNavigationView);
 //        navController = Navigation.findNavController(this, R.id.navHost);
