@@ -29,4 +29,13 @@ public class Session {
         String base = prefs.getString("base","");
         return base;
     }
+
+    public void setId(String id) {
+        prefs.edit().putString("id", id).commit();
+    }
+
+    public String getId() {
+        String id = prefs.getString("id","");
+        return id;
+    }
 }

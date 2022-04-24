@@ -74,6 +74,8 @@ id appBarLayout2
 id appBarLayout_add_coll
 id balance
 id banner
+id bid
+id bidBtn
 id bidder
 id bio
 id bottomNavigationView
@@ -90,8 +92,13 @@ id btn_top_up
 id cardView2
 id change_pass
 id clickhere
+id collCreator
+id collDesc
+id collOwner
+id collPrice
 id collection
 id collection_image
+id collection_img
 id confirm_pass
 id createdCollected
 id creator
@@ -117,6 +124,7 @@ id imageView4
 id imageView5
 id img_collection
 id item
+id itemCollName
 id item_desc
 id item_name
 id item_price
@@ -196,6 +204,8 @@ id username
 id viewall
 id wallet
 id wallet_add_coll
+id wallet_item
+id wallet_item_coll
 id wallet_pass
 id wallet_profile
 layout activity_add_collection

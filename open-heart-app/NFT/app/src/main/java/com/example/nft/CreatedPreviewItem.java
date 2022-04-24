@@ -53,7 +53,7 @@ public class CreatedPreviewItem extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
 
         createdArrayList = new ArrayList<>();
-        addData2();
+//        addData2();
 
         recyclerView.setAdapter(new MyAdapterCreated(createdArrayList, CreatedPreviewItem.this));
 
@@ -63,9 +63,9 @@ public class CreatedPreviewItem extends AppCompatActivity {
 
     }
 
-    void addData2() {
-        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
-        createdArrayList.add(ob1);
-    }
+//    void addData2() {
+//        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
+//        createdArrayList.add(ob1);
+//    }
 
 }

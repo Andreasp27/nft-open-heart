@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzcoskun.imageslider.interfaces.ItemClickListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -43,13 +44,15 @@ public class MyAdapterCollection extends RecyclerView.Adapter<MyAdapterCollectio
         holder.creator.setText(collectedArrayList.get(position).getCreator());
         holder.nameitem.setText(collectedArrayList.get(position).getItemname());
         holder.price.setText(collectedArrayList.get(position).getPrice());
-        holder.image.setImageResource(collectedArrayList.get(position).getImageCol());
+        Picasso.get().load(collectedArrayList.get(position).getImageCol()).into(holder.image);
 
+        int post = position;
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(view.getContext(), "ini", Toast.LENGTH_SHORT).show();
-                view.getContext().startActivity(new Intent(context, ItemPreviewCollection.class));
+                Intent intent = new Intent(context, ItemPreviewCollection.class);
+                intent.putExtra("id", collectedArrayList.get(post).getId());
+                view.getContext().startActivity(intent);
 
             }
         });

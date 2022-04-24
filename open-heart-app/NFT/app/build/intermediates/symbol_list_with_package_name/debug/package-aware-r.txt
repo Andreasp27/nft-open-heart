@@ -2736,6 +2736,8 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id bid
+id bidBtn
 id bidder
 id bio
 id blocking
@@ -2784,9 +2786,14 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id collCreator
+id collDesc
+id collOwner
+id collPrice
 id collapseActionView
 id collection
 id collection_image
+id collection_img
 id compress
 id confirm_button
 id confirm_pass
@@ -2914,6 +2921,7 @@ id item1
 id item2
 id item3
 id item4
+id itemCollName
 id item_desc
 id item_name
 id item_price
@@ -3248,6 +3256,8 @@ id visible
 id visible_removing_fragment_view_tag
 id wallet
 id wallet_add_coll
+id wallet_item
+id wallet_item_coll
 id wallet_pass
 id wallet_profile
 id west

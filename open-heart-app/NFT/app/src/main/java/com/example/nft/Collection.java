@@ -15,18 +15,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.Session;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Collection extends Fragment {
 
-    RecyclerView recyclerView;
+    RecyclerView recyclerView, recyclerCreated;
     ArrayList<Collected> collectedArrayList;
     ArrayList<Created> createdArrayList;
     CardView cardCreated, cardCollected;
     FloatingActionButton addCollection;
     TextView See1, See2;
+
+    private String access_token, base;
+    private Session session;
+
 
 
     @Override
@@ -41,9 +51,15 @@ public class Collection extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_collection, container, false);
 
+        //get access token
+        session = new Session(getActivity().getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
+
         cardCreated = view.findViewById(R.id.emptyCard);
         cardCollected = view.findViewById(R.id.emptyCard2);
         addCollection = view.findViewById(R.id.addCollection);
+
 
         //see all button
         See1 = view.findViewById(R.id.seeAll1);
@@ -67,14 +83,22 @@ public class Collection extends Fragment {
 
 
         //Collection Section
+
         recyclerView = view.findViewById(R.id.recyclerCollected);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         collectedArrayList = new ArrayList<>();
-        addData();
 
-        recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
+        //created section
+        recyclerCreated = view.findViewById(R.id.recyclerCreated);
+        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerCreated.setLayoutManager(gridLayoutManager1);
+
+        createdArrayList = new ArrayList<>();
+
+        getDataCollection();
+
 
         //Check collected length
         if (collectedArrayList.size() == 0) {
@@ -89,16 +113,6 @@ public class Collection extends Fragment {
             }
         });
 
-        //created section
-        recyclerView = view.findViewById(R.id.recyclerCreated);
-        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(gridLayoutManager1);
-
-        createdArrayList = new ArrayList<>();
-        addData2();
-
-        recyclerView.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
-
         //Check created length
         if (createdArrayList.size() == 0) {
             cardCreated.setVisibility(View.VISIBLE);
@@ -107,13 +121,81 @@ public class Collection extends Fragment {
         return view;
     }
 
-    void addData() {
-        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob1);
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
-    void addData2() {
-        Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
-        createdArrayList.add(ob1);
+
+    public void getDataCollection(){
+        Call<MyCollectionResponse> myCollection = ApiClient.getUserService().getAllMyCollection("Bearer "+ access_token);
+        myCollection.enqueue(new Callback<MyCollectionResponse>() {
+            @Override
+            public void onResponse(Call<MyCollectionResponse> call, Response<MyCollectionResponse> response) {
+                if (response.isSuccessful()){
+                    ArrayList<Market.CollectionResponse> dataCreated = response.body().getCreated();
+                    ArrayList<Market.CollectionResponse> dataCollected = response.body().getCollected();
+                    int totalCollected = 1;
+                    int totalCreated = 1;
+
+                    for (Market.CollectionResponse item : dataCollected){
+                        if(totalCollected <= 2){
+                            Collected ob1 = new Collected(base + item.getImage_path(), item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), item.getId());
+                            collectedArrayList.add(ob1);
+                            totalCollected++;
+                        }
+                    }
+
+                    for (Market.CollectionResponse item : dataCreated){
+                        if(totalCreated <= 2){
+                        Created ob2 = new Created(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path(), item.getId());
+                        createdArrayList.add(ob2);
+                        totalCreated++;
+                        }
+                    }
+
+                    recyclerCreated.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
+                    recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
+
+                    if (collectedArrayList.size() == 0) {
+                        cardCollected.setVisibility(View.VISIBLE);
+                    }
+
+                    if (createdArrayList.size() == 0) {
+                        cardCreated.setVisibility(View.VISIBLE);
+                    }
+
+                }else{
+                    Toast.makeText(getContext(), "Fetch data Failed", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MyCollectionResponse> call, Throwable t) {
+                Toast.makeText(getContext(), "Fetch data Failed: " + t , Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public class MyCollectionResponse{
+        private ArrayList<Market.CollectionResponse> created;
+        private ArrayList<Market.CollectionResponse> collected;
+
+        public ArrayList<Market.CollectionResponse> getCollected() {
+            return collected;
+        }
+
+        public void setCollected(ArrayList<Market.CollectionResponse> collected) {
+            this.collected = collected;
+        }
+
+        public ArrayList<Market.CollectionResponse> getCreated() {
+            return created;
+        }
+
+        public void setCreated(ArrayList<Market.CollectionResponse> created) {
+            this.created = created;
+        }
     }
 }

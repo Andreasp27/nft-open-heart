@@ -1,6 +1,7 @@
 package com.example.nft;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,12 +11,15 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
+import com.example.nft.api.MessageResponse;
 import com.example.nft.api.Session;
+import com.google.android.material.textfield.TextInputLayout;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -28,15 +32,16 @@ import retrofit2.Response;
 
 public class ItemPreview extends AppCompatActivity {
 
-    ImageView expand, back;
+    ImageView expand, back, itemImage, wallet;
     TextView desc, itemName, itemPrice, itemDesc, itemOwner, itemCreator;
-    ImageView itemImage;
+    TextInputLayout bid;
+    Button bidButton;
     RecyclerView recyclerView;
     ArrayList<Provenance> provenanceArrayList;
     MyAdapterProvenance myAdapterProvenance;
     private String access_token, base;
     private Session session;
-    int id;
+    int id, idUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,7 @@ public class ItemPreview extends AppCompatActivity {
         session = new Session(this);
         access_token = session.getAccessToken();
         base = session.getBase();
+        idUser = Integer.parseInt(session.getId());
 
         desc = findViewById(R.id.desc);
         expand = findViewById(R.id.expand);
@@ -63,7 +69,10 @@ public class ItemPreview extends AppCompatActivity {
         itemDesc = findViewById(R.id.desc);
         itemOwner = findViewById(R.id.owner);
         itemCreator = findViewById(R.id.creator);
+        bid = findViewById(R.id.bid);
         itemImage = findViewById(R.id.collection_image);
+        wallet = findViewById(R.id.wallet_item);
+        bidButton = findViewById(R.id.bidBtn);
 
         getDataCollection();
 
@@ -81,11 +90,24 @@ public class ItemPreview extends AppCompatActivity {
             }
         });
 
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ItemPreview.this, wallet.class);
+                startActivity(intent);
+            }
+        });
+        bidButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                placeBid();
+            }
+        });
+
         recyclerView = findViewById(R.id.recyclerProvenance);
         provenanceArrayList = new ArrayList<>();
 
         myAdapterProvenance = new MyAdapterProvenance(provenanceArrayList, this);
-//        addData();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -94,16 +116,7 @@ public class ItemPreview extends AppCompatActivity {
 
 
     }
-    void addData() {
-        Provenance ob1 = new Provenance("Bambank123", "Purchased", "120 SKS", "2022-03 -17 12:03:45" );
-        provenanceArrayList.add(ob1);
-        Provenance ob2 = new Provenance("Bambank123", "Purchased", "120 SKS", "2022-03 -17 12:03:45" );
-        provenanceArrayList.add(ob2);
-        Provenance ob3 = new Provenance("Bambank123", "Purchased", "120 SKS", "2022-03 -17 12:03:45" );
-        provenanceArrayList.add(ob3);
-        Provenance ob4 = new Provenance("Bambank123", "Purchased", "120 SKS", "2022-03 -17 12:03:45" );
-        provenanceArrayList.add(ob4);
-    }
+
 
     public void getDataCollection(){
         IdRequest idRequest = new IdRequest();
@@ -114,6 +127,11 @@ public class ItemPreview extends AppCompatActivity {
             public void onResponse(Call<Market.CollectionResponse> call, Response<Market.CollectionResponse> response) {
                 if (response.isSuccessful()){
 
+                    if(response.body().getUser().getId() != idUser){
+                        bid.setVisibility(View.VISIBLE);
+                        bidButton.setVisibility(View.VISIBLE);
+                    }
+
                     //set view
                     itemName.setText(response.body().getNama_item());
                     itemPrice.setText(Float.toString(response.body().getHarga()));
@@ -122,12 +140,19 @@ public class ItemPreview extends AppCompatActivity {
                     itemCreator.setText(response.body().getPembuat());
                     Picasso.get().load(base + response.body().getImage_path()).into(itemImage);
 
+                    for (Market.BidderList itemBid : response.body().getDaftarbid()){
+                        if(itemBid.getUser().getId() == idUser){
+                            bid.getEditText().setText(Float.toString(itemBid.getHarga_bid()));
+                        }
+                    }
+
                     for(ItemPreview.History item : response.body().getHistory()){
                         String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(item.getCreated_at());
                         Provenance ob1 = new Provenance(item.getNama(), item.getAksi(), Float.toString(item.getHarga()) + " SKS", date );
                         provenanceArrayList.add(ob1);
                     }
                     recyclerView.setAdapter(new MyAdapterProvenance(provenanceArrayList, getApplicationContext()));
+
 
                 }else{
                     Toast.makeText(getApplicationContext(), "fetch data failed", Toast.LENGTH_LONG).show();
@@ -143,7 +168,40 @@ public class ItemPreview extends AppCompatActivity {
         });
     }
 
-    public  class IdRequest{
+    public void placeBid(){
+        BidRequest bidRequest = new BidRequest();
+        bidRequest.setJumlah_bid(Float.parseFloat(bid.getEditText().getText().toString()));
+        bidRequest.setId_koleksi(id);
+
+        Call<MessageResponse> bidRequestCall = ApiClient.getUserService().placeBid("Bearer "+ access_token, bidRequest);
+        bidRequestCall.enqueue(new Callback<MessageResponse>() {
+            @Override
+            public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
+                if (response.isSuccessful()){
+                    if (response.body().getMessage().equals("success")){
+                        Toast.makeText(getApplicationContext(), "Place bid Success", Toast.LENGTH_LONG).show();
+                        refreshActivity();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Place bid Failed", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Place bid failed", Toast.LENGTH_LONG).show();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MessageResponse> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Place bid failed: " + t, Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
+
+    public static class IdRequest{
+
+        private int id;
+
         public int getId() {
             return id;
         }
@@ -151,8 +209,27 @@ public class ItemPreview extends AppCompatActivity {
         public void setId(int id) {
             this.id = id;
         }
+    }
 
-        private int id;
+    public class BidRequest{
+        private float jumlah_bid;
+        private int id_koleksi;
+
+        public float getJumlah_bid() {
+            return jumlah_bid;
+        }
+
+        public void setJumlah_bid(float jumlah_bid) {
+            this.jumlah_bid = jumlah_bid;
+        }
+
+        public int getId_koleksi() {
+            return id_koleksi;
+        }
+
+        public void setId_koleksi(int id_koleksi) {
+            this.id_koleksi = id_koleksi;
+        }
     }
 
     public class History{
@@ -192,6 +269,13 @@ public class ItemPreview extends AppCompatActivity {
         public void setCreated_at(Date created_at) {
             this.created_at = created_at;
         }
+    }
+
+    public void refreshActivity() {
+        Intent i = new Intent(this, Market.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        finish();
     }
 
 }

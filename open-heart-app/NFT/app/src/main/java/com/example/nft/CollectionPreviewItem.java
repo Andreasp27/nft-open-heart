@@ -53,7 +53,7 @@ public class CollectionPreviewItem extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
 
         collectedArrayList = new ArrayList<>();
-        addData();
+//        addData();
 
         recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, CollectionPreviewItem.this));
 
@@ -62,20 +62,20 @@ public class CollectionPreviewItem extends AppCompatActivity {
         }
 
     }
-    void addData(){
-        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob1);
-        Collected ob2 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob2);
-        Collected ob3 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob3);
-        Collected ob4 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob4);
-        Collected ob5 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob5);
-        Collected ob6 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob6);
-        Collected ob7 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-        collectedArrayList.add(ob7);
-    }
+//    void addData(){
+//        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob1);
+//        Collected ob2 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob2);
+//        Collected ob3 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob3);
+//        Collected ob4 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob4);
+//        Collected ob5 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob5);
+//        Collected ob6 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob6);
+//        Collected ob7 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
+//        collectedArrayList.add(ob7);
+//    }
 }

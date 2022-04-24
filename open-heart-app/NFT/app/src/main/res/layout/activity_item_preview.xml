@@ -52,7 +52,7 @@
                     app:layout_constraintVertical_bias="0.6" />
 
                 <ImageView
-                    android:id="@+id/wallet_add_coll"
+                    android:id="@+id/wallet_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -286,7 +286,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/item_name"
+                        android:id="@+id/bid"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -299,7 +299,8 @@
                         app:boxCornerRadiusBottomStart="5dp"
                         app:boxCornerRadiusTopEnd="5dp"
                         app:boxCornerRadiusTopStart="5dp"
-                        app:errorEnabled="true">
+                        app:errorEnabled="true"
+                        android:visibility="invisible">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -313,6 +314,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
+                        android:id="@+id/bidBtn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
@@ -321,7 +323,8 @@
                         android:layout_weight="2"
                         android:fontFamily="@font/roboto_bold"
                         android:text="Place bid"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:visibility="invisible"/>
 
                 </LinearLayout>
 
