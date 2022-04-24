@@ -12,6 +12,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable _650638328
 drawable akatzuki
 drawable boredape
 drawable bottom_stroke
@@ -19,6 +20,7 @@ drawable buttonradius
 drawable bx_collection
 drawable harimau
 drawable harimauungu
+drawable heart
 drawable ic_baseline_abc_24
 drawable ic_baseline_add_24
 drawable ic_baseline_arrow_back_24
@@ -54,6 +56,7 @@ drawable ninja
 drawable orang
 drawable orangkribo
 drawable password_selector
+drawable share
 font roboto
 font roboto_bold
 font roboto_medium
@@ -71,7 +74,10 @@ id appBarLayout2
 id appBarLayout_add_coll
 id balance
 id banner
+id bid
+id bidBtn
 id bidder
+id bio
 id bottomNavigationView
 id btn_back
 id btn_back_add_coll
@@ -86,11 +92,17 @@ id btn_top_up
 id cardView2
 id change_pass
 id clickhere
+id collCreator
+id collDesc
+id collOwner
+id collPrice
 id collection
 id collection_image
+id collection_img
 id confirm_pass
 id createdCollected
 id creator
+id creatorname
 id current
 id desc
 id donthave
@@ -108,8 +120,10 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id img_collection
 id item
+id itemCollName
 id item_desc
 id item_name
 id item_price
@@ -118,6 +132,8 @@ id itemcreated
 id itemname
 id jumlah
 id last_pass
+id like
+id linearLayout
 id login
 id logo
 id logocenter
@@ -132,6 +148,7 @@ id new_pass
 id noitem
 id nominal
 id nominal_send
+id ownedItem
 id owner
 id pass_send
 id pass_top_up
@@ -161,6 +178,7 @@ id recyclerhistory
 id required_txt
 id searchView
 id sendTxt
+id share
 id signup
 id sks
 id status
@@ -182,10 +200,13 @@ id username
 id viewall
 id wallet
 id wallet_add_coll
+id wallet_item
+id wallet_item_coll
 id wallet_pass
 id wallet_profile
 layout activity_add_collection
 layout activity_change_pass
+layout activity_creator_page
 layout activity_edit_profile
 layout activity_home
 layout activity_item_preview

@@ -97,6 +97,15 @@ public class Market extends Fragment {
         private float kenaikan;
         private EditProfile.ProfileRR user;
         private ArrayList<ItemPreview.History> history;
+        private ArrayList<BidderList> daftarbid;
+
+        public ArrayList<BidderList> getDaftarbid() {
+            return daftarbid;
+        }
+
+        public void setDaftarbid(ArrayList<BidderList> daftarbid) {
+            this.daftarbid = daftarbid;
+        }
 
         public ArrayList<ItemPreview.History> getHistory() {
             return history;
@@ -168,6 +177,45 @@ public class Market extends Fragment {
 
         public void setImage_path(String image_path) {
             this.image_path = image_path;
+        }
+    }
+
+    public class BidderList{
+        private String nomor_user;
+        private float harga_bid;
+        private int id;
+        private EditProfile.ProfileRR user;
+
+        public EditProfile.ProfileRR getUser() {
+            return user;
+        }
+
+        public void setUser(EditProfile.ProfileRR user) {
+            this.user = user;
+        }
+
+        public String getNomor_user() {
+            return nomor_user;
+        }
+
+        public void setNomor_user(String nomor_user) {
+            this.nomor_user = nomor_user;
+        }
+
+        public float getHarga_bid() {
+            return harga_bid;
+        }
+
+        public void setHarga_bid(float harga_bid) {
+            this.harga_bid = harga_bid;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
         }
     }
 }

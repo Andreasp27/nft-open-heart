@@ -110,7 +110,7 @@ public class Home extends Fragment {
     void addData() {
         Recom ob1 = new Recom("Akatzuki", "TOP 1 BINANCE ARTIST\n" +
                 "▵Best and profitable NFT on Binance \n" +
-                "https://www.instagram.com/nft.pride/\n" +
+                "https://www.instagram.com/nft.pride/" +
                 "https://discord.gg/BV2gsuSz2A", R.drawable.akatzuki, R.drawable.orang);
         recomArrayList.add(ob1);
         Recom ob2 = new Recom("Bambank", "FEKIKI is the Secret Key to unlock more FEKIRA UNIVERSE benefits in the near futur..", R.drawable.akatzuki, R.drawable.naruto);

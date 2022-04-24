@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -44,7 +45,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                view.getContext().startActivity(new Intent(context, ItemPreviewCollection.class));
+//                Toast.makeText(view.getContext(), Toast.LENGTH_SHORT).show();
+                view.getContext().startActivity(new Intent(context, CreatorPage.class));
             }
         });
     }

@@ -1,21 +1,30 @@
 package com.example.nft;
 
 public class Collected {
-    int imageCol;
-    String itemname, price, creator;
+    String imageCol, itemname, price, creator;
+    int id;
 
-    public Collected(int imageCol, String itemname, String price, String creator) {
+    public Collected(String imageCol, String itemname, String price, String creator, int id) {
         this.imageCol = imageCol;
         this.itemname = itemname;
         this.price = price;
         this.creator = creator;
+        this.id = id;
     }
 
-    public int getImageCol() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImageCol() {
         return imageCol;
     }
 
-    public void setImageCol(int imageCol) {
+    public void setImageCol(String imageCol) {
         this.imageCol = imageCol;
     }
 

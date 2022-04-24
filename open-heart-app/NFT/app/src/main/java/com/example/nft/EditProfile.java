@@ -167,6 +167,7 @@ public class EditProfile extends AppCompatActivity {
             });
 
     public class ProfileRR{
+        private int id;
         private String name;
         private String email;
         private String jenis_kelamin;
@@ -175,6 +176,14 @@ public class EditProfile extends AppCompatActivity {
         private String bio;
         private String gambar_path;
         private String banner_path;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
 
         public String getBanner_path() { return banner_path; }
 

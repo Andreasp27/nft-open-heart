@@ -142,7 +142,7 @@ public class AddCollection extends AppCompatActivity {
                 public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
                     if (response.isSuccessful()){
                         Toast.makeText(getApplicationContext(), "Create collection success", Toast.LENGTH_LONG).show();
-                        finish();
+                        refreshActivity();
                     }else{
                         Toast.makeText(getApplicationContext(), "Create collection failed", Toast.LENGTH_LONG).show();
                     }
@@ -155,5 +155,13 @@ public class AddCollection extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void refreshActivity() {
+        Intent i = new Intent(this, Collection.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        finish();
+
     }
 }

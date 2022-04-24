@@ -5,11 +5,13 @@ public class Trend {
     int id;
 
     public Trend (String itemname, String price, String creator, String image, int id){
+
         this.creator = creator;
         this.itemname = itemname;
         this.price = price;
         this.image = image;
         this.id = id;
+
     }
 
     public String getCreator() {

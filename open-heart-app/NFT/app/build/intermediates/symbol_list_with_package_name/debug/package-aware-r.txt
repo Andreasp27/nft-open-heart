@@ -2426,6 +2426,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable _650638328
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -2531,6 +2532,7 @@ drawable error
 drawable gradient
 drawable harimau
 drawable harimauungu
+drawable heart
 drawable ic_baseline_abc_24
 drawable ic_baseline_add_24
 drawable ic_baseline_arrow_back_24
@@ -2618,6 +2620,7 @@ drawable orang
 drawable orangkribo
 drawable password_selector
 drawable placeholder
+drawable share
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2733,7 +2736,10 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id bid
+id bidBtn
 id bidder
+id bio
 id blocking
 id bottom
 id bottomNavigationView
@@ -2780,9 +2786,14 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id collCreator
+id collDesc
+id collOwner
+id collPrice
 id collapseActionView
 id collection
 id collection_image
+id collection_img
 id compress
 id confirm_button
 id confirm_pass
@@ -2797,6 +2808,7 @@ id cos
 id counterclockwise
 id createdCollected
 id creator
+id creatorname
 id current
 id currentState
 id custom
@@ -2894,6 +2906,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id image_view
 id img_collection
 id immediateStop
@@ -2907,6 +2920,7 @@ id item1
 id item2
 id item3
 id item4
+id itemCollName
 id item_desc
 id item_name
 id item_price
@@ -2923,9 +2937,11 @@ id layout
 id left
 id leftToRight
 id legacy
+id like
 id line1
 id line3
 id linear
+id linearLayout
 id linear_layout
 id listMode
 id list_item
@@ -3028,6 +3044,7 @@ id onInterceptTouchReturnSwipe
 id outline
 id outward
 id overshoot
+id ownedItem
 id owner
 id packed
 id pager_dots
@@ -3108,6 +3125,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id sendTxt
+id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3234,6 +3252,8 @@ id visible
 id visible_removing_fragment_view_tag
 id wallet
 id wallet_add_coll
+id wallet_item
+id wallet_item_coll
 id wallet_pass
 id wallet_profile
 id west
@@ -3333,6 +3353,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_collection
 layout activity_change_pass
+layout activity_creator_page
 layout activity_edit_profile
 layout activity_home
 layout activity_item_preview

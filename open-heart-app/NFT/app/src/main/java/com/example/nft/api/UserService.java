@@ -1,14 +1,17 @@
 package com.example.nft.api;
 
 import com.example.nft.ChangePass;
+import com.example.nft.Collection;
 import com.example.nft.EditProfile;
 import com.example.nft.HistoryWallet;
 import com.example.nft.ItemPreview;
+import com.example.nft.ItemPreviewCollection;
 import com.example.nft.Market;
 import com.example.nft.Send;
 import com.example.nft.SignUp;
 import com.example.nft.TopUp;
 import com.example.nft.wallet;
+import com.example.nft.ItemPreview;
 
 import java.util.ArrayList;
 
@@ -78,7 +81,7 @@ public interface UserService {
     Call<ArrayList<Market.CollectionResponse>> getAllTrending(@Header("Authorization") String auth);
 
     @GET("collection/mycollection")
-    Call<ArrayList<Market.CollectionResponse>> getAllMyCollection(@Header("Authorization") String auth);
+    Call<Collection.MyCollectionResponse> getAllMyCollection(@Header("Authorization") String auth);
 
     @Multipart
     @POST("collection/create")
@@ -91,4 +94,13 @@ public interface UserService {
     @POST("collection/item")
     Call<Market.CollectionResponse> getCollection(@Header("Authorization") String auth,
                                                   @Body ItemPreview.IdRequest id);
+
+    @POST("collection/bid")
+    Call<MessageResponse> placeBid(@Header("Authorization") String auth,
+                                   @Body ItemPreview.BidRequest bidRequest);
+
+    @POST("collection/terimabid")
+    Call<MessageResponse> acceptBidR(@Header("Authorization") String auth,
+                                    @Body ItemPreviewCollection.AcceptBidRequest acceptBidRequest);
+
 }

@@ -1,61 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="5dp">
+    android:layout_marginBottom="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/nama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingRight="30dp"
-            android:textSize="10dp"
-            android:gravity="left"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:text="Bambankk"/>
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingRight="30dp"
-            android:textSize="10dp"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:text="Purchased"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="17dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_ethereum_eth_mini"/>
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            android:paddingRight="30dp"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:textSize="10dp"
-            android:text="2.55 SKS"/>
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textSize="10dp"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:text="2022-03 -17 12:03:45"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nama"
+                style="@style/Theme.NFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="left"
+                android:paddingRight="30dp"
+                android:text="Bambankk"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/status"
+                style="@style/Theme.NFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="76dp"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/roboto"
+                android:paddingRight="30dp"
+                android:text="Purchased"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/nama"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="152dp"
+                android:layout_marginLeft="152dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_ethereum_eth_mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/nama"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/Theme.NFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:paddingRight="25dp"
+                android:text="2.55 SKS"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/Theme.NFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="236dp"
+                android:layout_marginLeft="236dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/roboto"
+                android:text="2022-03 -17 12:03:45"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
