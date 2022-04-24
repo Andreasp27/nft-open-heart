@@ -13,4 +13,8 @@ class Daftarbid extends Model
     {
         return $this->belongsTo(Koleksi::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nomor_user');
             $table->float('harga_bid');
             $table->foreignId('koleksi_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
