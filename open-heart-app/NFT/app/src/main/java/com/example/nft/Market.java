@@ -62,18 +62,18 @@ public class Market extends Fragment{
         recyclerView.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-        searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String newtext) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                myAdapterTrend.getFilter().filter(newText);
-                return false;
-            }
-        });
+//        searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String newtext) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                myAdapterTrend.getFilter().filter(newText);
+//                return false;
+//            }
+//        });
 
         getData();
 

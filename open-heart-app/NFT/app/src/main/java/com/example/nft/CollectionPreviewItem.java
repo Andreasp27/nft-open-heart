@@ -9,8 +9,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.Session;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CollectionPreviewItem extends AppCompatActivity {
 
@@ -19,12 +27,20 @@ public class CollectionPreviewItem extends AppCompatActivity {
     CardView cardCollected;
     ImageView back, wallet;
 
+    private String access_token, base;
+    private Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collection_preview_item);
 
         getSupportActionBar().hide();
+
+        //get access token
+        session = new Session(getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
 
         //Action Bar Function
         back = findViewById(R.id.btn_back_add_coll);
@@ -54,28 +70,45 @@ public class CollectionPreviewItem extends AppCompatActivity {
 
         collectedArrayList = new ArrayList<>();
 //        addData();
+        getDataCollection();
 
-        recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, CollectionPreviewItem.this));
+//        recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, CollectionPreviewItem.this));
 
-        if (collectedArrayList.size() == 0) {
-            cardCollected.setVisibility(View.VISIBLE);
-        }
 
     }
-//    void addData(){
-//        Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob1);
-//        Collected ob2 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob2);
-//        Collected ob3 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob3);
-//        Collected ob4 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob4);
-//        Collected ob5 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob5);
-//        Collected ob6 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob6);
-//        Collected ob7 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob7);
-//    }
+    public void getDataCollection(){
+        Call<Collection.MyCollectionResponse> myCollection = ApiClient.getUserService().getAllMyCollection("Bearer "+ access_token);
+        myCollection.enqueue(new Callback<Collection.MyCollectionResponse>() {
+            @Override
+            public void onResponse(Call<Collection.MyCollectionResponse> call, Response<Collection.MyCollectionResponse> response) {
+                if (response.isSuccessful()){
+                    ArrayList<Market.CollectionResponse> dataCollected = response.body().getCollected();
+
+
+                    for (Market.CollectionResponse item : dataCollected){
+
+                        Collected ob1 = new Collected(base + item.getImage_path(), item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), item.getId());
+                        collectedArrayList.add(ob1);
+
+                    }
+
+
+                    recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, CollectionPreviewItem.this));
+
+                    if (collectedArrayList.size() == 0) {
+                        cardCollected.setVisibility(View.VISIBLE);
+                    }
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "Fetch data Failed", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Collection.MyCollectionResponse> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Fetch data Failed: " + t , Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 }

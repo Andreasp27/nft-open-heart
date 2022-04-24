@@ -99,12 +99,6 @@ public class Collection extends Fragment {
 
         getDataCollection();
 
-
-        //Check collected length
-        if (collectedArrayList.size() == 0) {
-            cardCollected.setVisibility(View.VISIBLE);
-        }
-
         addCollection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,11 +106,6 @@ public class Collection extends Fragment {
                 startActivity(intent);
             }
         });
-
-        //Check created length
-        if (createdArrayList.size() == 0) {
-            cardCreated.setVisibility(View.VISIBLE);
-        }
 
         return view;
     }
@@ -154,6 +143,7 @@ public class Collection extends Fragment {
                         totalCreated++;
                         }
                     }
+
 
                     recyclerCreated.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
                     recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
