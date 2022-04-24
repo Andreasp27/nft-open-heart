@@ -3,11 +3,13 @@ package com.example.nft;
 public class Trend {
     String creator, price, itemname, image;
 
+
     public Trend (String itemname, String price, String creator, String image){
         this.creator = creator;
         this.itemname = itemname;
         this.price = price;
         this.image = image;
+
     }
 
     public String getCreator() {

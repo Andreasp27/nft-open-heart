@@ -8,6 +8,7 @@ import com.example.nft.Send;
 import com.example.nft.SignUp;
 import com.example.nft.TopUp;
 import com.example.nft.wallet;
+import com.example.nft.ItemPreview;
 
 import java.util.ArrayList;
 
@@ -83,4 +84,8 @@ public interface UserService {
                                                   @Part("harga") RequestBody harga,
                                                   @Part("deskripsi") RequestBody deskripsi,
                                                   @Part MultipartBody.Part fileImg);
+
+//    @POST("collection/item")
+//    Call<Market.CollectionResponse> item(@Header("Authorization") String auth,
+//                                         @Body );
 }

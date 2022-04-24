@@ -2531,6 +2531,7 @@ drawable error
 drawable gradient
 drawable harimau
 drawable harimauungu
+drawable heart
 drawable ic_baseline_abc_24
 drawable ic_baseline_add_24
 drawable ic_baseline_arrow_back_24
@@ -2618,6 +2619,7 @@ drawable orang
 drawable orangkribo
 drawable password_selector
 drawable placeholder
+drawable share
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2734,6 +2736,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id bidder
+id bio
 id blocking
 id bottom
 id bottomNavigationView
@@ -2796,6 +2799,7 @@ id cos
 id counterclockwise
 id createdCollected
 id creator
+id creatorname
 id current
 id currentState
 id custom
@@ -2922,9 +2926,11 @@ id layout
 id left
 id leftToRight
 id legacy
+id like
 id line1
 id line3
 id linear
+id linearLayout
 id linear_layout
 id listMode
 id list_item
@@ -3027,6 +3033,7 @@ id onInterceptTouchReturnSwipe
 id outline
 id outward
 id overshoot
+id ownedItem
 id owner
 id packed
 id pager_dots
@@ -3107,6 +3114,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id sendTxt
+id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3332,6 +3340,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_collection
 layout activity_change_pass
+layout activity_creator_page
 layout activity_edit_profile
 layout activity_home
 layout activity_item_preview
