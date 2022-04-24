@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Koleksi::class);
     }
+    public function daftarbid()
+    {
+        return $this->hasMany(Daftarbid::class);
+    }
 }

@@ -25,7 +25,7 @@ class CollectionController extends Controller
 
     public function cariKoleksi(Request $request)
     {
-        $koleksi = Koleksi::with('trending', 'user', 'history');
+        $koleksi = Koleksi::with('trending', 'user', 'history', 'daftarbid.user');
         $koleksi = $koleksi->find($request->id);
 
         return response()
@@ -46,8 +46,10 @@ class CollectionController extends Controller
     public function showById()
     {
         $koleksi = Koleksi::where('user_id', auth()->user()->id)->latest()->get();
+        $koleksi_created = $koleksi->where('pembuat', auth()->user()->name)->flatten();
+        $koleksi_collected = $koleksi->where('pembuat', "!=", auth()->user()->name)->flatten();
         return response()
-            ->json([CollectionResource::collection($koleksi)]);
+            ->json(['created' => $koleksi_created, 'collected' => $koleksi_collected]);
     }
 
     public function create(Request $request)
@@ -112,25 +114,32 @@ class CollectionController extends Controller
 
         if ($saldoUser < $request->jumlah_bid) {
             return response()
-                ->json(['msg' => 'Bid failed']);
+                ->json(['message' => 'failed']);
         }
 
         if ($request->jumlah_bid <= $koleksi->harga) {
             return response()
-                ->json(['msg' => 'Bid failed']);
+                ->json(['message' => 'failed']);
         }
-        Daftarbid::create([
-            'harga_bid' => $request->jumlah_bid,
-            'nomor_user' => auth()->user()->nomor_user,
-            'koleksi_id' => $request->id_koleksi,
-        ]);
 
-        $koleksi->update([
-            'harga' => $request->jumlah_bid,
-        ]);
+        $daftarBid = $koleksi->daftarbid->FirstWhere('nomor_user', auth()->user()->nomor_user);
+        if ($daftarBid) {
+            $this->updateBid($request);
+        } else {
+            Daftarbid::create([
+                'harga_bid' => $request->jumlah_bid,
+                'nomor_user' => auth()->user()->nomor_user,
+                'koleksi_id' => $request->id_koleksi,
+                'user_id' => auth()->user()->id,
+            ]);
+
+            $koleksi->update([
+                'harga' => $request->jumlah_bid,
+            ]);
+        }
 
         return response()
-            ->json(['msg' => 'Bid success']);
+            ->json(['message' => 'success']);
     }
 
     public function terimaBid(Request $request)
@@ -140,7 +149,7 @@ class CollectionController extends Controller
         $koleksi = Koleksi::find($request->id_koleksi);
         if ($user->wallet->saldo < $koleksi->harga) {
             return response()
-                ->json(['msg' => 'Purchase failed']);
+                ->json(['message' => 'failed']);
         }
 
         //koleksi
@@ -196,7 +205,7 @@ class CollectionController extends Controller
         Daftarbid::where('koleksi_id', $koleksi->id)->delete();
 
         return response()
-            ->json(['msg' => 'Purchase Success']);
+            ->json(['message' => 'success']);
     }
 
     public function updateBid(Request $request)
@@ -207,7 +216,7 @@ class CollectionController extends Controller
 
         if ($request->jumlah_bid > auth()->user()->wallet->saldo) {
             return response()
-                ->json(['msg' => 'Bid Failed']);
+                ->json(['message' => 'failed']);
         }
 
         $koleksi = Koleksi::find($request->id_koleksi);
@@ -221,6 +230,6 @@ class CollectionController extends Controller
         ]);
 
         return response()
-            ->json(['msg' => 'Bid Success']);
+            ->json(['message' => 'success']);
     }
 }
