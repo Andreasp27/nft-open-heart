@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,15 +18,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
-public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendViewHolder> {
+public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendViewHolder> implements Filterable {
 
     private ArrayList<Trend> trendArrayList;
+    private ArrayList<Trend> trends;
     private Context context;
 
-    public MyAdapterTrend(ArrayList<Trend> trendArrayList, Context context) {
+    public MyAdapterTrend(ArrayList<Trend> trendArrayList,Context context) {
 
         this.trendArrayList = trendArrayList;
+        this.trends = trends;
         this.context = context;
     }
 
@@ -64,6 +70,43 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
         return trendArrayList.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        Filter filter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+
+                String charString = charSequence.toString();
+                if (charString.isEmpty()){
+                    trendArrayList = trends;
+                } else {
+                    ArrayList<Trend> filteredList = new ArrayList<>();
+                    for (Trend item : trendArrayList){
+                        if (item.getItemname().toLowerCase().contains(charString.toLowerCase())){
+                            filteredList.add(item);
+                        }
+                    }
+                    trends = filteredList;
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = trendArrayList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                trendArrayList = (ArrayList<Trend>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+
+        return filter;
+    }
+
+
+
+
     public class TrendViewHolder  extends  RecyclerView.ViewHolder{
         private TextView creator, nameitem, price;
         private ImageView image;
@@ -79,4 +122,5 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
 
         }
     }
+
 }

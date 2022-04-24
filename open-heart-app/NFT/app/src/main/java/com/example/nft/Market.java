@@ -1,5 +1,6 @@
 package com.example.nft;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,25 +8,30 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
 import com.example.nft.api.Session;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Market extends Fragment {
+public class Market extends Fragment{
 
     RecyclerView recyclerView;
     MyAdapterTrend myAdapterTrend;
     ArrayList<Trend> trendArrayList;
+    SearchView searchView2;
     private String access_token, base;
     private Session session;
 
@@ -49,17 +55,31 @@ public class Market extends Fragment {
         access_token = session.getAccessToken();
         base = session.getBase();
 
+        searchView2 = view.findViewById(R.id.searchView);
+
         recyclerView = view.findViewById(R.id.recyclerMarket);
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-//        addData2();
-        getData();
+        searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String newtext) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                myAdapterTrend.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+        getData();
 
         return view;
     }
+
 
     void getData(){
         Call<ArrayList<CollectionResponse>> collectionResponseCall = ApiClient.getUserService().getAllCollection("Bearer "+ access_token);
@@ -68,12 +88,12 @@ public class Market extends Fragment {
             public void onResponse(Call<ArrayList<CollectionResponse>> call, Response<ArrayList<CollectionResponse>> response) {
                 if (response.isSuccessful()){
                     ArrayList<CollectionResponse> data = response.body();
+
                     for (CollectionResponse item : data){
                         Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path(), item.getId());
                         trendArrayList.add(obj);
                         System.out.println("item name: " + item.getNama_item());
                     }
-
                     recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
                     Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
@@ -86,6 +106,8 @@ public class Market extends Fragment {
             }
         });
     }
+
+
 
     public class CollectionResponse{
         private int id;

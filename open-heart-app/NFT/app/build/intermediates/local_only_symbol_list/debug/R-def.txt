@@ -114,6 +114,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id img_collection
 id item
 id item_desc
@@ -169,6 +170,8 @@ id recyclerTrend2
 id recyclerhistory
 id required_txt
 id searchView
+id seeAll1
+id seeAll2
 id sendTxt
 id share
 id signup
@@ -180,6 +183,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id textempty
 id time
 id tokenTxt
@@ -196,6 +200,8 @@ id wallet_pass
 id wallet_profile
 layout activity_add_collection
 layout activity_change_pass
+layout activity_collection_preview_item
+layout activity_created_preview_item
 layout activity_creator_page
 layout activity_edit_profile
 layout activity_home

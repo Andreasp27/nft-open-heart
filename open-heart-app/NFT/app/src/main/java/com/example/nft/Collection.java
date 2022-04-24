@@ -26,6 +26,7 @@ public class Collection extends Fragment {
     ArrayList<Created> createdArrayList;
     CardView cardCreated, cardCollected;
     FloatingActionButton addCollection;
+    TextView See1, See2;
 
 
     @Override
@@ -44,6 +45,28 @@ public class Collection extends Fragment {
         cardCollected = view.findViewById(R.id.emptyCard2);
         addCollection = view.findViewById(R.id.addCollection);
 
+        //see all button
+        See1 = view.findViewById(R.id.seeAll1);
+        See2 = view.findViewById(R.id.seeAll2);
+
+        See1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), CollectionPreviewItem.class);
+                startActivity(intent);
+            }
+        });
+
+        See2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), CreatedPreviewItem.class);
+                startActivity(intent);
+            }
+        });
+
+
+        //Collection Section
         recyclerView = view.findViewById(R.id.recyclerCollected);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -53,10 +76,9 @@ public class Collection extends Fragment {
 
         recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
 
+        //Check collected length
         if (collectedArrayList.size() == 0) {
-//            Toast.makeText(getContext(), "kososng", Toast.LENGTH_SHORT).show();
             cardCollected.setVisibility(View.VISIBLE);
-
         }
 
         addCollection.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +99,7 @@ public class Collection extends Fragment {
 
         recyclerView.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
 
+        //Check created length
         if (createdArrayList.size() == 0) {
             cardCreated.setVisibility(View.VISIBLE);
         }
@@ -87,8 +110,6 @@ public class Collection extends Fragment {
     void addData() {
         Collected ob1 = new Collected(R.drawable.orang, "3D Cinema Human", "25 SKS", "Bored Ape ");
         collectedArrayList.add(ob1);
-//        Collected ob2 = new Collected(R.drawable.boredape, "3D Cinema Human", "25 SKS", "Bored Ape ");
-//        collectedArrayList.add(ob2);
     }
 
     void addData2() {

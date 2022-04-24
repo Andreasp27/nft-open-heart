@@ -4,13 +4,24 @@ public class TopSales {
 
 
     String noitem,itemname, price, growth, image;
+    int id;
 
-    public TopSales(String image, String noitem, String itemname, String price, String growth) {
+    public TopSales(String image, String noitem, String itemname, String price, String growth, int id) {
         this.image = image;
         this.noitem = noitem;
         this.itemname = itemname;
         this.price = price;
         this.growth = growth;
+        this.id = id;
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getImage() {

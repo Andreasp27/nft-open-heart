@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -7,43 +9,72 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/bidder"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="40dp"
-            android:gravity="left"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:text="Bambankk"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_ethereum_eth_mini"/>
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_vertical"
-            style="@style/Theme.NFT"
-            android:fontFamily="@font/roboto"
-            android:text="2.55 SKS"/>
-        <Button
-            android:id="@+id/acceptbid"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:text="Place Bid"
-            android:gravity="center"
-            android:textSize="10dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bidder"
+                style="@style/Theme.NFT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:fontFamily="@font/roboto"
+                android:gravity="left"
+                android:text="Bambankk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="136dp"
+                android:layout_marginLeft="136dp"
+                android:src="@drawable/ic_ethereum_eth_mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/Theme.NFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="2.55 SKS"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/acceptbid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="232dp"
+                android:layout_marginLeft="232dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Accept Bid"
+                android:textSize="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/bidder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

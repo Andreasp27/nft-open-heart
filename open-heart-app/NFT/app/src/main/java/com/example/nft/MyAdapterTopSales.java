@@ -44,10 +44,13 @@ public class MyAdapterTopSales extends RecyclerView.Adapter<MyAdapterTopSales.To
         holder.growth.setText(topSalesArrayList.get(position).getGrowth());
         Picasso.get().load(topSalesArrayList.get(position).getImage()).into(holder.image);
 
+        int post = position;
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view.getContext().startActivity(new Intent(context, ItemPreview.class));
+                Intent intent = new Intent(context, ItemPreview.class);
+                intent.putExtra("id", topSalesArrayList.get(post).getId());
+                view.getContext().startActivity(intent);
             }
         });
 

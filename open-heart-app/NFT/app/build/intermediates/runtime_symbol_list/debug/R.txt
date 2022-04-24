@@ -2899,6 +2899,7 @@ int id imageView 0x7f09010c
 int id imageView2 0x7f09010d
 int id imageView3 0x7f09010e
 int id imageView4 0x7f090272
+int id imageView5 0x7f090275
 int id image_view 0x7f09010f
 int id img_collection 0x7f090110
 int id immediateStop 0x7f090111
@@ -3112,6 +3113,8 @@ int id search_mag_icon 0x7f0901e0
 int id search_plate 0x7f0901e1
 int id search_src_text 0x7f0901e2
 int id search_voice_btn 0x7f0901e3
+int id seeAll1 0x7f090274
+int id seeAll2 0x7f090276
 int id select_dialog_listview 0x7f0901e4
 int id selected 0x7f0901e5
 int id selection_type 0x7f0901e6
@@ -3192,6 +3195,7 @@ int id textView3 0x7f090230
 int id textView4 0x7f090231
 int id textView5 0x7f090232
 int id textView6 0x7f090233
+int id textView7 0x7f090273
 int id text_input_end_icon 0x7f090234
 int id text_input_error_icon 0x7f090235
 int id text_input_start_icon 0x7f090236
@@ -3342,6 +3346,8 @@ int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_add_collection 0x7f0c001c
 int layout activity_change_pass 0x7f0c001d
+int layout activity_collection_preview_item 0x7f0c0097
+int layout activity_created_preview_item 0x7f0c0098
 int layout activity_creator_page 0x7f0c001e
 int layout activity_edit_profile 0x7f0c001f
 int layout activity_home 0x7f0c0020

@@ -28,6 +28,12 @@
         android:theme="@style/Theme.NFT"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.nft.CreatedPreviewItem"
+            android:exported="false" />
+        <activity
+            android:name="com.example.nft.CollectionPreviewItem"
+            android:exported="false" />
+        <activity
             android:name="com.example.nft.CreatorPage"
             android:exported="false" />
         <activity

@@ -81,7 +81,7 @@ void getData(){
                 int no = 1;
                 for (Market.CollectionResponse item : data){
                     if (no <= 3){
-                        TopSales ob1 = new TopSales(base + item.getImage_path(), Integer.toString(no), item.getNama_item(), Float.toString(item.getHarga()),"+ " + Float.toString(item.getKenaikan()) + " %");
+                        TopSales ob1 = new TopSales(base + item.getImage_path(), Integer.toString(no), item.getNama_item(), Float.toString(item.getHarga()),"+ " + Float.toString(item.getKenaikan()) + " %", item.getId());
                         topSales.add(ob1);
 
                     }

@@ -2900,6 +2900,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id image_view
 id img_collection
 id immediateStop
@@ -3113,6 +3114,8 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seeAll1
+id seeAll2
 id select_dialog_listview
 id selected
 id selection_type
@@ -3193,6 +3196,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3343,6 +3347,8 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_collection
 layout activity_change_pass
+layout activity_collection_preview_item
+layout activity_created_preview_item
 layout activity_creator_page
 layout activity_edit_profile
 layout activity_home
