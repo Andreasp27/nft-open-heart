@@ -12,6 +12,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable _650638328
 drawable akatzuki
 drawable boredape
 drawable bottom_stroke
@@ -90,6 +91,7 @@ id cardView2
 id change_pass
 id clickhere
 id collection
+id collection_image
 id confirm_pass
 id createdCollected
 id creator
@@ -111,6 +113,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id img_collection
 id item
 id item_desc

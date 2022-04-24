@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -43,10 +44,13 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
         holder.price.setText(trendArrayList.get(position).getPrice());
         Picasso.get().load(trendArrayList.get(position).getImage()).into(holder.image);
 
+        int post = position;
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view.getContext().startActivity(new Intent(context, ItemPreview.class));
+                Intent intent = new Intent(context, ItemPreview.class);
+                intent.putExtra("id", trendArrayList.get(post).getId());
+                view.getContext().startActivity(intent);
             }
         });
 

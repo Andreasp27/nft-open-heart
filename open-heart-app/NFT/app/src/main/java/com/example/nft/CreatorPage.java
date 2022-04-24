@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
@@ -24,6 +27,7 @@ public class CreatorPage extends AppCompatActivity {
     MyAdapterTrend myAdapterTrend;
     private String access_token, base;
     private Session session;
+    ImageView wallet, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +36,37 @@ public class CreatorPage extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        //get access token
+        session = new Session(getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
+
+        wallet = findViewById(R.id.wallet_add_coll);
+        back = findViewById(R.id.btn_back_add_coll);
+
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreatorPage.this, wallet.class);
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
         recyclerView = findViewById(R.id.ownedItem);
 
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager2);
-
-        trendArrayList = new ArrayList<>();
         getData();
+        trendArrayList = new ArrayList<>();
+
 
         //recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getApplicationContext()));
 
@@ -54,12 +82,12 @@ public class CreatorPage extends AppCompatActivity {
                     int no = 1;
                     for (Market.CollectionResponse item : data){
                         if (no <= 2){
-                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), "Bored APE",base + item.getImage_path());
+                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), "Bored APE",base + item.getImage_path(), item.getId());
                             trendArrayList.add(ob1);
                         }
                         no++;
                     }
-                    recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getApplicationContext()));
+                    recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, CreatorPage.this));
                 }else{
                     Toast.makeText(getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
                 }

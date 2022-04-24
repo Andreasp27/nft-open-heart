@@ -77,18 +77,16 @@ void getData(){
         @Override
         public void onResponse(Call<ArrayList<Market.CollectionResponse>> call, Response<ArrayList<Market.CollectionResponse>> response) {
             if (response.isSuccessful()){
-                String percent = "%";
-                String plus = "+";
                 ArrayList<Market.CollectionResponse> data = response.body();
                 int no = 1;
                 for (Market.CollectionResponse item : data){
                     if (no <= 3){
-                        TopSales ob1 = new TopSales(base + item.getImage_path(), Integer.toString(no), item.getNama_item(), Float.toString(item.getHarga()),plus + Float.toString(item.getKenaikan()) + percent);
+                        TopSales ob1 = new TopSales(base + item.getImage_path(), Integer.toString(no), item.getNama_item(), Float.toString(item.getHarga()),"+ " + Float.toString(item.getKenaikan()) + " %");
                         topSales.add(ob1);
 
                     }
 
-                    Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path());
+                    Trend obj = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(), base + item.getImage_path(), item.getId());
                     trendArrayList.add(obj);
                     System.out.println("item name: " + item.getNama_item());
 

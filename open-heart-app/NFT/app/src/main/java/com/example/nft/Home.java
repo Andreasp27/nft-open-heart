@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -66,14 +67,14 @@ public class Home extends Fragment {
         addData();
         recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
 
+
         //Trend item
         recyclerTrend = view.findViewById(R.id.recyclerTrend);
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerTrend.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-//        addData2();
-//        recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
+        //Trending data
         getData();
 
 
@@ -138,7 +139,7 @@ public class Home extends Fragment {
                     int no = 1;
                     for (Market.CollectionResponse item : data){
                         if (no <= 2){
-                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), "Bored APE",base + item.getImage_path());
+                            Trend ob1 = new Trend(item.getNama_item(), Float.toString(item.getHarga()), item.getPembuat(),base + item.getImage_path(), item.getId() );
                             trendArrayList.add(ob1);
 
                         }
@@ -146,7 +147,7 @@ public class Home extends Fragment {
                     }
                     recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
-                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed " + response.body(), Toast.LENGTH_LONG).show();
                 }
             }
 

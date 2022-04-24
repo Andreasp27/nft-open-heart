@@ -106,7 +106,7 @@
                         android:layout_weight="2"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingLeft="30dp"
-                        android:text="Bored Ape #1003" />
+                        android:text="" />
 
                     <TextView
                         android:id="@+id/current"
@@ -130,17 +130,30 @@
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="right"
                         android:paddingRight="30dp"
-                        android:text="125.0" />
+                        android:text="" />
 
                 </LinearLayout>
 
-                <ImageView
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:layout_gravity="center_horizontal"
-                    android:padding="30dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/harimauungu" />
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <ImageView
+                        android:id="@+id/collection_image"
+                        android:layout_width="0dp"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_baseline_image_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -177,7 +190,7 @@
                     android:paddingLeft="30dp"
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
-                    android:text="💃Matryoshka Crew 💃is 10,000 generated Matryoshka Girls collection. Every Matryoshka is unique with different accessories and characteristics Join our Clan 🦾 . Discover the best items in this Unique collection."
+                    android:text=""
                     android:textSize="11dp" />
 
                 <TextView
@@ -215,7 +228,7 @@
                         android:layout_weight="2"
                         android:fontFamily="@font/roboto"
                         android:paddingTop="10dp"
-                        android:text="Bored Ape"
+                        android:text=""
                         android:textSize="11dp" />
 
                 </LinearLayout>
@@ -246,7 +259,7 @@
                         android:layout_weight="2"
                         android:fontFamily="@font/roboto"
                         android:paddingTop="10dp"
-                        android:text="Bambang"
+                        android:text=""
                         android:textSize="11dp" />
 
                 </LinearLayout>
