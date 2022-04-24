@@ -18,6 +18,7 @@ import com.example.nft.api.ApiClient;
 import com.example.nft.api.Session;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -122,7 +123,8 @@ public class ItemPreview extends AppCompatActivity {
                     Picasso.get().load(base + response.body().getImage_path()).into(itemImage);
 
                     for(ItemPreview.History item : response.body().getHistory()){
-                        Provenance ob1 = new Provenance(item.getNama(), item.getAksi(), Float.toString(item.getHarga()) + " SKS", item.getCreated_at().toString() );
+                        String date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(item.getCreated_at());
+                        Provenance ob1 = new Provenance(item.getNama(), item.getAksi(), Float.toString(item.getHarga()) + " SKS", date );
                         provenanceArrayList.add(ob1);
                     }
                     recyclerView.setAdapter(new MyAdapterProvenance(provenanceArrayList, getApplicationContext()));

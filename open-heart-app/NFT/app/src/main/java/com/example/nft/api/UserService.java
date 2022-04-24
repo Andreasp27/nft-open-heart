@@ -77,6 +77,9 @@ public interface UserService {
     @GET("collection/trending")
     Call<ArrayList<Market.CollectionResponse>> getAllTrending(@Header("Authorization") String auth);
 
+    @GET("collection/mycollection")
+    Call<ArrayList<Market.CollectionResponse>> getAllMyCollection(@Header("Authorization") String auth);
+
     @Multipart
     @POST("collection/create")
     Call<MessageResponse> createCollection(@Header("Authorization") String auth,

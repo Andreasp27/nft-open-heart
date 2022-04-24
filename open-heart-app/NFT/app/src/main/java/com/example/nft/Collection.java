@@ -15,17 +15,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nft.api.ApiClient;
+import com.example.nft.api.Session;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Collection extends Fragment {
 
-    RecyclerView recyclerView;
+    RecyclerView recyclerView, recyclerCreated;
     ArrayList<Collected> collectedArrayList;
     ArrayList<Created> createdArrayList;
     CardView cardCreated, cardCollected;
     FloatingActionButton addCollection;
+    private String access_token, base;
+    private Session session;
 
 
     @Override
@@ -40,6 +48,11 @@ public class Collection extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_collection, container, false);
 
+        //get access token
+        session = new Session(getActivity().getApplicationContext());
+        access_token = session.getAccessToken();
+        base = session.getBase();
+
         cardCreated = view.findViewById(R.id.emptyCard);
         cardCollected = view.findViewById(R.id.emptyCard2);
         addCollection = view.findViewById(R.id.addCollection);
@@ -50,13 +63,25 @@ public class Collection extends Fragment {
 
         collectedArrayList = new ArrayList<>();
         addData();
-
         recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, getContext()));
+
+        //created section
+        recyclerCreated = view.findViewById(R.id.recyclerCreated);
+        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        recyclerCreated.setLayoutManager(gridLayoutManager1);
+
+        createdArrayList = new ArrayList<>();
+        addData2();
+        recyclerCreated.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
 
         if (collectedArrayList.size() == 0) {
 //            Toast.makeText(getContext(), "kososng", Toast.LENGTH_SHORT).show();
             cardCollected.setVisibility(View.VISIBLE);
 
+        }
+
+        if (createdArrayList.size() == 0) {
+            cardCreated.setVisibility(View.VISIBLE);
         }
 
         addCollection.setOnClickListener(new View.OnClickListener() {
@@ -66,20 +91,6 @@ public class Collection extends Fragment {
                 startActivity(intent);
             }
         });
-
-        //created section
-        recyclerView = view.findViewById(R.id.recyclerCreated);
-        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(gridLayoutManager1);
-
-        createdArrayList = new ArrayList<>();
-        addData2();
-
-        recyclerView.setAdapter(new MyAdapterCreated(createdArrayList, getContext()));
-
-        if (createdArrayList.size() == 0) {
-            cardCreated.setVisibility(View.VISIBLE);
-        }
 
         return view;
     }
@@ -94,5 +105,20 @@ public class Collection extends Fragment {
     void addData2() {
         Created ob1 = new Created("3D Cinema Human", "25 SKS", "Bored Ape", R.drawable.orang);
         createdArrayList.add(ob1);
+    }
+
+    public void getDataCollection(){
+        Call<ArrayList<Market.CollectionResponse>> myCollection = ApiClient.getUserService().getAllMyCollection("Bearer "+ access_token);
+        myCollection.enqueue(new Callback<ArrayList<Market.CollectionResponse>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Market.CollectionResponse>> call, Response<ArrayList<Market.CollectionResponse>> response) {
+                if ()
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Market.CollectionResponse>> call, Throwable t) {
+
+            }
+        });
     }
 }
