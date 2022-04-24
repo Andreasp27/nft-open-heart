@@ -94,6 +94,7 @@ public class Market extends Fragment{
                         trendArrayList.add(obj);
                         System.out.println("item name: " + item.getNama_item());
                     }
+
                     recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
                     Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
