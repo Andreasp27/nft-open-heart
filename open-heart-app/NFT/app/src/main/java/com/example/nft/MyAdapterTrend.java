@@ -70,41 +70,6 @@ public class MyAdapterTrend extends RecyclerView.Adapter<MyAdapterTrend.TrendVie
         return trendArrayList.size();
     }
 
-//    @Override
-//    public Filter getFilter() {
-//        Filter filter = new Filter() {
-//            @Override
-//            protected FilterResults performFiltering(CharSequence charSequence) {
-//
-//                String charString = charSequence.toString();
-//                if (charString.isEmpty()){
-//                    trendArrayList = trends;
-//                } else {
-//                    ArrayList<Trend> filteredList = new ArrayList<>();
-//                    for (Trend item : trendArrayList){
-//                        if (item.getItemname().toLowerCase().contains(charString.toLowerCase())){
-//                            filteredList.add(item);
-//                        }
-//                    }
-//                    trends = filteredList;
-//                }
-//
-//                FilterResults filterResults = new FilterResults();
-//                filterResults.values = trendArrayList;
-//                return filterResults;
-//            }
-//
-//            @Override
-//            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-//                trendArrayList = (ArrayList<Trend>) filterResults.values;
-//                notifyDataSetChanged();
-//            }
-//        };
-//
-//        return filter;
-//    }
-
-
 
 
     public class TrendViewHolder  extends  RecyclerView.ViewHolder{

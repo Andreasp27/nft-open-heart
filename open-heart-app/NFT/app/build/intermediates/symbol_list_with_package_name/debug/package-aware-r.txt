@@ -2841,6 +2841,7 @@ id btn_back_send
 id btn_back_topup
 id btn_back_wallet
 id btn_change_pass
+id btn_loc_maps
 id btn_profile
 id btn_send
 id btn_top_up
@@ -3043,7 +3044,6 @@ id linear_layout
 id listMode
 id list_item
 id locale
-id locationBtn
 id login
 id logo
 id logocenter
@@ -3330,6 +3330,7 @@ id tokenTxt
 id top
 id topPanel
 id top_bar
+id top_bar_maps
 id topcard
 id topupTxt
 id touch_outside

@@ -41,7 +41,7 @@ public class EditProfile extends AppCompatActivity {
     ImageButton addProfileImg, addProfileBanner;
     private Integer statusImg = 0, statusBanner = 0;
     ImageView imageProfile, imageBanner, imageWallet, backBtn, mapsBtn;
-    private String access_token, base;
+    private String access_token, base, locationMaps;
     private Session session;
     Uri imgUri, bannerUri;
     Button saveBtn;
@@ -55,6 +55,7 @@ public class EditProfile extends AppCompatActivity {
         session = new Session(this);
         access_token = session.getAccessToken();
         base = session.getBase();
+
 
         getSupportActionBar().hide();
 
@@ -147,6 +148,16 @@ public class EditProfile extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        locationMaps = session.getLocation();
+        if (!locationMaps.isEmpty()){
+            editAddress.getEditText().setText(locationMaps);
+        }
+        session.setLocation("");
+    }
+
     //get image profile from storage
     ActivityResultLauncher<String> getImgProfile = registerForActivityResult(
             new ActivityResultContracts.GetContent(),
@@ -174,6 +185,8 @@ public class EditProfile extends AppCompatActivity {
                     }
                 }
             });
+
+
 
     public static class Like{
         private int liked_by;
