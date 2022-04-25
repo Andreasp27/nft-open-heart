@@ -40,7 +40,7 @@ public class EditProfile extends AppCompatActivity {
     TextInputLayout editName, editEmail, editSex, editAddress, editPhone, editBio;
     ImageButton addProfileImg, addProfileBanner;
     private Integer statusImg = 0, statusBanner = 0;
-    ImageView imageProfile, imageBanner, imageWallet, backBtn;
+    ImageView imageProfile, imageBanner, imageWallet, backBtn, mapsBtn;
     private String access_token, base;
     private Session session;
     Uri imgUri, bannerUri;
@@ -71,6 +71,7 @@ public class EditProfile extends AppCompatActivity {
         imageProfile = findViewById(R.id.profile_img);
         imageBanner = findViewById(R.id.profile_banner);
         imageWallet = findViewById(R.id.wallet_profile);
+        mapsBtn = findViewById(R.id.maps);
 
 
         //add image profile
@@ -93,6 +94,14 @@ public class EditProfile extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(EditProfile.this, wallet.class);
                 startActivity(intent);
+            }
+        });
+
+        //open maps
+        mapsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EditProfile.this, MapsActivity.class));
             }
         });
 

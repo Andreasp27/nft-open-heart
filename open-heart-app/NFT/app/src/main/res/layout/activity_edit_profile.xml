@@ -229,10 +229,9 @@
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:errorEnabled="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/profile_sex"
                 app:layout_constraintTop_toBottomOf="@id/profile_sex"
-                app:layout_constraintWidth_percent="0.90">
+                app:layout_constraintWidth_percent="0.70">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -243,6 +242,16 @@
                     android:paddingBottom="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/maps"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_map"
+                app:layout_constraintBottom_toTopOf="@id/profile_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile_address"
+                app:layout_constraintTop_toBottomOf="@id/profile_sex"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/profile_phone"

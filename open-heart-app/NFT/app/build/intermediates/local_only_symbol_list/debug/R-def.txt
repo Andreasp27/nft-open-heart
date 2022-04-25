@@ -46,6 +46,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logo
 drawable ic_logo1
+drawable ic_map
 drawable ic_wallet
 drawable image_border
 drawable image_profil
@@ -73,6 +74,7 @@ id appBarLayout
 id appBarLayout2
 id appBarLayout_add_coll
 id appBarLayout_creator
+id appBarLayout_maps
 id balance
 id banner
 id bannerCreator
@@ -83,6 +85,7 @@ id bioCreator
 id bottomNavigationView
 id btn_back
 id btn_back_add_coll
+id btn_back_maps
 id btn_back_pass
 id btn_back_send
 id btn_back_topup
@@ -114,6 +117,8 @@ id email
 id emptyCard
 id emptyCard2
 id emptyrecycler
+id emptyrecyclerC
+id emptyrecyclerCC
 id expand
 id growth
 id haveAcc
@@ -138,10 +143,14 @@ id jumlah
 id last_pass
 id layoutExpand
 id linearLayout
+id locationBtn
 id login
 id logo
 id logocenter
+id logocenter_maps
 id logout
+id map
+id maps
 id market
 id more_trending
 id my_nav
@@ -197,6 +206,8 @@ id textView5
 id textView6
 id textView7
 id textempty
+id textemptyC
+id textemptyCC
 id time
 id tokenTxt
 id top_bar
@@ -221,6 +232,7 @@ layout activity_home
 layout activity_item_preview
 layout activity_item_preview_collection
 layout activity_main
+layout activity_maps
 layout activity_send
 layout activity_sign_up
 layout activity_top_up
@@ -252,6 +264,7 @@ string back
 string change_pass
 string confirm_pass
 string edit_profile
+string get_location
 string hello_blank_fragment
 string item_desc
 string item_name
@@ -274,6 +287,7 @@ string publish
 string required
 string save
 string send
+string title_activity_maps
 string top_up
 string topsales
 string wallet

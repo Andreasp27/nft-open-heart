@@ -5,194 +5,260 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
-8-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
+8        android:minSdkVersion="19"
+8-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
+9-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:5:5-67
-11-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-12-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:6:5-76
-12-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:6:22-73
+12-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:6:5-76
+12-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:6:22-73
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:7:5-79
-13-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:7:22-76
+13-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:7:5-79
+13-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:8:5-80
-14-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:8:22-77
+14-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:8:5-80
+14-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:8:22-77
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:5-81
-15-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:22-78
+15-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:5-81
+15-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:22-78
 16
-17    <application
-17-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:11:5-71:19
-18        android:allowBackup="true"
-18-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:12:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.7.0] C:\Users\rafae\.gradle\caches\transforms-3\d79cd730aff89e16bbe6bbee05f6ceb1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-21-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:13:9-43
-22        android:label="@string/app_name"
-22-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:14:9-41
-23        android:networkSecurityConfig="@xml/network_security_config"
-23-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:15:9-69
-24        android:requestLegacyExternalStorage="true"
-24-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:16:9-52
-25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:17:9-54
-26        android:supportsRtl="true"
-26-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:18:9-35
-27        android:testOnly="true"
-28        android:theme="@style/Theme.NFT"
-28-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:19:9-41
-29        android:usesCleartextTraffic="true" >
-29-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:20:9-44
-30        <activity
-30-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:21:9-23:40
-31            android:name="com.example.nft.CreatedPreviewItem"
-31-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:22:13-47
-32            android:exported="false" />
-32-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:23:13-37
-33        <activity
-33-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:24:9-26:40
-34            android:name="com.example.nft.CollectionPreviewItem"
-34-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:25:13-50
-35            android:exported="false" />
-35-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:26:13-37
-36        <activity
-36-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:27:9-29:40
-37            android:name="com.example.nft.CreatorPage"
-37-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:28:13-40
-38            android:exported="false" />
-38-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:29:13-37
-39        <activity
-39-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:30:9-32:40
-40            android:name="com.example.nft.ItemPreviewCollection"
-40-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:31:13-50
-41            android:exported="false" />
-41-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:32:13-37
-42        <activity
-42-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:33:9-35:40
-43            android:name="com.example.nft.ItemPreview"
-43-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:34:13-40
-44            android:exported="false" />
-44-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:35:13-37
-45        <activity
-45-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:36:9-38:40
-46            android:name="com.example.nft.AddCollection"
-46-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:37:13-42
-47            android:exported="false" />
-47-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:38:13-37
-48        <activity
-48-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:39:9-42:40
-49            android:name="com.example.nft.Send"
-49-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:40:13-33
-50            android:exported="false"
-50-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:41:13-37
-51            android:noHistory="true" />
-51-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:42:13-37
-52        <activity
-52-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:43:9-46:40
-53            android:name="com.example.nft.TopUp"
-53-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:44:13-34
-54            android:exported="false"
-54-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:45:13-37
-55            android:noHistory="true" />
-55-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:46:13-37
+17    <uses-feature
+17-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+18        android:glEsVersion="0x00020000"
+18-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+19        android:required="true" />
+19-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+20
+21    <queries>
+21-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+22
+23        <!-- Needs to be explicitly declared on Android R+ -->
+24        <package android:name="com.google.android.apps.maps" />
+24-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+24-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+25    </queries>
+26
+27    <application
+27-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:11:5-91:19
+28        android:allowBackup="true"
+28-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:12:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.7.0] C:\Users\acer\.gradle\caches\transforms-3\19993721b14e547f735b9fa1d0b1eaa2\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+31-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:13:9-43
+32        android:label="@string/app_name"
+32-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:14:9-41
+33        android:networkSecurityConfig="@xml/network_security_config"
+33-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:15:9-69
+34        android:requestLegacyExternalStorage="true"
+34-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:16:9-52
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:17:9-54
+36        android:supportsRtl="true"
+36-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:18:9-35
+37        android:testOnly="true"
+38        android:theme="@style/Theme.NFT"
+38-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:19:9-41
+39        android:usesCleartextTraffic="true" >
+39-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:20:9-44
+40
+41        <!--
+42             TODO: Before you run your application, you need a Google Maps API key.
+43
+44             To get one, follow the directions here:
+45
+46                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+47
+48             Once you have your API key (it starts with "AIza"), define a new property in your
+49             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+50             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+51        -->
+52        <meta-data
+52-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:33:9-35:71
+53            android:name="com.google.android.geo.API_KEY"
+53-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:34:13-58
+54            android:value="AIzaSyA0na1tIM4P-r3NLZYibtP1tqhOGn2o1so" />
+54-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:35:13-68
+55
 56        <activity
-56-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:47:9-49:40
-57            android:name="com.example.nft.EditProfile"
-57-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:48:13-40
-58            android:exported="false" />
-58-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:49:13-37
-59        <activity
-59-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:50:9-52:40
-60            android:name="com.example.nft.ChangePass"
-60-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:51:13-39
-61            android:exported="false" />
-61-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:52:13-37
-62        <activity
-62-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:53:9-55:40
-63            android:name="com.example.nft.wallet"
-63-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:54:13-35
-64            android:exported="false" />
-64-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:55:13-37
-65        <activity
-65-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:56:9-58:40
-66            android:name="com.example.nft.SignUp"
-66-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:57:13-35
-67            android:exported="false" />
-67-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:58:13-37
-68        <activity
-68-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:59:9-61:40
-69            android:name="com.example.nft.HomeActivity"
-69-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:60:13-41
-70            android:exported="false" />
-70-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:61:13-37
-71        <activity
-71-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:62:9-70:20
-72            android:name="com.example.nft.MainActivity"
-72-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:63:13-41
-73            android:exported="true" >
-73-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:64:13-36
-74            <intent-filter>
-74-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:65:13-69:29
-75                <action android:name="android.intent.action.MAIN" />
-75-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:66:17-69
-75-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:66:25-66
-76
-77                <category android:name="android.intent.category.LAUNCHER" />
-77-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:68:17-77
-77-->D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:68:27-74
-78            </intent-filter>
-79        </activity>
-80
-81        <provider
-81-->[com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\266243aee40c84b5b302f494977b5578\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-82            android:name="com.squareup.picasso.PicassoProvider"
-82-->[com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\266243aee40c84b5b302f494977b5578\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-83            android:authorities="com.example.nft.com.squareup.picasso"
-83-->[com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\266243aee40c84b5b302f494977b5578\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-84            android:exported="false" />
-84-->[com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\266243aee40c84b5b302f494977b5578\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-85
-86        <uses-library
-86-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-87            android:name="androidx.window.extensions"
-87-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-88            android:required="false" />
-88-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-89        <uses-library
-89-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-90            android:name="androidx.window.sidecar"
-90-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-91            android:required="false" />
-91-->[androidx.window:window:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\f2c1d0bfc6da84d53bbcfedc5525574c\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-92
-93        <provider
-93-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-94            android:name="androidx.startup.InitializationProvider"
-94-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-95            android:authorities="com.example.nft.androidx-startup"
-95-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-96            android:exported="false" >
-96-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-97            <meta-data
-97-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-98                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-98-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-99                android:value="androidx.startup" />
-99-->[androidx.emoji2:emoji2:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-100            <meta-data
-100-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rafae\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-101                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-101-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rafae\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-102                android:value="androidx.startup" />
-102-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rafae\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-103        </provider>
-104    </application>
-105
-106</manifest>
+56-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:37:9-40:59
+57            android:name="com.example.nft.MapsActivity"
+57-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:38:13-41
+58            android:exported="false"
+58-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:39:13-37
+59            android:label="@string/title_activity_maps" />
+59-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:40:13-56
+60        <activity
+60-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:41:9-43:40
+61            android:name="com.example.nft.CreatedPreviewItem"
+61-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:42:13-47
+62            android:exported="false" />
+62-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:43:13-37
+63        <activity
+63-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:44:9-46:40
+64            android:name="com.example.nft.CollectionPreviewItem"
+64-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:45:13-50
+65            android:exported="false" />
+65-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:46:13-37
+66        <activity
+66-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:47:9-49:40
+67            android:name="com.example.nft.CreatorPage"
+67-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:48:13-40
+68            android:exported="false" />
+68-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:49:13-37
+69        <activity
+69-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:50:9-52:40
+70            android:name="com.example.nft.ItemPreviewCollection"
+70-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:51:13-50
+71            android:exported="false" />
+71-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:52:13-37
+72        <activity
+72-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:53:9-55:40
+73            android:name="com.example.nft.ItemPreview"
+73-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:54:13-40
+74            android:exported="false" />
+74-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:55:13-37
+75        <activity
+75-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:56:9-58:40
+76            android:name="com.example.nft.AddCollection"
+76-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:57:13-42
+77            android:exported="false" />
+77-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:58:13-37
+78        <activity
+78-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:59:9-62:40
+79            android:name="com.example.nft.Send"
+79-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:60:13-33
+80            android:exported="false"
+80-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:61:13-37
+81            android:noHistory="true" />
+81-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:62:13-37
+82        <activity
+82-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:63:9-66:40
+83            android:name="com.example.nft.TopUp"
+83-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:64:13-34
+84            android:exported="false"
+84-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:65:13-37
+85            android:noHistory="true" />
+85-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:66:13-37
+86        <activity
+86-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:67:9-69:40
+87            android:name="com.example.nft.EditProfile"
+87-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:68:13-40
+88            android:exported="false" />
+88-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:69:13-37
+89        <activity
+89-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:70:9-72:40
+90            android:name="com.example.nft.ChangePass"
+90-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:71:13-39
+91            android:exported="false" />
+91-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:72:13-37
+92        <activity
+92-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:73:9-75:40
+93            android:name="com.example.nft.wallet"
+93-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:74:13-35
+94            android:exported="false" />
+94-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:75:13-37
+95        <activity
+95-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:76:9-78:40
+96            android:name="com.example.nft.SignUp"
+96-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:77:13-35
+97            android:exported="false" />
+97-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:78:13-37
+98        <activity
+98-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:79:9-81:40
+99            android:name="com.example.nft.HomeActivity"
+99-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:80:13-41
+100            android:exported="false" />
+100-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:81:13-37
+101        <activity
+101-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:82:9-90:20
+102            android:name="com.example.nft.MainActivity"
+102-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:83:13-41
+103            android:exported="true" >
+103-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:84:13-36
+104            <intent-filter>
+104-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:85:13-89:29
+105                <action android:name="android.intent.action.MAIN" />
+105-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:86:17-69
+105-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:86:25-66
+106
+107                <category android:name="android.intent.category.LAUNCHER" />
+107-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:17-77
+107-->D:\dokumen\KULIAH\Semester 8\Pengembangan Aplikasi Mobile\Tugas\open-heart\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:27-74
+108            </intent-filter>
+109        </activity>
+110        <!-- Needs to be explicitly declared on P+ -->
+111        <uses-library
+111-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+112            android:name="org.apache.http.legacy"
+112-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+113            android:required="false" />
+113-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\acer\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+114
+115        <provider
+115-->[com.squareup.picasso:picasso:2.71828] C:\Users\acer\.gradle\caches\transforms-3\f7a0ccabc642f9f0456a00f0dcf6c04c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+116            android:name="com.squareup.picasso.PicassoProvider"
+116-->[com.squareup.picasso:picasso:2.71828] C:\Users\acer\.gradle\caches\transforms-3\f7a0ccabc642f9f0456a00f0dcf6c04c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+117            android:authorities="com.example.nft.com.squareup.picasso"
+117-->[com.squareup.picasso:picasso:2.71828] C:\Users\acer\.gradle\caches\transforms-3\f7a0ccabc642f9f0456a00f0dcf6c04c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+118            android:exported="false" />
+118-->[com.squareup.picasso:picasso:2.71828] C:\Users\acer\.gradle\caches\transforms-3\f7a0ccabc642f9f0456a00f0dcf6c04c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+119
+120        <activity
+120-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\acer\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+121            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+121-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\acer\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+122            android:exported="false"
+122-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\acer\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+123            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+123-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\acer\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+124
+125        <meta-data
+125-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\acer\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+126            android:name="com.google.android.gms.version"
+126-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\acer\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+127            android:value="@integer/google_play_services_version" />
+127-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\acer\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+128
+129        <provider
+129-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+130            android:name="androidx.startup.InitializationProvider"
+130-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+131            android:authorities="com.example.nft.androidx-startup"
+131-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+132            android:exported="false" >
+132-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+133            <meta-data
+133-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+134                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+134-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+135                android:value="androidx.startup" />
+135-->[androidx.emoji2:emoji2:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\c6dcadbc0e6ad596ddb3e79f806afe2e\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+136            <meta-data
+136-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\acer\.gradle\caches\transforms-3\6bdae4d60c7f705570ffecffa1dec3d1\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+137                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+137-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\acer\.gradle\caches\transforms-3\6bdae4d60c7f705570ffecffa1dec3d1\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+138                android:value="androidx.startup" />
+138-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\acer\.gradle\caches\transforms-3\6bdae4d60c7f705570ffecffa1dec3d1\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+139        </provider>
+140
+141        <uses-library
+141-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+142            android:name="androidx.window.extensions"
+142-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+143            android:required="false" />
+143-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+144        <uses-library
+144-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+145            android:name="androidx.window.sidecar"
+145-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+146            android:required="false" />
+146-->[androidx.window:window:1.0.0] C:\Users\acer\.gradle\caches\transforms-3\9e88556b4260f830e00f2e42ccbde230\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+147    </application>
+148
+149</manifest>
