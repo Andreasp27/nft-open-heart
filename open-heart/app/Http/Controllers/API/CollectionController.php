@@ -179,7 +179,7 @@ class CollectionController extends Controller
         //history wallet yang beli
         Historywallet::create([
             'jumlah' => $koleksi->harga,
-            'status' => 'Keluar',
+            'status' => 'keluar',
             'wallet_id' => $user->wallet->id,
         ]);
 
@@ -191,7 +191,7 @@ class CollectionController extends Controller
         //history penerima
         Historywallet::create([
             'jumlah' => $koleksi->harga,
-            'status' => 'Masuk',
+            'status' => 'masuk',
             'wallet_id' => auth()->user()->wallet->id,
         ]);
 

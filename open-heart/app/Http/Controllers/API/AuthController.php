@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Like;
 use App\Models\User;
 use App\Models\Wallet;
 use Illuminate\Http\Request;
@@ -11,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Validator;
+
+use function PHPUnit\Framework\isNull;
 
 class AuthController extends Controller
 {
@@ -178,11 +181,46 @@ class AuthController extends Controller
 
     public function suka(Request $request)
     {
-        $user = User::find($request->id)->update([
-            'suka' => DB::Raw('suka+1'),
+        $user = User::find($request->id);
+        $jml_suka = $user->suka;
+
+
+        $id_like = $user->like->firstWhere('liked_by', auth()->user()->id);
+
+        if (is_null($id_like)) {
+            Like::create([
+                'liked_by' => auth()->user()->id,
+                'user_id' => $request->id,
+
+            ]);
+            $jml_suka++;
+            $msg = "liked";
+        } else {
+            Like::find(($id_like)->id)->delete();
+            $jml_suka--;
+            $msg = "unliked";
+        }
+
+        $user->update([
+            'suka' => $jml_suka,
         ]);
 
+
         return response()
-            ->json(['msg' => 'liked']);
+            ->json(['message' => $msg]);
+    }
+
+    public function getAllUser()
+    {
+        $user = User::orderByDesc('suka')->get();
+        return response()
+            ->json($user);
+    }
+
+    public function getAllCreator(Request $request)
+    {
+        $user = User::with('koleksi', 'like')->find($request->id);
+        return response()
+            ->json($user);
     }
 }
