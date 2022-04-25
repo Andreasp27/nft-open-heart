@@ -4,6 +4,7 @@ import com.example.nft.ChangePass;
 import com.example.nft.Collection;
 import com.example.nft.EditProfile;
 import com.example.nft.HistoryWallet;
+import com.example.nft.Home;
 import com.example.nft.ItemPreview;
 import com.example.nft.ItemPreviewCollection;
 import com.example.nft.Market;
@@ -102,5 +103,16 @@ public interface UserService {
     @POST("collection/terimabid")
     Call<MessageResponse> acceptBidR(@Header("Authorization") String auth,
                                     @Body ItemPreviewCollection.AcceptBidRequest acceptBidRequest);
+
+    @GET("user")
+    Call<ArrayList<EditProfile.ProfileRR>> getAllCreator(@Header("Authorization") String auth);
+
+    @POST("creator")
+    Call<EditProfile.ProfileRR> getCreator(@Header("Authorization") String auth,
+                                           @Body ItemPreview.IdRequest id);
+
+    @POST("like")
+    Call<MessageResponse> like(@Header("Authorization") String auth,
+                               @Body ItemPreview.IdRequest id);
 
 }

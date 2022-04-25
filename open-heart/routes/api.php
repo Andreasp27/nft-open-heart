@@ -27,6 +27,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function (Request $request) {
         return auth()->user();
     });
+
+    Route::get('/user', [App\Http\Controllers\API\AuthController::class, 'getAllUser']);
+    Route::post('/creator', [App\Http\Controllers\API\AuthController::class, 'getAllCreator']);
+
     Route::post('/update', [App\Http\Controllers\API\AuthController::class, 'data']);
     Route::post('/updateimg', [App\Http\Controllers\API\AuthController::class, 'updateImg']);
     Route::post('/updatepass', [App\Http\Controllers\API\AuthController::class, 'updatePass']);
@@ -43,6 +47,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/collection/bid', [App\Http\Controllers\API\CollectionController::class, 'bid']);
     Route::post('/collection/terimabid', [App\Http\Controllers\API\CollectionController::class, 'terimaBid']);
     Route::post('/collection/updatebid', [App\Http\Controllers\API\CollectionController::class, 'updateBid']);
+    Route::post('/like', [App\Http\Controllers\API\AuthController::class, 'suka']);
 
 
     // API route for logout user

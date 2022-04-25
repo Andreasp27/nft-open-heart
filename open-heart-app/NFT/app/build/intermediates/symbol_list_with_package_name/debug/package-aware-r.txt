@@ -124,6 +124,7 @@ attr alpha
 attr alphabeticModifiers
 attr altSrc
 attr alwaysExpand
+attr anim_scale_factor
 attr animateCircleAngleTo
 attr animateRelativeTo
 attr animationMode
@@ -262,6 +263,8 @@ attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
 attr circleRadius
+attr circle_end_color
+attr circle_start_color
 attr circularProgressIndicatorStyle
 attr circularflow_angles
 attr circularflow_defaultAngle
@@ -417,6 +420,8 @@ attr dividerInsetStart
 attr dividerPadding
 attr dividerThickness
 attr dividerVertical
+attr dots_primary_color
+attr dots_secondary_color
 attr dragDirection
 attr dragScale
 attr dragThreshold
@@ -575,6 +580,8 @@ attr iconSize
 attr iconStartPadding
 attr iconTint
 attr iconTintMode
+attr icon_size
+attr icon_type
 attr iconifiedByDefault
 attr ifTagNotSet
 attr ifTagSet
@@ -595,6 +602,7 @@ attr insetForeground
 attr isLightTheme
 attr isMaterial3Theme
 attr isMaterialTheme
+attr is_enabled
 attr iss_auto_cycle
 attr iss_corner_radius
 attr iss_delay
@@ -719,6 +727,8 @@ attr layout_scrollInterpolator
 attr layout_wrapBehaviorInParent
 attr liftOnScroll
 attr liftOnScrollTargetViewId
+attr like_drawable
+attr liked
 attr limitBoundsTo
 attr lineHeight
 attr lineSpacing
@@ -1184,6 +1194,7 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr unlike_drawable
 attr upDuration
 attr uri
 attr useCompatPadding
@@ -2533,6 +2544,8 @@ drawable gradient
 drawable harimau
 drawable harimauungu
 drawable heart
+drawable heart_off
+drawable heart_on
 drawable ic_baseline_abc_24
 drawable ic_baseline_add_24
 drawable ic_baseline_arrow_back_24
@@ -2621,8 +2634,12 @@ drawable orangkribo
 drawable password_selector
 drawable placeholder
 drawable share
+drawable star_off
+drawable star_on
 drawable test_custom_background
 drawable test_level_drawable
+drawable thumb_off
+drawable thumb_on
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font roboto
@@ -2722,6 +2739,7 @@ id anticipate
 id appBarLayout
 id appBarLayout2
 id appBarLayout_add_coll
+id appBarLayout_creator
 id arc
 id asConfigured
 id async
@@ -2731,6 +2749,7 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id balance
 id banner
+id bannerCreator
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2739,7 +2758,7 @@ id bestChoice
 id bid
 id bidBtn
 id bidder
-id bio
+id bioCreator
 id blocking
 id bottom
 id bottomNavigationView
@@ -2780,6 +2799,7 @@ id chip2
 id chip3
 id chip_group
 id chronometer
+id circle
 id circle_center
 id clear_text
 id clickhere
@@ -2809,7 +2829,7 @@ id cos
 id counterclockwise
 id createdCollected
 id creator
-id creatorname
+id creatorName
 id current
 id currentState
 id custom
@@ -2837,6 +2857,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id donthave
+id dots
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2940,7 +2961,6 @@ id layoutExpand
 id left
 id leftToRight
 id legacy
-id like
 id line1
 id line3
 id linear
@@ -3074,6 +3094,7 @@ id profile_banner
 id profile_bio
 id profile_email
 id profile_img
+id profile_img_creator
 id profile_name
 id profile_phone
 id profile_sex
@@ -3130,7 +3151,6 @@ id select_dialog_listview
 id selected
 id selection_type
 id sendTxt
-id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3162,6 +3182,7 @@ id src_atop
 id src_in
 id src_over
 id standard
+id star_button
 id start
 id startHorizontal
 id startToEnd
@@ -3398,6 +3419,7 @@ layout fragment_profil_option
 layout fragment_trending
 layout historywallet
 layout image_slider
+layout likeview
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4765,6 +4787,7 @@ styleable KeyPosition curveFit drawPath framePosition keyPositionType motionTarg
 styleable KeyTimeCycle android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transitionEasing transitionPathRotate waveDecay waveOffset wavePeriod wavePhase waveShape
 styleable KeyTrigger framePosition motionTarget motion_postLayoutCollision motion_triggerOnCollision onCross onNegativeCross onPositiveCross triggerId triggerReceiver triggerSlack viewTransitionOnCross viewTransitionOnNegativeCross viewTransitionOnPositiveCross
 styleable Layout android_orientation android_layout_width android_layout_height android_layout_marginLeft android_layout_marginTop android_layout_marginRight android_layout_marginBottom android_layout_marginStart android_layout_marginEnd barrierAllowsGoneWidgets barrierDirection barrierMargin chainUseRtl constraint_referenced_ids constraint_referenced_tags guidelineUseRtl layout_constrainedHeight layout_constrainedWidth layout_constraintBaseline_creator layout_constraintBaseline_toBaselineOf layout_constraintBaseline_toBottomOf layout_constraintBaseline_toTopOf layout_constraintBottom_creator layout_constraintBottom_toBottomOf layout_constraintBottom_toTopOf layout_constraintCircle layout_constraintCircleAngle layout_constraintCircleRadius layout_constraintDimensionRatio layout_constraintEnd_toEndOf layout_constraintEnd_toStartOf layout_constraintGuide_begin layout_constraintGuide_end layout_constraintGuide_percent layout_constraintHeight layout_constraintHeight_default layout_constraintHeight_max layout_constraintHeight_min layout_constraintHeight_percent layout_constraintHorizontal_bias layout_constraintHorizontal_chainStyle layout_constraintHorizontal_weight layout_constraintLeft_creator layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_creator layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintTop_creator layout_constraintTop_toBottomOf layout_constraintTop_toTopOf layout_constraintVertical_bias layout_constraintVertical_chainStyle layout_constraintVertical_weight layout_constraintWidth layout_constraintWidth_default layout_constraintWidth_max layout_constraintWidth_min layout_constraintWidth_percent layout_editor_absoluteX layout_editor_absoluteY layout_goneMarginBaseline layout_goneMarginBottom layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginRight layout_goneMarginStart layout_goneMarginTop layout_marginBaseline layout_wrapBehaviorInParent maxHeight maxWidth minHeight minWidth
+styleable LikeButton anim_scale_factor circle_end_color circle_start_color dots_primary_color dots_secondary_color icon_size icon_type is_enabled like_drawable liked unlike_drawable
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear

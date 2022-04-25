@@ -27,7 +27,8 @@
                 android:id="@+id/recommend"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:background="#EAEAEA"/>
 
             <TextView
                 android:id="@+id/nama"
@@ -63,6 +64,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="54dp"
                 android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

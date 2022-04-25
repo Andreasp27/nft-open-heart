@@ -50,4 +50,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Daftarbid::class);
     }
+    public function like()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

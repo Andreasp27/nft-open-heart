@@ -26,6 +26,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -38,9 +39,8 @@ public class EditProfile extends AppCompatActivity {
 
     TextInputLayout editName, editEmail, editSex, editAddress, editPhone, editBio;
     ImageButton addProfileImg, addProfileBanner;
-    ImageView backBtn;
     private Integer statusImg = 0, statusBanner = 0;
-    ImageView imageProfile, imageBanner, imageWallet;
+    ImageView imageProfile, imageBanner, imageWallet, backBtn;
     private String access_token, base;
     private Session session;
     Uri imgUri, bannerUri;
@@ -166,6 +166,27 @@ public class EditProfile extends AppCompatActivity {
                 }
             });
 
+    public static class Like{
+        private int liked_by;
+        private int user_id;
+
+        public int getLiked_by() {
+            return liked_by;
+        }
+
+        public void setLiked_by(int liked_by) {
+            this.liked_by = liked_by;
+        }
+
+        public int getUser_id() {
+            return user_id;
+        }
+
+        public void setUser_id(int user_id) {
+            this.user_id = user_id;
+        }
+    }
+
     public class ProfileRR{
         private int id;
         private String name;
@@ -176,6 +197,8 @@ public class EditProfile extends AppCompatActivity {
         private String bio;
         private String gambar_path;
         private String banner_path;
+        private ArrayList<Market.CollectionResponse> koleksi;
+        private ArrayList<Like> like;
 
         public int getId() {
             return id;
@@ -239,6 +262,22 @@ public class EditProfile extends AppCompatActivity {
 
         public void setBio(String bio) {
             this.bio = bio;
+        }
+
+        public ArrayList<Market.CollectionResponse> getKoleksi() {
+            return koleksi;
+        }
+
+        public void setKoleksi(ArrayList<Market.CollectionResponse> koleksi) {
+            this.koleksi = koleksi;
+        }
+
+        public ArrayList<Like> getLike() {
+            return like;
+        }
+
+        public void setLike(ArrayList<Like> like) {
+            this.like = like;
         }
     }
 
