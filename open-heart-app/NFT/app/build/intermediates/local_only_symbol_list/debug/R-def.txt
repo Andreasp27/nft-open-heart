@@ -72,12 +72,14 @@ id amountTxt
 id appBarLayout
 id appBarLayout2
 id appBarLayout_add_coll
+id appBarLayout_creator
 id balance
 id banner
+id bannerCreator
 id bid
 id bidBtn
 id bidder
-id bio
+id bioCreator
 id bottomNavigationView
 id btn_back
 id btn_back_add_coll
@@ -102,7 +104,7 @@ id collection_img
 id confirm_pass
 id createdCollected
 id creator
-id creatorname
+id creatorName
 id current
 id desc
 id donthave
@@ -133,7 +135,6 @@ id itemcreated
 id itemname
 id jumlah
 id last_pass
-id like
 id linearLayout
 id login
 id logo
@@ -161,6 +162,7 @@ id profile_banner
 id profile_bio
 id profile_email
 id profile_img
+id profile_img_creator
 id profile_name
 id profile_phone
 id profile_sex
@@ -181,9 +183,9 @@ id searchView
 id seeAll1
 id seeAll2
 id sendTxt
-id share
 id signup
 id sks
+id star_button
 id status
 id textView
 id textView2

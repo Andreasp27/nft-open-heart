@@ -123,6 +123,7 @@ int attr alpha 0x7f03002f
 int attr alphabeticModifiers 0x7f030030
 int attr altSrc 0x7f030031
 int attr alwaysExpand 0x7f030032
+int attr anim_scale_factor 0x7f030479
 int attr animateCircleAngleTo 0x7f030033
 int attr animateRelativeTo 0x7f030034
 int attr animationMode 0x7f030035
@@ -261,6 +262,8 @@ int attr chipStrokeWidth 0x7f0300b9
 int attr chipStyle 0x7f0300ba
 int attr chipSurfaceColor 0x7f0300bb
 int attr circleRadius 0x7f0300bc
+int attr circle_end_color 0x7f03047a
+int attr circle_start_color 0x7f03047b
 int attr circularProgressIndicatorStyle 0x7f0300bd
 int attr circularflow_angles 0x7f0300be
 int attr circularflow_defaultAngle 0x7f0300bf
@@ -416,6 +419,8 @@ int attr dividerInsetStart 0x7f030154
 int attr dividerPadding 0x7f030155
 int attr dividerThickness 0x7f030156
 int attr dividerVertical 0x7f030157
+int attr dots_primary_color 0x7f03047c
+int attr dots_secondary_color 0x7f03047d
 int attr dragDirection 0x7f030158
 int attr dragScale 0x7f030159
 int attr dragThreshold 0x7f03015a
@@ -574,6 +579,8 @@ int attr iconSize 0x7f0301f2
 int attr iconStartPadding 0x7f0301f3
 int attr iconTint 0x7f0301f4
 int attr iconTintMode 0x7f0301f5
+int attr icon_size 0x7f03047e
+int attr icon_type 0x7f03047f
 int attr iconifiedByDefault 0x7f0301f6
 int attr ifTagNotSet 0x7f0301f7
 int attr ifTagSet 0x7f0301f8
@@ -594,6 +601,7 @@ int attr insetForeground 0x7f030206
 int attr isLightTheme 0x7f030207
 int attr isMaterial3Theme 0x7f030208
 int attr isMaterialTheme 0x7f030209
+int attr is_enabled 0x7f030480
 int attr iss_auto_cycle 0x7f03020a
 int attr iss_corner_radius 0x7f03020b
 int attr iss_delay 0x7f03020c
@@ -718,6 +726,8 @@ int attr layout_scrollInterpolator 0x7f030282
 int attr layout_wrapBehaviorInParent 0x7f030283
 int attr liftOnScroll 0x7f030284
 int attr liftOnScrollTargetViewId 0x7f030285
+int attr like_drawable 0x7f030481
+int attr liked 0x7f030482
 int attr limitBoundsTo 0x7f030286
 int attr lineHeight 0x7f030287
 int attr lineSpacing 0x7f030288
@@ -1183,6 +1193,7 @@ int attr triggerId 0x7f030453
 int attr triggerReceiver 0x7f030454
 int attr triggerSlack 0x7f030455
 int attr ttcIndex 0x7f030456
+int attr unlike_drawable 0x7f030483
 int attr upDuration 0x7f030457
 int attr uri 0x7f030458
 int attr useCompatPadding 0x7f030459
@@ -2532,6 +2543,8 @@ int drawable gradient 0x7f07006e
 int drawable harimau 0x7f07006f
 int drawable harimauungu 0x7f070070
 int drawable heart 0x7f070071
+int drawable heart_off 0x7f0700ce
+int drawable heart_on 0x7f0700cf
 int drawable ic_baseline_abc_24 0x7f070072
 int drawable ic_baseline_add_24 0x7f070073
 int drawable ic_baseline_arrow_back_24 0x7f070074
@@ -2620,8 +2633,12 @@ int drawable orangkribo 0x7f0700c6
 int drawable password_selector 0x7f0700c7
 int drawable placeholder 0x7f0700c8
 int drawable share 0x7f0700c9
+int drawable star_off 0x7f0700d0
+int drawable star_on 0x7f0700d1
 int drawable test_custom_background 0x7f0700ca
 int drawable test_level_drawable 0x7f0700cb
+int drawable thumb_off 0x7f0700d2
+int drawable thumb_on 0x7f0700d3
 int drawable tooltip_frame_dark 0x7f0700cc
 int drawable tooltip_frame_light 0x7f0700cd
 int font roboto 0x7f080000
@@ -2721,6 +2738,7 @@ int id anticipate 0x7f09005a
 int id appBarLayout 0x7f09005b
 int id appBarLayout2 0x7f09005c
 int id appBarLayout_add_coll 0x7f09005d
+int id appBarLayout_creator 0x7f090288
 int id arc 0x7f09005e
 int id asConfigured 0x7f09005f
 int id async 0x7f090060
@@ -2730,6 +2748,7 @@ int id autoCompleteToEnd 0x7f090063
 int id autoCompleteToStart 0x7f090064
 int id balance 0x7f090065
 int id banner 0x7f090066
+int id bannerCreator 0x7f090284
 int id barrier 0x7f090067
 int id baseline 0x7f090068
 int id beginOnFirstDraw 0x7f090069
@@ -2738,7 +2757,7 @@ int id bestChoice 0x7f09006b
 int id bid 0x7f09006c
 int id bidBtn 0x7f09006d
 int id bidder 0x7f09006e
-int id bio 0x7f09006f
+int id bioCreator 0x7f090285
 int id blocking 0x7f090070
 int id bottom 0x7f090071
 int id bottomNavigationView 0x7f090072
@@ -2778,6 +2797,7 @@ int id chip2 0x7f090093
 int id chip3 0x7f090094
 int id chip_group 0x7f090095
 int id chronometer 0x7f090096
+int id circle 0x7f090281
 int id circle_center 0x7f090097
 int id clear_text 0x7f090098
 int id clickhere 0x7f090099
@@ -2807,7 +2827,7 @@ int id cos 0x7f0900b0
 int id counterclockwise 0x7f0900b1
 int id createdCollected 0x7f0900b2
 int id creator 0x7f0900b3
-int id creatorname 0x7f0900b4
+int id creatorName 0x7f090286
 int id current 0x7f0900b5
 int id currentState 0x7f0900b6
 int id custom 0x7f0900b7
@@ -2835,6 +2855,7 @@ int id disablePostScroll 0x7f0900cc
 int id disableScroll 0x7f0900cd
 int id disjoint 0x7f0900ce
 int id donthave 0x7f0900cf
+int id dots 0x7f090282
 int id dragAnticlockwise 0x7f0900d0
 int id dragClockwise 0x7f0900d1
 int id dragDown 0x7f0900d2
@@ -2937,7 +2958,6 @@ int id layout 0x7f090132
 int id left 0x7f090133
 int id leftToRight 0x7f090134
 int id legacy 0x7f090135
-int id like 0x7f090136
 int id line1 0x7f090137
 int id line3 0x7f090138
 int id linear 0x7f090139
@@ -3071,6 +3091,7 @@ int id profile_banner 0x7f0901b8
 int id profile_bio 0x7f0901b9
 int id profile_email 0x7f0901ba
 int id profile_img 0x7f0901bb
+int id profile_img_creator 0x7f090287
 int id profile_name 0x7f0901bc
 int id profile_phone 0x7f0901bd
 int id profile_sex 0x7f0901be
@@ -3127,7 +3148,6 @@ int id select_dialog_listview 0x7f0901f0
 int id selected 0x7f0901f1
 int id selection_type 0x7f0901f2
 int id sendTxt 0x7f0901f3
-int id share 0x7f0901f4
 int id sharedValueSet 0x7f0901f5
 int id sharedValueUnset 0x7f0901f6
 int id shortcut 0x7f0901f7
@@ -3159,6 +3179,7 @@ int id src_atop 0x7f090210
 int id src_in 0x7f090211
 int id src_over 0x7f090212
 int id standard 0x7f090213
+int id star_button 0x7f090283
 int id start 0x7f090214
 int id startHorizontal 0x7f090215
 int id startToEnd 0x7f090216
@@ -3395,6 +3416,7 @@ int layout fragment_profil_option 0x7f0c0041
 int layout fragment_trending 0x7f0c0042
 int layout historywallet 0x7f0c0043
 int layout image_slider 0x7f0c0044
+int layout likeview 0x7f0c0099
 int layout m3_alert_dialog 0x7f0c0045
 int layout m3_alert_dialog_actions 0x7f0c0046
 int layout m3_alert_dialog_title 0x7f0c0047
@@ -5947,6 +5969,18 @@ int styleable Layout_maxHeight 72
 int styleable Layout_maxWidth 73
 int styleable Layout_minHeight 74
 int styleable Layout_minWidth 75
+int[] styleable LikeButton { 0x7f030479, 0x7f03047a, 0x7f03047b, 0x7f03047c, 0x7f03047d, 0x7f03047e, 0x7f03047f, 0x7f030480, 0x7f030481, 0x7f030482, 0x7f030483 }
+int styleable LikeButton_anim_scale_factor 0
+int styleable LikeButton_circle_end_color 1
+int styleable LikeButton_circle_start_color 2
+int styleable LikeButton_dots_primary_color 3
+int styleable LikeButton_dots_secondary_color 4
+int styleable LikeButton_icon_size 5
+int styleable LikeButton_icon_type 6
+int styleable LikeButton_is_enabled 7
+int styleable LikeButton_like_drawable 8
+int styleable LikeButton_liked 9
+int styleable LikeButton_unlike_drawable 10
 int[] styleable LinearLayoutCompat { 0x010100af, 0x010100c4, 0x01010126, 0x01010127, 0x01010128, 0x7f030150, 0x7f030155, 0x7f0302ca, 0x7f030371 }
 int styleable LinearLayoutCompat_android_gravity 0
 int styleable LinearLayoutCompat_android_orientation 1

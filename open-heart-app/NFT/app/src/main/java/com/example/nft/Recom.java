@@ -1,14 +1,15 @@
 package com.example.nft;
 
 public class Recom {
-    String creator, description;
-    int imagecrea, imagebann;
+    String creator, description, imagecrea, imagebann;
+    int id;
 
-    public Recom(String creator, String description, int imagecrea, int imagebann){
+    public Recom(String creator, String description, String imagecrea, String imagebann, int id){
         this.creator = creator;
         this.description = description;
         this.imagecrea = imagecrea;
         this.imagebann = imagebann;
+        this.id = id;
     }
 
     public String getCreator() {
@@ -27,19 +28,27 @@ public class Recom {
         this.description = description;
     }
 
-    public int getImagecrea() {
+    public String getImagecrea() {
         return imagecrea;
     }
 
-    public void setImagecrea(int imagecrea) {
+    public void setImagecrea(String imagecrea) {
         this.imagecrea = imagecrea;
     }
 
-    public int getImagebann() {
+    public String getImagebann() {
         return imagebann;
     }
 
-    public void setImagebann(int imagebann) {
+    public void setImagebann(String imagebann) {
         this.imagebann = imagebann;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

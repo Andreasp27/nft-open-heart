@@ -7,7 +7,7 @@
     tools:context=".CreatorPage">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout_add_coll"
+        android:id="@+id/appBarLayout_creator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ToolBarStyle"
@@ -78,68 +78,58 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_add_coll">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_creator">
 
         <ImageView
-            android:id="@+id/banner"
+            android:id="@+id/bannerCreator"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/orang" />
+            android:background="#EAEAEA"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/creatorname"
+                android:id="@+id/creatorName"
                 style="@style/Theme.NFT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
-                android:text="Akatzuki"
+                android:text="----"
                 android:textSize="20dp"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="0dp" />
 
             <TextView
-                android:id="@+id/bio"
+                android:id="@+id/bioCreator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="@style/Theme.NFT"
+                android:paddingHorizontal="10dp"
                 android:fontFamily="@font/roboto"
-                android:text="TOP 1 BINANCE ARTIST\n▵Best and profitable NFT on Binance \nhttps://www.instagram.com/nft.pride/\nhttps://discord.gg/BV2gsuSz2A"
-                app:layout_constraintTop_toBottomOf="@+id/creatorname"
+                android:text="----"
+                app:layout_constraintTop_toBottomOf="@+id/creatorName"
                 tools:layout_editor_absoluteX="0dp" />
 
-            <ImageView
-                android:id="@+id/like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="80dp"
-                android:layout_marginRight="80dp"
-                android:layout_marginBottom="24dp"
-                android:src="@drawable/heart"
-                app:layout_constraintBottom_toTopOf="@+id/creatorname"
+            <com.like.LikeButton
+                android:id="@+id/star_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                app:icon_size="8dp"
+                app:icon_type="heart"
+                app:layout_constraintBottom_toTopOf="@+id/creatorName"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.814"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.6" />
 
-            <ImageView
-                android:id="@+id/share"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginBottom="24dp"
-                android:src="@drawable/share"
-                app:layout_constraintBottom_toTopOf="@+id/creatorname"
-                app:layout_constraintStart_toEndOf="@+id/like"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -147,12 +137,13 @@
             android:id="@+id/ownedItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
             android:paddingTop="20dp"/>
 
     </LinearLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_img"
+        android:id="@+id/profile_img_creator"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_marginTop="136dp"
@@ -161,7 +152,7 @@
         android:src="@mipmap/profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_add_coll"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout_creator"
         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="5dp"/>

@@ -63,9 +63,9 @@ public class Home extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recomArrayList = new ArrayList<>();
+        getDataCreator();
 
-        addData();
-        recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
+
 
 
         //Trend item
@@ -107,15 +107,15 @@ public class Home extends Fragment {
 
     }
 
-    void addData() {
-        Recom ob1 = new Recom("Akatzuki", "TOP 1 BINANCE ARTIST\n" +
-                "▵Best and profitable NFT on Binance \n" +
-                "https://www.instagram.com/nft.pride/" +
-                "https://discord.gg/BV2gsuSz2A", R.drawable.akatzuki, R.drawable.orang);
-        recomArrayList.add(ob1);
-        Recom ob2 = new Recom("Bambank", "FEKIKI is the Secret Key to unlock more FEKIRA UNIVERSE benefits in the near futur..", R.drawable.akatzuki, R.drawable.naruto);
-        recomArrayList.add(ob2);
-    }
+//    void addData() {
+//        Recom ob1 = new Recom("Akatzuki", "TOP 1 BINANCE ARTIST\n" +
+//                "▵Best and profitable NFT on Binance \n" +
+//                "https://www.instagram.com/nft.pride/" +
+//                "https://discord.gg/BV2gsuSz2A", R.drawable.akatzuki, R.drawable.orang);
+//        recomArrayList.add(ob1);
+//        Recom ob2 = new Recom("Bambank", "FEKIKI is the Secret Key to unlock more FEKIRA UNIVERSE benefits in the near futur..", R.drawable.akatzuki, R.drawable.naruto);
+//        recomArrayList.add(ob2);
+//    }
 
 //    void addDatabanner() {
 //        SlideModel ob1 = new SlideModel("https://public.nftstatic.com/static/nft/res/nft-cex/S3/1649823900545_6jn5ubar1ajr28zb2py05z7lvsprhcmh.png");
@@ -157,6 +157,46 @@ public class Home extends Fragment {
             }
         });
     }
+
+    void getDataCreator(){
+        Call<ArrayList<EditProfile.ProfileRR>> arrayListCall = ApiClient.getUserService().getAllCreator("Bearer "+ access_token);
+        arrayListCall.enqueue(new Callback<ArrayList<EditProfile.ProfileRR>>() {
+            @Override
+            public void onResponse(Call<ArrayList<EditProfile.ProfileRR>> call, Response<ArrayList<EditProfile.ProfileRR>> response) {
+                if (response.isSuccessful()){
+
+                    int no = 1;
+                    String bio = "";
+                    for (EditProfile.ProfileRR item : response.body()){
+                        if (no <= 2){
+                            if (item.getBio().length()>30){
+                                bio = item.getBio().substring(0,27) + "...";
+                            }else{
+                                bio = item.getBio();
+                            }
+
+                            Recom ob2 = new Recom(item.getName(), bio ,base +  item.getGambar_path(),base +  item.getBanner_path(), item.getId());
+                            recomArrayList.add(ob2);
+                        }
+                        no++;
+                    }
+
+
+                    recyclerView.setAdapter(new MyAdapter(recomArrayList, getContext()));
+                }else{
+                    Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed ", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<EditProfile.ProfileRR>> call, Throwable t) {
+                Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed " + t, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+
+
 
 
 }

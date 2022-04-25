@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
@@ -39,14 +41,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecomViewHolder> {
     public void onBindViewHolder(RecomViewHolder holder, int position) {
         holder.creator.setText(recomArrayList.get(position).getCreator());
         holder.desc.setText(recomArrayList.get(position).getDescription());
-        holder.imgcreator.setImageResource(recomArrayList.get(position).getImagecrea());
-        holder.imgbanner.setImageResource(recomArrayList.get(position).getImagebann());
+        Picasso.get().load(recomArrayList.get(position).getImagecrea()).into(holder.imgcreator);
+        Picasso.get().load(recomArrayList.get(position).getImagebann()).into(holder.imgbanner);
 
+        int id = recomArrayList.get(position).getId();
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(view.getContext(), Toast.LENGTH_SHORT).show();
-                view.getContext().startActivity(new Intent(context, CreatorPage.class));
+                Intent intent = new Intent(context, CreatorPage.class);
+                intent.putExtra("id", id);
+                view.getContext().startActivity(intent);
             }
         });
     }
