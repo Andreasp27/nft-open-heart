@@ -203,7 +203,6 @@ id topupTxt
 id trending
 id user_send
 id username
-id viewall
 id wallet
 id wallet_add_coll
 id wallet_item
@@ -224,6 +223,7 @@ layout activity_send
 layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
+layout banner_layout
 layout bidder
 layout card_item
 layout collection_item

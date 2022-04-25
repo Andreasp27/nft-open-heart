@@ -1,34 +1,43 @@
 package com.example.nft;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+import androidx.viewpager.widget.ViewPager;
 
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.models.SlideModel;
-import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.example.nft.api.ApiClient;
 import com.example.nft.api.Session;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.progressindicator.CircularProgressIndicatorSpec;
 
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,11 +45,13 @@ import retrofit2.Response;
 
 
 public class Home extends Fragment {
-    private RecyclerView recyclerView, recyclerTrend;
+    private RecyclerView recyclerView, recyclerTrend, recyclerBanner;
     private MyAdapter adapter;
     private MyAdapterTrend adapterTrend;
     private ArrayList<Recom> recomArrayList;
     private ArrayList<Trend> trendArrayList;
+    private ArrayList<Banner> bannerArrayList;
+    private SliderAdapter bannerAdapter;
 
     private String access_token, base;
     private Session session;
@@ -57,6 +68,17 @@ public class Home extends Fragment {
         session = new Session(getActivity().getApplicationContext());
         access_token = session.getAccessToken();
         base = session.getBase();
+
+        more = view.findViewById(R.id.more_trending);
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController controller = Navigation.findNavController(view);
+                controller.popBackStack(R.id.home2, true);
+                controller.navigate(R.id.trending);
+            }
+        });
 
         //Trend Creator
         recyclerView = view.findViewById(R.id.recycler);
@@ -78,24 +100,35 @@ public class Home extends Fragment {
         getData();
 
 
-        ImageSlider imageSlider = (ImageSlider) view.findViewById(R.id.banner);
-        ArrayList <SlideModel> imageList = new ArrayList<>();
+        //banner
+        recyclerBanner = view.findViewById(R.id.banner);
+        bannerArrayList = new ArrayList<>();
+        bannerAdapter = new SliderAdapter(bannerArrayList, getActivity().getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false);
+        recyclerBanner.addItemDecoration(new DotsIndicatorDecoration(15,40,60,0x33000000,0xFFFF7043));
+        recyclerBanner.setLayoutManager(layoutManager);
 
-        imageList.add(new SlideModel(R.drawable.orang, ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.naruto, ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.akatzuki, ScaleTypes.CENTER_CROP));
-        imageSlider.setImageList(imageList);
+        //viewpager behavior
+        SnapHelper snapHelper = new PagerSnapHelper();
+        snapHelper.attachToRecyclerView(recyclerBanner);
 
-        more = view.findViewById(R.id.more_trending);
-
-        more.setOnClickListener(new View.OnClickListener() {
+        //event handler
+        final int interval = 3000;
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            int count = 0;
             @Override
-            public void onClick(View view) {
-                NavController controller = Navigation.findNavController(view);
-                controller.popBackStack(R.id.home2, true);
-                controller.navigate(R.id.trending);
+            public void run() {
+                if (count<bannerArrayList.size()){
+                    recyclerBanner.smoothScrollToPosition(count++);
+                    handler.postDelayed(this, interval);
+                    if (count == bannerArrayList.size()){
+                        count = 0;
+                    }
+                }
             }
-        });
+        };
+        handler.postDelayed(runnable, interval);
 
         return view;
     }
@@ -117,18 +150,6 @@ public class Home extends Fragment {
 //        recomArrayList.add(ob2);
 //    }
 
-//    void addDatabanner() {
-//        SlideModel ob1 = new SlideModel("https://public.nftstatic.com/static/nft/res/nft-cex/S3/1649823900545_6jn5ubar1ajr28zb2py05z7lvsprhcmh.png");
-//        SlideModel.add(ob1);
-//    }
-
-//    void addData2() {
-//        Trend ob1 = new Trend("Bored APE #1003", "25 SKS", "Bored APE", R.drawable.orang);
-//        trendArrayList.add(ob1);
-//        Trend ob2 = new Trend("Bored APE #1005", "37 SKS", "Bored APE", R.drawable.naruto);
-//        trendArrayList.add(ob2);
-//    }
-
     void getData(){
         Call<ArrayList<Market.CollectionResponse>> collectionResponseCall = ApiClient.getUserService().getAllTrending("Bearer "+ access_token);
         collectionResponseCall.enqueue(new Callback<ArrayList<Market.CollectionResponse>>() {
@@ -143,8 +164,13 @@ public class Home extends Fragment {
                             trendArrayList.add(ob1);
 
                         }
+                        if (no <= 5){
+                            Banner ob = new Banner(base + item.getImage_path(), item.getId());
+                            bannerArrayList.add(ob);
+                        }
                         no++;
                     }
+                    recyclerBanner.setAdapter(new SliderAdapter(bannerArrayList, getContext()));
                     recyclerTrend.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
                     Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed " + response.body(), Toast.LENGTH_LONG).show();
@@ -157,6 +183,7 @@ public class Home extends Fragment {
             }
         });
     }
+
 
     void getDataCreator(){
         Call<ArrayList<EditProfile.ProfileRR>> arrayListCall = ApiClient.getUserService().getAllCreator("Bearer "+ access_token);
@@ -194,7 +221,6 @@ public class Home extends Fragment {
             }
         });
     }
-
 
 
 

@@ -11,6 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,46 +21,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.denzcoskun.imageslider.ImageSlider
+<!--            <com.denzcoskun.imageslider.ImageSlider-->
+<!--                android:id="@+id/banner"-->
+<!--                android:layout_width="449dp"-->
+<!--                android:layout_height="197dp"-->
+<!--                app:iss_auto_cycle="true"-->
+<!--                app:iss_delay="0"-->
+<!--                app:iss_period="1000"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            </com.denzcoskun.imageslider.ImageSlider>-->
+
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/banner"
-                android:layout_width="449dp"
-                android:layout_height="197dp"
-                app:iss_auto_cycle="true"
-                app:iss_delay="0"
-                app:iss_period="1000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" />
 
-            </com.denzcoskun.imageslider.ImageSlider>
 
             <TextView
                 android:id="@+id/textView"
+                style="@style/Theme.NFT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/roboto"
                 android:text="Recommend Creators"
-                style="@style/Theme.NFT"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/banner" />
-
-
-            <TextView
-                android:id="@+id/viewall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="@font/roboto"
-                android:text="View All"
-                android:textStyle="bold"
-                style="@style/Theme.NFT"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/banner" />
 
             <RelativeLayout
