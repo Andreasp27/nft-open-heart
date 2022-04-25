@@ -62,18 +62,6 @@ public class Market extends Fragment{
         recyclerView.setLayoutManager(gridLayoutManager2);
         trendArrayList = new ArrayList<>();
 
-//        searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String newtext) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                myAdapterTrend.getFilter().filter(newText);
-//                return false;
-//            }
-//        });
 
         getData();
 
@@ -95,6 +83,27 @@ public class Market extends Fragment{
                         System.out.println("item name: " + item.getNama_item());
                     }
 
+                    searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                        @Override
+                        public boolean onQueryTextSubmit(String newtext) {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onQueryTextChange(String newText) {
+                            newText = newText.toLowerCase();
+                            ArrayList<Trend> filteredList = new ArrayList<>();
+                            for (Trend item : trendArrayList){
+                                String nama = item.getItemname().toLowerCase();
+                                if (nama.contains(newText)){
+                                    filteredList.add(item);
+                                }
+                            }
+                            recyclerView.setAdapter(new MyAdapterTrend(filteredList, getContext()));
+                            return true;
+                        }
+                    });
+
                     recyclerView.setAdapter(new MyAdapterTrend(trendArrayList, getContext()));
                 }else{
                     Toast.makeText(getActivity().getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
@@ -107,7 +116,6 @@ public class Market extends Fragment{
             }
         });
     }
-
 
 
     public class CollectionResponse{

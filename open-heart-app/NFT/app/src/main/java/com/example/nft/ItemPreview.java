@@ -151,10 +151,11 @@ public class ItemPreview extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
 
-
-
                             AutoTransition autoTransition = new AutoTransition();
-                            autoTransition.setDuration(300);
+                            autoTransition.setDuration(10);
+
+                            AutoTransition autoTransition1 = new AutoTransition();
+                            autoTransition1.setDuration(200);
 
                             if (layout_expand.getVisibility() == View.VISIBLE){
                                 TransitionManager.beginDelayedTransition(cardView, autoTransition);
@@ -168,7 +169,7 @@ public class ItemPreview extends AppCompatActivity {
                                 rotate.setFillAfter(true);
                                 //expand.setRotation(expand.getRotation() + 180);
                             }else {
-                                TransitionManager.beginDelayedTransition(cardView, autoTransition);
+                                TransitionManager.beginDelayedTransition(cardView, autoTransition1);
                                 layout_expand.setVisibility(View.VISIBLE);
                                 //expand.setRotation(expand.getRotation() + 180);
 
