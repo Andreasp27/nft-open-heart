@@ -1,6 +1,8 @@
 package com.example.nft;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,17 +10,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
 import com.example.nft.api.MessageResponse;
 import com.example.nft.api.Session;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.squareup.picasso.Picasso;
 
@@ -42,6 +52,9 @@ public class ItemPreview extends AppCompatActivity {
     private String access_token, base;
     private Session session;
     int id, idUser;
+
+    LinearLayout layout_expand;
+    MaterialCardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +87,9 @@ public class ItemPreview extends AppCompatActivity {
         wallet = findViewById(R.id.wallet_item);
         bidButton = findViewById(R.id.bidBtn);
 
+        layout_expand = findViewById(R.id.layoutExpand);
+        cardView = findViewById(R.id.cardExpand);
+
         getDataCollection();
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -83,12 +99,6 @@ public class ItemPreview extends AppCompatActivity {
             }
         });
 
-        expand.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                expand.setRotation(expand.getRotation() + 180);
-            }
-        });
 
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,9 +120,11 @@ public class ItemPreview extends AppCompatActivity {
         myAdapterProvenance = new MyAdapterProvenance(provenanceArrayList, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL));
 
         recyclerView.setLayoutManager(layoutManager);
+
+
 
 
     }
@@ -131,6 +143,44 @@ public class ItemPreview extends AppCompatActivity {
                         bid.setVisibility(View.VISIBLE);
                         bidButton.setVisibility(View.VISIBLE);
                     }
+
+
+
+                    expand.setOnClickListener(new View.OnClickListener() {
+                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                        @Override
+                        public void onClick(View view) {
+
+
+
+                            AutoTransition autoTransition = new AutoTransition();
+                            autoTransition.setDuration(300);
+
+                            if (layout_expand.getVisibility() == View.VISIBLE){
+                                TransitionManager.beginDelayedTransition(cardView, autoTransition);
+                                layout_expand.setVisibility(View.GONE);
+
+                                RotateAnimation rotate = new RotateAnimation(180, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                                rotate.setDuration(200);
+                                rotate.setInterpolator(new LinearInterpolator());
+
+                                expand.startAnimation(rotate);
+                                rotate.setFillAfter(true);
+                                //expand.setRotation(expand.getRotation() + 180);
+                            }else {
+                                TransitionManager.beginDelayedTransition(cardView, autoTransition);
+                                layout_expand.setVisibility(View.VISIBLE);
+                                //expand.setRotation(expand.getRotation() + 180);
+
+                                RotateAnimation rotate = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                                rotate.setDuration(200);
+                                rotate.setInterpolator(new LinearInterpolator());
+
+                                expand.startAnimation(rotate);
+                                rotate.setFillAfter(true);
+                            }
+                        }
+                    });
 
                     //set view
                     itemName.setText(response.body().getNama_item());
@@ -151,6 +201,7 @@ public class ItemPreview extends AppCompatActivity {
                         Provenance ob1 = new Provenance(item.getNama(), item.getAksi(), Float.toString(item.getHarga()) + " SKS", date );
                         provenanceArrayList.add(ob1);
                     }
+
                     recyclerView.setAdapter(new MyAdapterProvenance(provenanceArrayList, getApplicationContext()));
 
 
