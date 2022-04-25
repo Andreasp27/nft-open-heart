@@ -33,5 +33,7 @@
     <string name="add_coll">Add New Collection</string>
     <string name="required">*required</string>
     <string name="add_img_txt">click here</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="get_location">Get Location</string>
 
 </resources>

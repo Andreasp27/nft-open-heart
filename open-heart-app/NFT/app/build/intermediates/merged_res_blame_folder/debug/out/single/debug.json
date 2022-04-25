@@ -20,10 +20,6 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_visibility_off_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_visibility_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_visibility_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xhdpi_ic_baseline_trending_up_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xhdpi\\ic_baseline_trending_up_24.png"
     },
@@ -32,16 +28,20 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_created_preview_item.xml"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_visibility_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_visibility_24.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_visibility_24.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_visibility_24.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_wallet.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_wallet.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_warning_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_warning_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_wallet.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_wallet.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_ethereum_eth_mini.png.flat",
@@ -68,24 +68,24 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable\\monkey.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_image_upload.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_image_upload.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_logo.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_image_upload.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_image_upload.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_historywallet.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\historywallet.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_image_upload.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_image_upload.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_baseline_arrow_back_24.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_image_upload.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_image_upload.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_abc_24.png.flat",
@@ -120,6 +120,10 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_verified_user_24.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_logo.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_logo.xml"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_arrow_circle_right_25.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_arrow_circle_right_25.png"
     },
@@ -128,12 +132,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xhdpi\\ic_logo.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_logo.xml.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_logo.xml"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable_password_selector.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable\\password_selector.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_map.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_map.xml"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_logo.png.flat",
@@ -150,6 +154,10 @@
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_logo.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_map.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_logo.png.flat",
@@ -212,12 +220,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_visibility_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_image_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_image_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-hdpi_ic_baseline_collections_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_collections_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_image_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_image_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_trending_up_24.png.flat",
@@ -244,12 +252,16 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_baseline_visibility_off_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_visibility_off_24.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_collections_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_collections_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_baseline_visibility_off_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_visibility_off_24.png"
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_iconl.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\iconl.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_email_24.xml.flat",
@@ -312,12 +324,16 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_visibility_off_24.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_home_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_home_24.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_image_upload.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_image_upload.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_home_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_home_24.png"
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable_ninja.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable\\ninja.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_abc_24.xml.flat",
@@ -326,10 +342,6 @@
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_logo.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_logo.png"
-    },
-    {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable_ninja.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable\\ninja.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-hdpi_ic_logo.png.flat",
@@ -352,10 +364,6 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_item_preview.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_baseline_visibility_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_visibility_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_visibility_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_visibility_24.png"
     },
@@ -364,20 +372,28 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_logo1.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_verified_user_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_verified_user_24.png"
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_baseline_visibility_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_visibility_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_map.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_person_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_person_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_heart.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\heart.png"
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_verified_user_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_verified_user_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_store_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_store_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_heart.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\heart.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_ethereum_eth.png.flat",
@@ -472,12 +488,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_visibility_off_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_verified_user_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_verified_user_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_trending.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\fragment_trending.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_verified_user_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_verified_user_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xhdpi_ic_baseline_person_24.png.flat",
@@ -490,6 +506,10 @@
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_home_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_map.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_provenance.xml.flat",
@@ -528,10 +548,6 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_store_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_store_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_store_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_logo.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_logo.xml"
     },
@@ -540,16 +556,20 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_store_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_store_24.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_home_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_home_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_ethereum_eth.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_ethereum_eth.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-ldpi_ic_baseline_home_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-ldpi\\ic_baseline_home_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_ethereum_eth.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_ethereum_eth.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_top_up.xml.flat",
@@ -716,12 +736,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_arrow_circle_right_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_visibility_off_24.xml.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_visibility_off_24.xml"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_collections_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_collections_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_visibility_off_24.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_visibility_off_24.xml"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_baseline_collections_24.png.flat",
@@ -736,8 +756,16 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_arrow_circle_right_25.xml"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_maps.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_ethereum_eth.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_ethereum_eth.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_map.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_image_24.png.flat",
@@ -780,6 +808,10 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_map.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_wallet.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_wallet.xml"
     },
@@ -796,16 +828,20 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_baseline_arrow_back_24.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-mdpi_ic_baseline_trending_up_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-mdpi\\ic_baseline_trending_up_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_person_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_person_24.png"
     },
     {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-mdpi_ic_baseline_trending_up_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-mdpi\\ic_baseline_trending_up_24.png"
+    },
+    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_wallet.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_wallet.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_map.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_map.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_warning_24.xml.flat",
@@ -840,12 +876,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\fragment_market.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_image_24.xml.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_image_24.xml"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_key_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_key_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_image_24.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_image_24.xml"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_wallet.png.flat",
@@ -896,10 +932,6 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_key_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_key_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_key_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_orangkribo.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable-mdpi\\orangkribo.png"
     },
@@ -910,6 +942,10 @@
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_abc_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_abc_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_key_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_key_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_store_24.png.flat",
@@ -1016,12 +1052,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\drawable-mdpi\\_650638328.jpg"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-hdpi_ic_baseline_visibility_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_visibility_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_baseline_visibility_off_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_visibility_off_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-hdpi_ic_baseline_visibility_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_visibility_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_verified_user_24.png.flat",
@@ -1036,12 +1072,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_wallet.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xhdpi_ic_wallet.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xhdpi\\ic_wallet.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_top_item.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\top_item.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xhdpi_ic_wallet.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xhdpi\\ic_wallet.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_visibility_24.png.flat",
@@ -1116,12 +1152,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_item_preview_collection.xml"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_arrow_back_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_visibility_off_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_visibility_off_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_baseline_arrow_back_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_ethereum_eth.png.flat",
@@ -1156,12 +1192,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-mdpi\\ic_baseline_person_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_baseline_store_24.xml.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_baseline_store_24.xml"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_change_pass.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\src\\main\\res\\layout\\activity_change_pass.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_baseline_store_24.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-anydpi-v21\\ic_baseline_store_24.xml"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-hdpi_ic_baseline_store_24.png.flat",
@@ -1204,12 +1240,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-hdpi\\ic_baseline_home_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_arrow_circle_right_24.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_arrow_circle_right_24.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxxhdpi_ic_logo1.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxxhdpi\\ic_logo1.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_arrow_circle_right_24.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_arrow_circle_right_24.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-anydpi-v21_ic_baseline_person_24.xml.flat",
@@ -1276,12 +1312,12 @@
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_visibility_24.png"
     },
     {
-        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_arrow_circle_right_25.png.flat",
-        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_arrow_circle_right_25.png"
-    },
-    {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_key_24.png.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-night-xxhdpi\\ic_baseline_key_24.png"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_arrow_circle_right_25.png.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_arrow_circle_right_25.png"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-night-xxhdpi_ic_baseline_arrow_back_24.png.flat",
@@ -1362,6 +1398,10 @@
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_key_24.xml.flat",
         "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_key_24.xml"
+    },
+    {
+        "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi-v21_iconl.xml.flat",
+        "source": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi-v21\\iconl.xml"
     },
     {
         "merged": "D:\\NFT-OpenHeart(VS)\\nft-open-heart\\open-heart-app\\NFT\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_launcher_background.png.flat",

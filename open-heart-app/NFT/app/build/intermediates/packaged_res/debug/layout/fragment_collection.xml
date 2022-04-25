@@ -113,7 +113,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/emptyrecycler"
+                android:id="@+id/emptyrecyclerC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -123,7 +123,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textempty"
+                android:id="@+id/textemptyC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="68dp"
@@ -157,7 +157,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/emptyrecycler"
+                android:id="@+id/emptyrecyclerCC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -167,7 +167,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textempty"
+                android:id="@+id/textemptyCC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="68dp"

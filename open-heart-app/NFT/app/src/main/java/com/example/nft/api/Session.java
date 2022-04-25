@@ -38,4 +38,13 @@ public class Session {
         String id = prefs.getString("id","");
         return id;
     }
+
+    public void setLocation(String location) {
+        prefs.edit().putString("location", location).commit();
+    }
+
+    public String getLocation() {
+        String location = prefs.getString("location","");
+        return location;
+    }
 }
