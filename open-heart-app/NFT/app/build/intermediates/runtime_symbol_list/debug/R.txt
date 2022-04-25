@@ -3250,7 +3250,6 @@ int id view_transition 0x7f09026b
 int id view_tree_lifecycle_owner 0x7f09026c
 int id view_tree_saved_state_registry_owner 0x7f09026d
 int id view_tree_view_model_store_owner 0x7f09026e
-int id viewall 0x7f09026f
 int id visible 0x7f090270
 int id visible_removing_fragment_view_tag 0x7f090271
 int id wallet 0x7f090272
@@ -3368,6 +3367,7 @@ int layout activity_send 0x7f0c0026
 int layout activity_sign_up 0x7f0c0027
 int layout activity_top_up 0x7f0c0028
 int layout activity_wallet 0x7f0c0029
+int layout banner_layout 0x7f0c0099
 int layout bidder 0x7f0c002a
 int layout card_item 0x7f0c002b
 int layout collection_item 0x7f0c002c

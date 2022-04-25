@@ -3251,7 +3251,6 @@ id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
-id viewall
 id visible
 id visible_removing_fragment_view_tag
 id wallet
@@ -3369,6 +3368,7 @@ layout activity_send
 layout activity_sign_up
 layout activity_top_up
 layout activity_wallet
+layout banner_layout
 layout bidder
 layout card_item
 layout collection_item
