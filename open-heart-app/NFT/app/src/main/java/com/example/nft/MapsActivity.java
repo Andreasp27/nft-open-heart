@@ -1,18 +1,34 @@
 package com.example.nft;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.nft.api.Session;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -21,6 +37,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.nft.databinding.ActivityMapsBinding;
 
+import java.security.Permission;
 import java.util.List;
 import java.util.Locale;
 
@@ -32,6 +49,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Button save;
     LatLng rawLoc;
     Session session;
+    private FusedLocationProviderClient fusedLocationClient;
+    Location mLastLocation;
+    LocationRequest mLocationRequest;
+
+    ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+
+                } else {
+                    finish();
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +94,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        if (ContextCompat.checkSelfPermission(
+                MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED) {
+            requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
 
+//        final LocationManager manager = (LocationManager)getApplication().getSystemService(Context.LOCATION_SERVICE );
+//
+//        if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) )
+//            Toast.makeText(getApplicationContext(), "GPS is disable!", Toast.LENGTH_LONG).show();
+//        else
+//            Toast.makeText(getApplicationContext(), "GPS is Enable!", Toast.LENGTH_LONG).show();
 
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
     }
@@ -80,15 +121,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    @SuppressLint("MissingPermission")
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+//        mLocationRequest = LocationRequest.create()
+//                .setInterval(100)
+//                .setFastestInterval(3000)
+//                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+//                .setMaxWaitTime(100);
+//
+//        LocationCallback mLocationCallback = null;
+//        fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+        googleMap.getUiSettings().setMyLocationButtonEnabled(true);
+        googleMap.setMyLocationEnabled(true);
+
+
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney,10.0f));
-        rawLoc = sydney;
+//        LatLng sydney = new LatLng(-34, 151);
+//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney,10.0f));
+//        rawLoc = sydney;
+
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION == PackageManager.PERMISSION_GRANTED)) {
+//
+//        }
 
         mMap.setOnMapClickListener(this);
     }
@@ -127,7 +186,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
         finish();
-
     }
 
 

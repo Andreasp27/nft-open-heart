@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
 MERGED from [androidx.databinding:viewbinding:7.1.1] C:\Users\rafae\.gradle\caches\transforms-3\5055aa3104d1875c220e05d0701501c5\transformed\jetified-viewbinding-7.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.denzcoskun:ImageSlideshow:0.1.0] C:\Users\rafae\.gradle\caches\transforms-3\97e5222471c546fff6da5a9ccd28f235\transformed\jetified-ImageSlideshow-0.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-ui:2.4.2] C:\Users\rafae\.gradle\caches\transforms-3\71219d7e91bc332bfec4f14f664190b2\transformed\navigation-ui-2.4.2\AndroidManifest.xml:17:1-24:12
@@ -18,9 +18,11 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\rafae\.gradle\caches
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rafae\.gradle\caches\transforms-3\fa53f186f02498d1359cc0706b9c9ca7\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\0e4b3ed69ba1d5ef69295186a3ec6b84\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rafae\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\rafae\.gradle\caches\transforms-3\ff2e0da4ab392632ad9cc13daded8e2f\transformed\jetified-play-services-location-19.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\5b7671f138842c021d756893b75500c7\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\rafae\.gradle\caches\transforms-3\9e49725229fe878e038768aec48f25e8\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\rafae\.gradle\caches\transforms-3\bbda5a4828e321904f545793dd1fec0f\transformed\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\1368f1c7e6d6a42d3934cbb02b801196\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\rafae\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.4.1] C:\Users\rafae\.gradle\caches\transforms-3\843cb6040c2857dc75e9ab82e9f14dc4\transformed\fragment-1.4.1\AndroidManifest.xml:17:1-24:12
@@ -72,20 +74,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\a5a7311960bf5c1bff5fb80410424df2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\63a69ce68fa557e382b8a43f04a2feb0\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\rafae\.gradle\caches\transforms-3\2708c71d5e0f2d21976ae3ce02be014f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
+INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
 	package
 		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:3:5-30
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-93:12
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:1-95:12
 		INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:2:11-69
@@ -113,8 +115,16 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
 		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:10:5-95
+	android:name
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:11:5-97
+	android:name
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:11:22-78
 application
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:11:5-91:19
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:13:5-93:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\rafae\.gradle\caches\transforms-3\6b1551fc7e84f44babff69c38bfda24d\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\rafae\.gradle\caches\transforms-3\6b1551fc7e84f44babff69c38bfda24d\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\rafae\.gradle\caches\transforms-3\a586d80e67ac8cbb53870bfb799eb811\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -125,10 +135,14 @@ MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\rafae\.gradle\cach
 MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\rafae\.gradle\caches\transforms-3\cfb60c0fb43fcbad1a21e211c7eb0636\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rafae\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rafae\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\rafae\.gradle\caches\transforms-3\ff2e0da4ab392632ad9cc13daded8e2f\transformed\jetified-play-services-location-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\rafae\.gradle\caches\transforms-3\ff2e0da4ab392632ad9cc13daded8e2f\transformed\jetified-play-services-location-19.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\5b7671f138842c021d756893b75500c7\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\5b7671f138842c021d756893b75500c7\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\rafae\.gradle\caches\transforms-3\bbda5a4828e321904f545793dd1fec0f\transformed\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\rafae\.gradle\caches\transforms-3\bbda5a4828e321904f545793dd1fec0f\transformed\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\1368f1c7e6d6a42d3934cbb02b801196\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\1368f1c7e6d6a42d3934cbb02b801196\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\rafae\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
@@ -148,137 +162,137 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\rafae\.gradle\
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\12faba213096f61089f9dfe4af40660e\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\12faba213096f61089f9dfe4af40660e\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
 	android:requestLegacyExternalStorage
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:16:9-52
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:18:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\rafae\.gradle\caches\transforms-3\19993721b14e547f735b9fa1d0b1eaa2\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:17:9-44
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:19:9-44
 	android:icon
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:13:9-39
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:15:9-39
 	android:allowBackup
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:19:9-41
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:21:9-41
 	android:networkSecurityConfig
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:15:9-69
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:17:9-69
 	android:usesCleartextTraffic
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:20:9-44
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:22:9-44
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:33:9-35:71
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:35:9-37:71
 	android:value
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:35:13-68
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:37:13-68
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:34:13-58
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:36:13-58
 activity#com.example.nft.MapsActivity
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:37:9-40:59
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:39:9-42:59
 	android:label
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:40:13-56
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:42:13-56
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:40:13-41
 activity#com.example.nft.CreatedPreviewItem
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:41:9-43:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:42:13-47
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:44:13-47
 activity#com.example.nft.CollectionPreviewItem
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:44:9-46:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:46:9-48:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:45:13-50
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:47:13-50
 activity#com.example.nft.CreatorPage
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:47:9-49:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:49:9-51:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:49:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:48:13-40
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:50:13-40
 activity#com.example.nft.ItemPreviewCollection
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:50:9-52:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:52:9-54:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:52:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:51:13-50
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:53:13-50
 activity#com.example.nft.ItemPreview
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:53:9-55:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:55:9-57:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:55:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:54:13-40
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:56:13-40
 activity#com.example.nft.AddCollection
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:56:9-58:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:58:9-60:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:58:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:57:13-42
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:59:13-42
 activity#com.example.nft.Send
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:59:9-62:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:61:9-64:40
 	android:noHistory
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:62:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:64:13-37
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:61:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:60:13-33
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:62:13-33
 activity#com.example.nft.TopUp
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:63:9-66:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:65:9-68:40
 	android:noHistory
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:66:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:68:13-37
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:65:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:67:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:64:13-34
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:66:13-34
 activity#com.example.nft.EditProfile
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:67:9-69:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:69:9-71:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:69:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:68:13-40
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:70:13-40
 activity#com.example.nft.ChangePass
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:70:9-72:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:72:9-74:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:72:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:74:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:71:13-39
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:73:13-39
 activity#com.example.nft.wallet
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:73:9-75:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:75:9-77:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:75:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:77:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:74:13-35
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:76:13-35
 activity#com.example.nft.SignUp
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:76:9-78:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:78:9-80:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:78:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:80:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:77:13-35
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:79:13-35
 activity#com.example.nft.HomeActivity
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:79:9-81:40
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:81:9-83:40
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:81:13-37
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:83:13-37
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:80:13-41
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:82:13-41
 activity#com.example.nft.MainActivity
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:82:9-90:20
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:84:9-92:20
 	android:exported
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:84:13-36
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:86:13-36
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:83:13-41
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:85:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:85:13-89:29
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:87:13-91:29
 action#android.intent.action.MAIN
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:86:17-69
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:17-69
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:86:25-66
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:17-77
+ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:90:17-77
 	android:name
-		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:88:27-74
+		ADDED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml:90:27-74
 uses-sdk
 INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\NFT-OpenHeart(VS)\nft-open-heart\open-heart-app\NFT\app\src\main\AndroidManifest.xml
@@ -311,12 +325,16 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rafae\.gradle\caches\tra
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rafae\.gradle\caches\transforms-3\0e4b3ed69ba1d5ef69295186a3ec6b84\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rafae\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\rafae\.gradle\caches\transforms-3\ce2fc7dc7ce65acddb7f66c2fc14e6e1\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\rafae\.gradle\caches\transforms-3\ff2e0da4ab392632ad9cc13daded8e2f\transformed\jetified-play-services-location-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\rafae\.gradle\caches\transforms-3\ff2e0da4ab392632ad9cc13daded8e2f\transformed\jetified-play-services-location-19.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\5b7671f138842c021d756893b75500c7\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rafae\.gradle\caches\transforms-3\5b7671f138842c021d756893b75500c7\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\rafae\.gradle\caches\transforms-3\9e49725229fe878e038768aec48f25e8\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\rafae\.gradle\caches\transforms-3\9e49725229fe878e038768aec48f25e8\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\04b80b46dda3f4cbd691a038326e2b68\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\rafae\.gradle\caches\transforms-3\bbda5a4828e321904f545793dd1fec0f\transformed\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\rafae\.gradle\caches\transforms-3\bbda5a4828e321904f545793dd1fec0f\transformed\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\1368f1c7e6d6a42d3934cbb02b801196\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\rafae\.gradle\caches\transforms-3\1368f1c7e6d6a42d3934cbb02b801196\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\rafae\.gradle\caches\transforms-3\49e4151045f264c4d815ce37e323df5e\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
