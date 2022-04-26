@@ -193,6 +193,7 @@ id recyclerTrend2
 id recyclerhistory
 id required_txt
 id searchView
+id searcharea
 id seeAll1
 id seeAll2
 id sendTxt

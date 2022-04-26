@@ -20,6 +20,7 @@ public class ApiClient {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
+
                 //enter your web server IP
                 .baseUrl("https://openheart.kecapy.com/public/api/")
 

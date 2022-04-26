@@ -41,8 +41,10 @@ public class HomeActivity extends AppCompatActivity {
 
         //set base
         session = new Session(this);
+
         //enter your web server IP
         session.setBase("https://openheart.kecapy.com/public/");
+
 
 
        nav = findViewById(R.id.bottomNavigationView);

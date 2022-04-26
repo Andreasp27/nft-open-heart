@@ -3226,6 +3226,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id searcharea
 id seeAll1
 id seeAll2
 id select_dialog_listview
