@@ -3130,6 +3130,7 @@ int id neverCompleteToStart 0x7f0901a1
 int id new_pass 0x7f0901a2
 int id noScroll 0x7f0901a3
 int id noState 0x7f0901a4
+int id no_user_wallet 0x7f09029a
 int id noitem 0x7f0901a5
 int id nominal 0x7f0901a6
 int id nominal_send 0x7f0901a7

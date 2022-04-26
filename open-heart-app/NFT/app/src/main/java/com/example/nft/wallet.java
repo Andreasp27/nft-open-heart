@@ -33,7 +33,7 @@ public class wallet extends AppCompatActivity {
     private ArrayList<HistoryWallet> historyWallet;
     private String access_token;
     private Session session;
-    TextView amount;
+    TextView amount, no_usr;
 
     ImageView btnsend, btntopup, back;
 
@@ -57,7 +57,7 @@ public class wallet extends AppCompatActivity {
         historyWallet = new ArrayList<>();
 
         myAdapterHistory = new MyAdapterHistory(historyWallet, this);
-        addData();
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 
         history(layoutManager);
@@ -75,6 +75,7 @@ public class wallet extends AppCompatActivity {
         btnsend = findViewById(R.id.imageView3);
         btntopup = findViewById(R.id.imageView2);
         back = findViewById(R.id.btn_back_wallet);
+        no_usr = findViewById(R.id.no_user_wallet);
 
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,19 +109,17 @@ public class wallet extends AppCompatActivity {
         super.onResume();
     }
 
-    void addData() {
-//        HistoryWallet ob1 = new HistoryWallet("SKS", "+ 230", R.drawable.ic_ethereum_eth);
-//        historyWallet.add(ob1);
-//        HistoryWallet ob2 = new HistoryWallet("SKS", "+ 200", R.drawable.ic_ethereum_eth);
-//        historyWallet.add(ob2);
-//        HistoryWallet ob3 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
-//        historyWallet.add(ob3);
-//        HistoryWallet ob4 = new HistoryWallet("SKS", "- 3020", R.drawable.ic_ethereum_eth);
-//        historyWallet.add(ob4);
-    }
-
     public class walletResponse{
+        private String nomor_user;
         private float saldo;
+
+        public String getNomor_user() {
+            return nomor_user;
+        }
+
+        public void setNomor_user(String nomor_user) {
+            this.nomor_user = nomor_user;
+        }
 
         public float getSaldo() {
             return saldo;
@@ -132,28 +131,35 @@ public class wallet extends AppCompatActivity {
     }
 
     public void balance(){
-        Call<walletResponse> walletResponseCall = ApiClient.getUserService().getBalance("Bearer "+ access_token);
+        Call<walletResponse> walletResponseCall = ApiClient.getUserService().getBalance(
+                "Bearer "+ access_token);
         walletResponseCall.enqueue(new Callback<walletResponse>() {
             @Override
             public void onResponse(Call<walletResponse> call, Response<walletResponse> response) {
 
                 if (response.isSuccessful()){
                     balance.setText(Float.toString(response.body().getSaldo()));
+                    no_usr.setText(response.body().getNomor_user());
+
                 }else{
-                    Toast.makeText(getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(
+                            getApplicationContext(), "Fetch data failed", Toast.LENGTH_LONG)
+                            .show();
                 }
             }
 
             @Override
             public void onFailure(Call<walletResponse> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Fetch data failed" + t, Toast.LENGTH_LONG).show();
+                Toast.makeText(
+                        getApplicationContext(), "Fetch data failed" + t, Toast.LENGTH_LONG)
+                        .show();
             }
         });
-
     }
 
     public void history(RecyclerView.LayoutManager layoutManager){
-        Call<ArrayList<historyResponse>> responseBodyCall = ApiClient.getUserService().getHistory("Bearer "+ access_token);
+        Call<ArrayList<historyResponse>> responseBodyCall = ApiClient.getUserService().getHistory(
+                "Bearer "+ access_token);
         responseBodyCall.enqueue(new Callback<ArrayList<historyResponse>>() {
             @Override
             public void onResponse(Call<ArrayList<historyResponse>> call, Response<ArrayList<historyResponse>> response) {
@@ -163,15 +169,13 @@ public class wallet extends AppCompatActivity {
 
                     amount = findViewById(R.id.jumlah);
                     for (historyResponse item : data) {
-//                        jumlah.add(Float.toString(item.getJumlah()));
-//                        System.out.println(item.getJumlah());
                         if (item.getStatus().equals("masuk")) {
                             sign = "+";
-
                         } else {
                             sign = "-";
                         }
-                        HistoryWallet obj = new HistoryWallet("SKS",sign + item.getJumlah(), R.drawable.ic_ethereum_eth);
+                        HistoryWallet obj = new HistoryWallet("SKS",sign + item.getJumlah(),
+                                R.drawable.ic_ethereum_eth);
                         historyWallet.add(obj);
                     }
                     recyclerView.setLayoutManager(layoutManager);

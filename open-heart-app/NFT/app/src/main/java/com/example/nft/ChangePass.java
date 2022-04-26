@@ -70,24 +70,26 @@ public class ChangePass extends AppCompatActivity {
                 changePassRequest.setPassword(editNewPass.getEditText().getText().toString());
                 changePassRequest.setConfirm_password(editConfPass.getEditText().getText().toString());
 
-                Call<MessageResponse> messageResponseCall = ApiClient.getUserService().updatePass("Bearer "+ access_token, changePassRequest);
+                Call<MessageResponse> messageResponseCall = ApiClient.getUserService().updatePass(
+                        "Bearer "+ access_token, changePassRequest);
                 messageResponseCall.enqueue(new Callback<MessageResponse>() {
                     @Override
                     public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
                         String message = response.body().getMessage();
                         if (response.isSuccessful()){
                             if (message.equals("success")){
-                                Toast.makeText(getApplicationContext(), "Update Password Success", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),
+                                        "Update Password Success", Toast.LENGTH_LONG).show();
                                 finish();
                             }else{
-                                Toast.makeText(getApplicationContext(), "Update Password Failed" + message, Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),
+                                        "Update Password Failed" + message, Toast.LENGTH_LONG).show();
                             }
                         }else{
-                            Toast.makeText(getApplicationContext(), "Update Password Failed" + message, Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),
+                                    "Update Password Failed" + message, Toast.LENGTH_LONG).show();
                         }
-
                     }
-
                     @Override
                     public void onFailure(Call<MessageResponse> call, Throwable t) {
                         Toast.makeText(getApplicationContext(), "Update Password Failed\n" + t , Toast.LENGTH_LONG).show();

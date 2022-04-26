@@ -3131,6 +3131,7 @@ id neverCompleteToStart
 id new_pass
 id noScroll
 id noState
+id no_user_wallet
 id noitem
 id nominal
 id nominal_send

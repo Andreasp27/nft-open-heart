@@ -159,6 +159,7 @@ id nama
 id name
 id navHost
 id new_pass
+id no_user_wallet
 id noitem
 id nominal
 id nominal_send
