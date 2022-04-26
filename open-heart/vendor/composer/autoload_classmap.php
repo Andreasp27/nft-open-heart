@@ -27,6 +27,7 @@ return array(
     'App\\Models\\Daftarbid' => $baseDir . '/app/Models/Daftarbid.php',
     'App\\Models\\History' => $baseDir . '/app/Models/History.php',
     'App\\Models\\Historywallet' => $baseDir . '/app/Models/Historywallet.php',
+    'App\\Models\\Images' => $baseDir . '/app/Models/Images.php',
     'App\\Models\\Koleksi' => $baseDir . '/app/Models/Koleksi.php',
     'App\\Models\\Like' => $baseDir . '/app/Models/Like.php',
     'App\\Models\\Trending' => $baseDir . '/app/Models/Trending.php',

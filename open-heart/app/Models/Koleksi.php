@@ -25,4 +25,8 @@ class Koleksi extends Model
     {
         return $this->hasMany(Daftarbid::class);
     }
+    public function images()
+    {
+        return $this->hasOne(Images::class);
+    }
 }

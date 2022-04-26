@@ -526,6 +526,7 @@ class ComposerStaticInit33b54d33a22b82ef61890809ae48e53e
         'App\\Models\\Daftarbid' => __DIR__ . '/../..' . '/app/Models/Daftarbid.php',
         'App\\Models\\History' => __DIR__ . '/../..' . '/app/Models/History.php',
         'App\\Models\\Historywallet' => __DIR__ . '/../..' . '/app/Models/Historywallet.php',
+        'App\\Models\\Images' => __DIR__ . '/../..' . '/app/Models/Images.php',
         'App\\Models\\Koleksi' => __DIR__ . '/../..' . '/app/Models/Koleksi.php',
         'App\\Models\\Like' => __DIR__ . '/../..' . '/app/Models/Like.php',
         'App\\Models\\Trending' => __DIR__ . '/../..' . '/app/Models/Trending.php',
