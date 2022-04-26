@@ -233,6 +233,10 @@ public class ItemPreview extends AppCompatActivity {
                     if (response.body().getMessage().equals("success")){
                         Toast.makeText(getApplicationContext(), "Place bid Success", Toast.LENGTH_LONG).show();
                         refreshActivity();
+                    }else if(response.body().getMessage().equals("failed balance")){
+                        Toast.makeText(getApplicationContext(), "Place bid Failed:\nNot enough balance", Toast.LENGTH_LONG).show();
+                    }else if(response.body().getMessage().equals("failed lowbid")){
+                        Toast.makeText(getApplicationContext(), "Place bid Failed:\nBid too low", Toast.LENGTH_LONG).show();
                     }else{
                         Toast.makeText(getApplicationContext(), "Place bid Failed", Toast.LENGTH_LONG).show();
                     }

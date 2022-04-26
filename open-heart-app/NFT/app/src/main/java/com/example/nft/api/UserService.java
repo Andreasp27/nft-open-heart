@@ -39,7 +39,7 @@ public interface UserService {
 
     @Multipart
     @POST("update")
-    Call<EditProfile.ProfileRR> updateDataProfile(@Header("Authorization") String auth,
+    Call<MessageResponse> updateDataProfile(@Header("Authorization") String auth,
                                                   @Part("name") RequestBody name,
                                                   @Part("email") RequestBody email,
                                                   @Part("jenis_kelamin") RequestBody jenis_kelamin,

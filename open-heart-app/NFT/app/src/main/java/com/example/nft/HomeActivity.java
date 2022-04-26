@@ -41,11 +41,10 @@ public class HomeActivity extends AppCompatActivity {
 
         //set base
         session = new Session(this);
-        session.setBase("http://10.0.2.2:8000/");
+        session.setBase("http://192.168.122.251/");
 
 
        nav = findViewById(R.id.bottomNavigationView);
-//        navController = Navigation.findNavController(this, R.id.navHost);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.home2, R.id.market, R.id.trending, R.id.collection, R.id.profile)
@@ -54,7 +53,6 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(nav, navController);
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.maincontainer, new Home());
     }
 
     public void wallet(View view) {

@@ -197,14 +197,18 @@ public class Home extends Fragment {
                 if (response.isSuccessful()){
 
                     int no = 1;
-                    String bio = "";
+
                     for (EditProfile.ProfileRR item : response.body()){
+                        String bio = "";
                         if (no <= 2){
-                            if (item.getBio().length()>30){
-                                bio = item.getBio().substring(0,27) + "...";
-                            }else{
-                                bio = item.getBio();
+                            if (item.getBio() != null){
+                                if (item.getBio().length()>30){
+                                    bio = item.getBio().substring(0,27) + "...";
+                                }else{
+                                    bio = item.getBio();
+                                }
                             }
+
 
                             Recom ob2 = new Recom(item.getName(), bio ,base +  item.getGambar_path(),base +  item.getBanner_path(), item.getId());
                             recomArrayList.add(ob2);

@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
                     session.setAccessToken(access_token.getAccess_token());
                     session.setId(Integer.toString(access_token.getId()));
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//                    intent.putExtra("key", access_token.getAccess_token());
                     startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_LONG).show();
 

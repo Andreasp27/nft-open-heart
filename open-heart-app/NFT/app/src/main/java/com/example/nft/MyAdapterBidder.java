@@ -101,6 +101,8 @@ public class MyAdapterBidder extends RecyclerView.Adapter<MyAdapterBidder.Bidder
                     if (response.body().getMessage().equals("success")){
                         Toast.makeText(context, "Bid Accepted", Toast.LENGTH_LONG).show();
                         new ItemPreviewCollection().refreshActivity();
+                    }else if(response.body().getMessage().equals("failed user")){
+                        Toast.makeText(context, "Bid Failed:\nBidder does not have enough balance", Toast.LENGTH_LONG).show();
                     }else{
                         Toast.makeText(context, "Bid Failed", Toast.LENGTH_LONG).show();
                     }
