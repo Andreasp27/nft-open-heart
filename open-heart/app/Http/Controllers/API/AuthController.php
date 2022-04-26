@@ -60,8 +60,8 @@ class AuthController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()
-            ->json(['id' => $user->id, 'message' => 'Hi ' . $user->name . 
-            ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
+            ->json(['id' => $user->id, 'message' => 'Hi ' . $user->name .
+                ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
     }
 
     // method for user logout and delete token
@@ -77,7 +77,6 @@ class AuthController extends Controller
 
     public function data(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'name' => 'required|string',
             'email' => 'required|string',
@@ -95,7 +94,8 @@ class AuthController extends Controller
 
         if ($request->gambar_path != null) {
             $imageName = time() . '.' . $request->gambar_path->extension();
-            $request->gambar_path->move(public_path('images/' . auth()->user()->nomor_user . "/profile"), $imageName);
+            $request->gambar_path->move(public_path('images/' . auth()->user()->nomor_user
+                . "/profile"), $imageName);
 
             $image_path = 'images/' . auth()->user()->nomor_user . "/profile/" . $imageName;
 

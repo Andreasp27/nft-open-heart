@@ -17,7 +17,7 @@ class WalletController extends Controller
     public function index()
     {
         $saldo = Wallet::join('users', 'wallets.user_id', '=', 'users.id')
-            ->select('Wallets.*', 'users.nomor_user')
+            ->select('wallets.*', 'users.nomor_user')
             ->find(auth()->user()->wallet->id);
         return response()
             ->json($saldo);
