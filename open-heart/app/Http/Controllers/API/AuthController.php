@@ -39,14 +39,10 @@ class AuthController extends Controller
             'nomor_user' => "USR" . str_pad($user->id, 4, '0', STR_PAD_LEFT),
         ]);
 
-
-
         $wallet = Wallet::create([
             'saldo' => 0,
             'user_id' => $user->id,
         ]);
-
-        // $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()
             ->json(['data' => $user, 'wallet' => $wallet]);
@@ -64,7 +60,8 @@ class AuthController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()
-            ->json(['id' => $user->id, 'message' => 'Hi ' . $user->name . ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
+            ->json(['id' => $user->id, 'message' => 'Hi ' . $user->name . 
+            ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
     }
 
     // method for user logout and delete token
@@ -73,7 +70,8 @@ class AuthController extends Controller
         auth()->user()->tokens()->delete();
 
         return [
-            'message' => 'You have successfully logged out and the token was successfully deleted'
+            'message' => 'You have successfully logged out and the 
+            token was successfully deleted'
         ];
     }
 
