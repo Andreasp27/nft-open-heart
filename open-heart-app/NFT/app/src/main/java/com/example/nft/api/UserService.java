@@ -34,6 +34,9 @@ public interface UserService {
     @POST("register")
     Call<SignUp.RegisterResponse> userRegister(@Body SignUp.RegisterRequest registerRequest);
 
+    @POST("logout")
+    Call<MessageResponse> logout(@Header("Authorization") String auth);
+
     @GET("profile")
     Call<EditProfile.ProfileRR> getUserProfile(@Header("Authorization") String auth);
 
@@ -48,9 +51,6 @@ public interface UserService {
                                                   @Part("bio") RequestBody bio,
                                                   @Part MultipartBody.Part fileImg,
                                                   @Part MultipartBody.Part fileBanner);
-
-    @POST("logout")
-    Call<MessageResponse> logout(@Header("Authorization") String auth);
 
     @POST("updatepass")
     Call<MessageResponse> updatePass(@Header("Authorization") String auth, @Body ChangePass.changePassRequest changePassRequest);
