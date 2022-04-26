@@ -26,8 +26,10 @@ import android.widget.Toast;
 
 import com.example.nft.api.Session;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationAvailability;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -52,6 +54,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FusedLocationProviderClient fusedLocationClient;
     Location mLastLocation;
     LocationRequest mLocationRequest;
+    double latitude, longitude;
 
     ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
@@ -126,20 +129,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-//        mLocationRequest = LocationRequest.create()
-//                .setInterval(100)
-//                .setFastestInterval(3000)
-//                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-//                .setMaxWaitTime(100);
-//
-//        LocationCallback mLocationCallback = null;
-//        fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+
         googleMap.getUiSettings().setMyLocationButtonEnabled(true);
         googleMap.setMyLocationEnabled(true);
 
+        getlocation();
 
 
-        // Add a marker in Sydney and move the camera
+//        Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
 //        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney,10.0f));
@@ -159,6 +156,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         rawLoc = latLng;
 
 
+    }
+
+    public void getlocation() {
+
+
+        mLocationRequest = LocationRequest.create()
+                .setInterval(0)
+                .setFastestInterval(0)
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                .setMaxWaitTime(0);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        fusedLocationClient.requestLocationUpdates(mLocationRequest, new LocationCallback() {
+            @Override
+            public void onLocationResult(@NonNull LocationResult locationResult) {
+                super.onLocationResult(locationResult);
+//                Toast.makeText(MapsActivity.this, "Location Latitiude:" + locationResult.getLastLocation().getLatitude() + "Location Longitude : " + locationResult.getLastLocation().getLongitude(), Toast.LENGTH_SHORT).show();
+                System.out.println("get" + locationResult.getLastLocation().getLatitude() + " | " + locationResult.getLastLocation().getLongitude());
+                latitude = locationResult.getLastLocation().getLatitude();
+                longitude = locationResult.getLastLocation().getLongitude();
+                LatLng position = new LatLng(latitude,longitude);
+
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position,14.0f));
+            }
+        }, Looper.myLooper());
     }
 
     public String getCompletedAddress(LatLng latLng){

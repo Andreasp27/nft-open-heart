@@ -94,6 +94,7 @@ public class profilOption extends Fragment {
                             Toast.makeText(getActivity().getApplicationContext(), "logout", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
                             startActivity(intent);
+                            getActivity().finish();
                         }else{
                             Toast.makeText(getActivity().getApplicationContext(), "cannot logout ", Toast.LENGTH_LONG).show();
                         }

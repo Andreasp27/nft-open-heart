@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
+import com.example.nft.api.MessageResponse;
 import com.example.nft.api.RealPath;
 import com.example.nft.api.Session;
 import com.google.android.material.textfield.TextInputLayout;
@@ -79,14 +81,16 @@ public class EditProfile extends AppCompatActivity {
         addProfileImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getImgProfile.launch("image/*");
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                getImgProfile.launch(intent);
             }
         });
 
         addProfileBanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getImgBanner.launch("image/*");
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                getImgBanner.launch(intent);
             }
         });
 
@@ -159,32 +163,33 @@ public class EditProfile extends AppCompatActivity {
     }
 
     //get image profile from storage
-    ActivityResultLauncher<String> getImgProfile = registerForActivityResult(
-            new ActivityResultContracts.GetContent(),
-            new ActivityResultCallback<Uri>() {
-                @Override
-                public void onActivityResult(Uri result) {
-                    if (result != null){
-                        imgUri = result;
-                        imageProfile.setImageURI(result);
+    ActivityResultLauncher<Intent> getImgProfile = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result ->  {
+                if (result.getResultCode() == Activity.RESULT_OK){
+                    Intent data = result.getData();
+                    if (data != null){
+                        imgUri = data.getData();
+                        imageProfile.setImageURI(imgUri);
                         statusImg = 1;
                     }
                 }
             });
 
     //get image banner from storage
-    ActivityResultLauncher<String> getImgBanner = registerForActivityResult(
-            new ActivityResultContracts.GetContent(),
-            new ActivityResultCallback<Uri>() {
-                @Override
-                public void onActivityResult(Uri result) {
-                    if (result != null){
-                        bannerUri = result;
-                        imageBanner.setImageURI(result);
+    ActivityResultLauncher<Intent> getImgBanner = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result ->  {
+                if (result.getResultCode() == Activity.RESULT_OK){
+                    Intent data = result.getData();
+                    if (data != null){
+                        bannerUri = data.getData();
+                        imageBanner.setImageURI(bannerUri);
                         statusBanner = 1;
                     }
                 }
             });
+
 
 
 
@@ -342,21 +347,26 @@ public class EditProfile extends AppCompatActivity {
             }
 
 
-            Call<ProfileRR> profileRRCall = ApiClient.getUserService().updateDataProfile("Bearer "+ access_token, name,email,jenis_kelamin,alamat,nomor_telepon,bio, body, body2);
-            profileRRCall.enqueue(new Callback<ProfileRR>() {
+            Call<MessageResponse> profileRRCall = ApiClient.getUserService().updateDataProfile("Bearer "+ access_token, name,email,jenis_kelamin,alamat,nomor_telepon,bio, body, body2);
+            profileRRCall.enqueue(new Callback<MessageResponse>() {
                 @Override
-                public void onResponse(Call<ProfileRR> call, Response<ProfileRR> response) {
+                public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
                     if (response.isSuccessful()){
-                        Toast.makeText(getApplicationContext(), "Update data success", Toast.LENGTH_LONG).show();
-                        statusBanner = 0;
-                        statusImg = 0;
-                        finish();
+                        if (response.body().getMessage().equals("success")){
+                            Toast.makeText(getApplicationContext(), "Update data success", Toast.LENGTH_LONG).show();
+                            statusBanner = 0;
+                            statusImg = 0;
+                            finish();
+                        }else if(response.body().getMessage().equals("image failure")){
+                            Toast.makeText(getApplicationContext(), "Update data failed: Image Failure", Toast.LENGTH_LONG).show();
+                        }
+
                     }else{
                         Toast.makeText(getApplicationContext(), "Update data failed", Toast.LENGTH_LONG).show();
                     }
                 }
                 @Override
-                public void onFailure(Call<ProfileRR> call, Throwable t) {
+                public void onFailure(Call<MessageResponse> call, Throwable t) {
                     Toast.makeText(getApplicationContext(), "Update data failed" + t, Toast.LENGTH_LONG).show();
                 }
             });

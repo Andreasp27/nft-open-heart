@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Images;
 use App\Models\Like;
 use App\Models\User;
 use App\Models\Wallet;
@@ -96,18 +97,44 @@ class AuthController extends Controller
 
         if ($request->gambar_path != null) {
             $imageName = time() . '.' . $request->gambar_path->extension();
-            $request->gambar_path->move(public_path('images'), $imageName);
+            $request->gambar_path->move(public_path('images/' . auth()->user()->nomor_user . "/profile"), $imageName);
 
-            $image_path = 'images/' . $imageName;
+            $image_path = 'images/' . auth()->user()->nomor_user . "/profile/" . $imageName;
+
+            $md5image = md5(file_get_contents($image_path));
+
+            if (Images::where('user_id', '!=', auth()->user()->id)->get()->contains("mdigest", $md5image)) {
+                unlink($image_path);
+                return response()
+                    ->json(['message' => 'image failure']);
+            }
+
+            Images::create([
+                'mdigest' => $md5image,
+                'user_id' => auth()->user()->id,
+            ]);
         } else {
             $image_path = auth()->user()->gambar_path;
         }
 
         if ($request->banner_path != null) {
             $imageBanner = time() + 1 . '.' . $request->banner_path->extension();
-            $request->banner_path->move(public_path('images'), $imageBanner);
+            $request->banner_path->move(public_path('images/' . auth()->user()->nomor_user . "/profile"), $imageBanner);
 
-            $image_banner_path = 'images/' . $imageBanner;
+            $image_banner_path = 'images/' . auth()->user()->nomor_user . "/profile/" . $imageBanner;
+
+            $md5banner = md5(file_get_contents($image_banner_path));
+
+            if (Images::where('user_id', '!=', auth()->user()->id)->get()->contains("mdigest", $md5banner)) {
+                unlink($image_banner_path);
+                return response()
+                    ->json(['message' => 'image failure']);
+            }
+
+            Images::create([
+                'mdigest' => $md5banner,
+                'user_id' => auth()->user()->id,
+            ]);
         } else {
             $image_banner_path = auth()->user()->banner_path;
         }
@@ -124,7 +151,7 @@ class AuthController extends Controller
         ]);
 
         return response()
-            ->json(['data' => User::find(auth()->user()->id)]);
+            ->json(['message' => 'success']);
     }
 
     public function updateImg(Request $request)

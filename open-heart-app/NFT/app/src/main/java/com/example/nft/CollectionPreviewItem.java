@@ -69,10 +69,8 @@ public class CollectionPreviewItem extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
 
         collectedArrayList = new ArrayList<>();
-//        addData();
         getDataCollection();
 
-//        recyclerView.setAdapter(new MyAdapterCollection(collectedArrayList, CollectionPreviewItem.this));
 
 
     }

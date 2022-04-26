@@ -5,10 +5,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -86,7 +88,8 @@ public class AddCollection extends AppCompatActivity {
         imgCollection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getImgCollection.launch("image/*");
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                getImgCollection.launch(intent);
 
             }
         });
@@ -99,19 +102,20 @@ public class AddCollection extends AppCompatActivity {
         });
     }
 
-    ActivityResultLauncher<String> getImgCollection = registerForActivityResult(
-            new ActivityResultContracts.GetContent(),
-            new ActivityResultCallback<Uri>() {
-                @Override
-                public void onActivityResult(Uri result) {
-                    if (result != null){
-                        imgCollectionUri = result;
-                        imgCollection.setImageURI(result);
-                        imgCollection.setPadding(0,0,0,0);
-                        image = true;
-                        required.setVisibility(View.INVISIBLE);
+    ActivityResultLauncher<Intent> getImgCollection = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result ->  {
+                    if (result.getResultCode() == Activity.RESULT_OK){
+                        Intent data = result.getData();
+                        if (data != null){
+                            imgCollectionUri = data.getData();
+                            imgCollection.setImageURI(imgCollectionUri);
+                            imgCollection.setPadding(0,0,0,0);
+                            image = true;
+                            required.setVisibility(View.INVISIBLE);
+                        }
+
                     }
-                }
             });
 
     public void PublishCollect(){
@@ -141,8 +145,13 @@ public class AddCollection extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
                     if (response.isSuccessful()){
-                        Toast.makeText(getApplicationContext(), "Create collection success", Toast.LENGTH_LONG).show();
-                        refreshActivity();
+                        if (response.body().getMessage().equals("success")){
+                            Toast.makeText(getApplicationContext(), "Create collection success", Toast.LENGTH_LONG).show();
+                            refreshActivity();
+                        }else if(response.body().getMessage().equals("image failure")){
+                            Toast.makeText(getApplicationContext(), "Create collection failed : Image failure", Toast.LENGTH_LONG).show();
+                        }
+
                     }else{
                         Toast.makeText(getApplicationContext(), "Create collection failed", Toast.LENGTH_LONG).show();
                     }

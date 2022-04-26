@@ -7,6 +7,7 @@ use App\Http\Resources\CollectionResource;
 use App\Models\Daftarbid;
 use App\Models\History;
 use App\Models\Historywallet;
+use App\Models\Images;
 use App\Models\Koleksi;
 use App\Models\Trending;
 use App\Models\User;
@@ -66,10 +67,22 @@ class CollectionController extends Controller
             return response()->json($validator->errors());
         }
 
-        $imageName = time() . '.' . $request->image_path->extension();
-        $request->image_path->move(public_path('images'), $imageName);
 
-        $path = 'images/' . $imageName;
+
+        $imageName = time() . '.' . $request->image_path->extension();
+        $request->image_path->move(public_path('images/' . auth()->user()->nomor_user), $imageName);
+
+        $path = 'images/' . auth()->user()->nomor_user . "/" . $imageName;
+
+        // md5
+        $md5image1 = md5(file_get_contents($path));
+        if (Images::get()->contains('mdigest', $md5image1)) {
+            unlink($path);
+            return response()
+                ->json(['message' => 'image failure']);
+        }
+
+
 
         $koleksi = Koleksi::Create([
             'pembuat' => auth()->user()->name,
@@ -78,6 +91,12 @@ class CollectionController extends Controller
             'image_path' => $path,
             'deskripsi' => $request->deskripsi,
             'status' => 'Created',
+            'user_id' => auth()->user()->id,
+        ]);
+
+        Images::create([
+            'mdigest' => $md5image1,
+            'koleksi_id' => $koleksi->id,
             'user_id' => auth()->user()->id,
         ]);
 
@@ -114,12 +133,12 @@ class CollectionController extends Controller
 
         if ($saldoUser < $request->jumlah_bid) {
             return response()
-                ->json(['message' => 'failed']);
+                ->json(['message' => 'failed balance']);
         }
 
         if ($request->jumlah_bid <= $koleksi->harga) {
             return response()
-                ->json(['message' => 'failed']);
+                ->json(['message' => 'failed lowbid']);
         }
 
         $daftarBid = $koleksi->daftarbid->FirstWhere('nomor_user', auth()->user()->nomor_user);
@@ -149,13 +168,18 @@ class CollectionController extends Controller
         $koleksi = Koleksi::find($request->id_koleksi);
         if ($user->wallet->saldo < $koleksi->harga) {
             return response()
-                ->json(['message' => 'failed']);
+                ->json(['message' => 'failed user']);
         }
 
         //koleksi
         $koleksi->update([
             'user_id' => $user->id,
             'status' => 'Collected',
+        ]);
+
+        //images 
+        Images::firstWhere('koleksi_id', $koleksi->id)->update([
+            'user_id' => $user->id,
         ]);
 
         //trending

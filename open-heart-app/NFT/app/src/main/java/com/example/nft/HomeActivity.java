@@ -45,7 +45,6 @@ public class HomeActivity extends AppCompatActivity {
 
 
        nav = findViewById(R.id.bottomNavigationView);
-//        navController = Navigation.findNavController(this, R.id.navHost);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.home2, R.id.market, R.id.trending, R.id.collection, R.id.profile)
@@ -54,7 +53,6 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(nav, navController);
 
-        //getSupportFragmentManager().beginTransaction().replace(R.id.maincontainer, new Home());
     }
 
     public void wallet(View view) {

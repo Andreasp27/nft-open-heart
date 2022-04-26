@@ -113,7 +113,7 @@
                 android:layout_marginTop="180dp"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/profile"
+                android:background="@mipmap/profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -277,7 +277,8 @@
                     android:fontFamily="@font/roboto_bold"
                     android:includeFontPadding="false"
                     android:paddingTop="10dp"
-                    android:paddingBottom="10dp" />
+                    android:paddingBottom="10dp"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
