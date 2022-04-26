@@ -159,6 +159,7 @@ id nama
 id name
 id navHost
 id new_pass
+id no_user_wallet
 id noitem
 id nominal
 id nominal_send
@@ -192,6 +193,7 @@ id recyclerTrend2
 id recyclerhistory
 id required_txt
 id searchView
+id searcharea
 id seeAll1
 id seeAll2
 id sendTxt

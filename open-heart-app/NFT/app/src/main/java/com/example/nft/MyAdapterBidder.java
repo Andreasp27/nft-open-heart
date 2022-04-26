@@ -118,7 +118,4 @@ public class MyAdapterBidder extends RecyclerView.Adapter<MyAdapterBidder.Bidder
         });
 
     }
-    public void refreshActivity() {
-
-    }
 }

@@ -96,16 +96,6 @@ public class ItemPreviewCollection extends AppCompatActivity {
 
 
     }
-//    void addData() {
-//        Bidder ob1 = new Bidder("Bambank123", "125");
-//        bidderArrayList.add(ob1);
-//        Bidder ob2 = new Bidder("Bambank123", "125");
-//        bidderArrayList.add(ob2);
-//        Bidder ob3 = new Bidder("Bambank123", "125");
-//        bidderArrayList.add(ob3);
-//        Bidder ob4 = new Bidder("Bambank123", "125");
-//        bidderArrayList.add(ob4);
-//    }
 
     public void getDataCollection(){
         ItemPreview.IdRequest idRequest = new ItemPreview.IdRequest();
@@ -164,7 +154,7 @@ public class ItemPreviewCollection extends AppCompatActivity {
     }
 
     public void refreshActivity() {
-        Intent i = new Intent(this, Collection.class);
+        Intent i = new Intent(this, HomeActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
         finish();

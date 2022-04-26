@@ -328,7 +328,7 @@ public class ItemPreview extends AppCompatActivity {
     }
 
     public void refreshActivity() {
-        Intent i = new Intent(this, Market.class);
+        Intent i = new Intent(this, HomeActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
         finish();

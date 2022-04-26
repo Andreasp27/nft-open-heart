@@ -69,7 +69,8 @@ public class Send extends AppCompatActivity {
                     sendRequest.setSaldo(Float.parseFloat(nominal.getEditText().getText().toString()));
                     sendRequest.setPassword(pass.getEditText().getText().toString());
 
-                    Call<MessageResponse> messageResponseCall = ApiClient.getUserService().send("Bearer "+ access_token, sendRequest);
+                    Call<MessageResponse> messageResponseCall = ApiClient.getUserService().send(
+                            "Bearer "+ access_token, sendRequest);
                     messageResponseCall.enqueue(new Callback<MessageResponse>() {
                         @Override
 

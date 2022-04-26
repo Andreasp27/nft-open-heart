@@ -34,6 +34,9 @@ public interface UserService {
     @POST("register")
     Call<SignUp.RegisterResponse> userRegister(@Body SignUp.RegisterRequest registerRequest);
 
+    @POST("logout")
+    Call<MessageResponse> logout(@Header("Authorization") String auth);
+
     @GET("profile")
     Call<EditProfile.ProfileRR> getUserProfile(@Header("Authorization") String auth);
 
@@ -49,17 +52,14 @@ public interface UserService {
                                                   @Part MultipartBody.Part fileImg,
                                                   @Part MultipartBody.Part fileBanner);
 
-    @POST("logout")
-    Call<MessageResponse> logout(@Header("Authorization") String auth);
-
     @POST("updatepass")
-    Call<MessageResponse> updatePass(@Header("Authorization") String auth, @Body ChangePass.changePassRequest changePassRequest);
+    Call<MessageResponse> updatePass(@Header("Authorization") String auth,
+                                     @Body ChangePass.changePassRequest changePassRequest);
 
     @Multipart
     @POST("updateimg")
     Call<EditProfile.ProfileRR> updateImageProfile(@Header("Authorization") String auth,
-                                                   @Part MultipartBody.Part file
-    );
+                                                   @Part MultipartBody.Part file);
 
     @GET("wallet")
     Call<wallet.walletResponse> getBalance(@Header("Authorization") String auth);
@@ -68,12 +68,10 @@ public interface UserService {
     Call<ArrayList<wallet.historyResponse>> getHistory(@Header("Authorization") String auth);
 
     @POST("wallet/topup")
-    Call<MessageResponse> topUp(@Header("Authorization") String auth,
-                                @Body TopUp.TopUpRequest body);
+    Call<MessageResponse> topUp(@Header("Authorization") String auth, @Body TopUp.TopUpRequest body);
 
     @POST("wallet/send")
-    Call<MessageResponse> send(@Header("Authorization") String auth,
-                               @Body Send.SendRequest body);
+    Call<MessageResponse> send(@Header("Authorization") String auth,  @Body Send.SendRequest body);
 
     @GET("collection")
     Call<ArrayList<Market.CollectionResponse>> getAllCollection(@Header("Authorization") String auth);

@@ -72,7 +72,8 @@ public class TopUp extends AppCompatActivity {
                     topUpRequest.setSaldo(Float.parseFloat(nominal.getEditText().getText().toString()));
                     topUpRequest.setPassword(pass.getEditText().getText().toString());
 
-                    Call<MessageResponse> messageResponseCall = ApiClient.getUserService().topUp("Bearer "+ access_token, topUpRequest);
+                    Call<MessageResponse> messageResponseCall = ApiClient.getUserService().topUp(
+                            "Bearer "+ access_token, topUpRequest);
                     messageResponseCall.enqueue(new Callback<MessageResponse>() {
                         @Override
                         public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {

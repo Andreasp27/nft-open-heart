@@ -347,7 +347,8 @@ public class EditProfile extends AppCompatActivity {
             }
 
 
-            Call<MessageResponse> profileRRCall = ApiClient.getUserService().updateDataProfile("Bearer "+ access_token, name,email,jenis_kelamin,alamat,nomor_telepon,bio, body, body2);
+            Call<MessageResponse> profileRRCall = ApiClient.getUserService().updateDataProfile(
+                    "Bearer "+ access_token, name,email,jenis_kelamin,alamat,nomor_telepon,bio, body, body2);
             profileRRCall.enqueue(new Callback<MessageResponse>() {
                 @Override
                 public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
@@ -358,7 +359,8 @@ public class EditProfile extends AppCompatActivity {
                             statusImg = 0;
                             finish();
                         }else if(response.body().getMessage().equals("image failure")){
-                            Toast.makeText(getApplicationContext(), "Update data failed: Image Failure", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Update data failed: Image Failure", Toast.LENGTH_LONG)
+                                    .show();
                         }
 
                     }else{
