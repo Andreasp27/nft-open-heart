@@ -1,5 +1,5 @@
-NFT-OpenHeart
-OpenHeart is a marketplace
+# NFT-OpenHeart
+>OpenHeart is a NFT Marketplace that provide several option from NFT Creator. OpenHeart comes with new features that can fit your NFT lifestyle. for now openheart is still in the development process in every side of the application features to make this app fully functioning.
 
 Our Team on this Project :
 - [Andreas Gibran Nethanel Paat](https://github.com/Andreasp27) (672019092)
@@ -30,13 +30,13 @@ Our Team on this Project :
 
 # Troubleshooting
 ### Using Android Virtual Device
-1. Make sure you have XAMPP or WAMP installed in your machine
+1. Make sure you have `XAMPP` or `WAMP` installed in your machine
 2. Download our latest .SQL file in our repositories
-3. Import our sql file into your database management system (i.e HeidiSQL,etc)
+3. Import our sql file into your database management system (i.e HeidiSQL, etc)
 ### Using Phone
 1. Make sure webservice is running and Database is running, also SQL are updated
 2. Webservice must running in local ip. Change the serve method to your local IP in your IDE Terminal (i.e php artisan serve --host=***your_local_IP*** --port=80)
 3. Edit your base url android studio project in ApiClient.java & HomeActivity.java
 ### Using our Hosting Service
-1. Edit the base url in HomeActivity.java change to `https://openheart.kecapy.com/public/`
-2. Edit the base url in ApiClient.java change to `https://openheart.kecapy.com/public/api`
+1. Edit the base url in `HomeActivity.java` change to `https://openheart.kecapy.com/public/`
+2. Edit the base url in `ApiClient.java` change to `https://openheart.kecapy.com/public/api`
