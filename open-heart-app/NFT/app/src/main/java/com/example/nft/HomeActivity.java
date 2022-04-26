@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //set base
         session = new Session(this);
-        session.setBase("http://192.168.1.7/");
+        session.setBase("http://10.0.2.2:8000/");
 
 
        nav = findViewById(R.id.bottomNavigationView);
