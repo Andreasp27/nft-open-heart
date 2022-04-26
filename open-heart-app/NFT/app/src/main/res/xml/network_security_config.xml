@@ -4,6 +4,6 @@
         <domain includeSubdomains="true">open-heart.herokuapp.com</domain>
         <domain includeSubdomains="true">10.0.2.2</domain>
         <domain includeSubdomains="true">192.168.1.5</domain>
-        <domain includeSubdomains="true">192.168.122.251</domain>
+        <domain includeSubdomains="true">openheart.kecapy.com</domain>
     </domain-config>
 </network-security-config>
