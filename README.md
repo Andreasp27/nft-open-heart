@@ -1,3 +1,5 @@
+![alt text](https://github.com/Andreas27/nft-open-heart/NFT/app/src/main/res/drawable/ic_logo1.xml?raw=true)
+
 # NFT-OpenHeart
 >OpenHeart is a NFT Marketplace that provide several option from NFT Creator. OpenHeart comes with new features that can fit your NFT lifestyle. for now openheart is still in the development process in every side of the application features to make this app fully functioning.
 
@@ -38,5 +40,5 @@ Our Team on this Project :
 2. Webservice must running in local ip. Change the serve method to your local IP in your IDE Terminal (i.e php artisan serve --host=***your_local_IP*** --port=80)
 3. Edit your base url android studio project in ApiClient.java & HomeActivity.java
 ### Using our Hosting Service
-1. Edit the base url in `HomeActivity.java` change to `https://openheart.kecapy.com/public/`
-2. Edit the base url in `ApiClient.java` change to `https://openheart.kecapy.com/public/api`
+1. Edit the *BaseUrl* in `HomeActivity.java` change to `https://openheart.kecapy.com/public/`
+2. Edit the *BaseUrl* in `ApiClient.java` change to `https://openheart.kecapy.com/public/api`
