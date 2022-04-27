@@ -169,15 +169,27 @@
                         android:text="Description" />
 
                     <ImageView
-                        android:id="@+id/expand"
+                        android:id="@+id/expand_coll"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="right"
-                        android:layout_weight="2"
+                        android:layout_weight="0.5"
                         android:rotation="180"
                         android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
                 </LinearLayout>
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardExpand_coll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/layoutExpand_coll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
                 <TextView
                     android:id="@+id/collDesc"
                     style="@style/Theme.NFT"
@@ -190,6 +202,10 @@
                     android:paddingRight="30dp"
                     android:text=""
                     android:textSize="11dp" />
+
+            </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     style="@style/Theme.NFT"

@@ -1,5 +1,6 @@
 package com.example.nft;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -8,14 +9,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nft.api.ApiClient;
 import com.example.nft.api.Session;
+import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -29,11 +38,14 @@ public class ItemPreviewCollection extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Bidder> bidderArrayList;
     MyAdapterBidder myAdapterBidder;
-    ImageView back, itemImage, wallet;
+    ImageView expand, back, itemImage, wallet;
     TextView itemName, itemPrice, itemDesc, itemOwner, itemCreator;
     private String access_token, base;
     private Session session;
     private int id;
+
+    LinearLayout layout_expand;
+    MaterialCardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +64,7 @@ public class ItemPreviewCollection extends AppCompatActivity {
         base = session.getBase();
 
         //get view
+        expand = findViewById(R.id.expand_coll);
         back = findViewById(R.id.btn_back_add_coll);
         itemName = findViewById(R.id.itemCollName);
         itemPrice = findViewById(R.id.collPrice);
@@ -60,6 +73,9 @@ public class ItemPreviewCollection extends AppCompatActivity {
         itemCreator = findViewById(R.id.collCreator);
         itemImage = findViewById(R.id.collection_img);
         wallet = findViewById(R.id.wallet_item_coll);
+
+        layout_expand = findViewById(R.id.layoutExpand_coll);
+        cardView = findViewById(R.id.cardExpand_coll);
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +121,44 @@ public class ItemPreviewCollection extends AppCompatActivity {
             @Override
             public void onResponse(Call<Market.CollectionResponse> call, Response<Market.CollectionResponse> response) {
                 if (response.isSuccessful()){
+
+                    expand.setOnClickListener(new View.OnClickListener() {
+                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                        @Override
+                        public void onClick(View view) {
+
+                            AutoTransition autoTransition = new AutoTransition();
+                            autoTransition.setDuration(10);
+
+                            AutoTransition autoTransition1 = new AutoTransition();
+                            autoTransition1.setDuration(200);
+
+                            if (layout_expand.getVisibility() == View.VISIBLE){
+                                TransitionManager.beginDelayedTransition(cardView, autoTransition);
+                                layout_expand.setVisibility(View.GONE);
+
+                                RotateAnimation rotate = new RotateAnimation(180, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                                rotate.setDuration(200);
+                                rotate.setInterpolator(new LinearInterpolator());
+
+                                expand.startAnimation(rotate);
+                                rotate.setFillAfter(true);
+                                //expand.setRotation(expand.getRotation() + 180);
+                            }else {
+                                TransitionManager.beginDelayedTransition(cardView, autoTransition1);
+                                layout_expand.setVisibility(View.VISIBLE);
+                                //expand.setRotation(expand.getRotation() + 180);
+
+                                RotateAnimation rotate = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                                rotate.setDuration(200);
+                                rotate.setInterpolator(new LinearInterpolator());
+
+                                expand.startAnimation(rotate);
+                                rotate.setFillAfter(true);
+                            }
+                        }
+                    });
+
                     itemName.setText(response.body().getNama_item());
                     itemPrice.setText(Float.toString(response.body().getHarga()));
                     itemDesc.setText(response.body().getDeskripsi());

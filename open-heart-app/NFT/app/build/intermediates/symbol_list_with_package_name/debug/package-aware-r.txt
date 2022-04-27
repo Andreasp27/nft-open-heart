@@ -2852,6 +2852,7 @@ id callMeasure
 id cancel_action
 id cancel_button
 id cardExpand
+id cardExpand_coll
 id cardView2
 id carryVelocity
 id center
@@ -2959,6 +2960,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand
 id expand_activities_button
+id expand_coll
 id expanded_menu
 id fade
 id fill
@@ -3033,6 +3035,7 @@ id labeled
 id last_pass
 id layout
 id layoutExpand
+id layoutExpand_coll
 id left
 id leftToRight
 id legacy

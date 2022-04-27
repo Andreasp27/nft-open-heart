@@ -2851,6 +2851,7 @@ int id callMeasure 0x7f09008a
 int id cancel_action 0x7f09008b
 int id cancel_button 0x7f09008c
 int id cardExpand 0x7f09008d
+int id cardExpand_coll 0x7f09029c
 int id cardView2 0x7f09008e
 int id carryVelocity 0x7f09008f
 int id center 0x7f090090
@@ -2958,6 +2959,7 @@ int id enterAlwaysCollapsed 0x7f0900f5
 int id exitUntilCollapsed 0x7f0900f6
 int id expand 0x7f0900f7
 int id expand_activities_button 0x7f0900f8
+int id expand_coll 0x7f09029d
 int id expanded_menu 0x7f0900f9
 int id fade 0x7f0900fa
 int id fill 0x7f0900fb
@@ -3032,6 +3034,7 @@ int id labeled 0x7f09013f
 int id last_pass 0x7f090140
 int id layout 0x7f090141
 int id layoutExpand 0x7f090142
+int id layoutExpand_coll 0x7f09029e
 int id left 0x7f090143
 int id leftToRight 0x7f090144
 int id legacy 0x7f090145

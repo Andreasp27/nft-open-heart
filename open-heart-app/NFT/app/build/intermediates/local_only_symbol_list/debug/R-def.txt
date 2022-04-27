@@ -97,6 +97,7 @@ id btn_profile
 id btn_send
 id btn_top_up
 id cardExpand
+id cardExpand_coll
 id cardView2
 id change_pass
 id clickhere
@@ -122,6 +123,7 @@ id emptyrecycler
 id emptyrecyclerC
 id emptyrecyclerCC
 id expand
+id expand_coll
 id growth
 id haveAcc
 id history
@@ -144,6 +146,7 @@ id itemname
 id jumlah
 id last_pass
 id layoutExpand
+id layoutExpand_coll
 id linearLayout
 id login
 id logo
