@@ -2,9 +2,7 @@
   <a href="https://imgbb.com/"><img src="https://i.ibb.co/FKMcK0q/Open-Heart-logo.png" alt="Open-Heart-logo" border="0"></a>
   <br/>
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Andreasp27/nft-open-heart">
-  <img alt="Webservice" src"https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
-  <img alt="Language" src"https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white">
-  <img alt="OS" src"https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white">
+  <a><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"></a>
   
 </p>
   
