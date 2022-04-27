@@ -1,5 +1,7 @@
 <p align="center">
   <a href="https://imgbb.com/"><img src="https://i.ibb.co/FKMcK0q/Open-Heart-logo.png" alt="Open-Heart-logo" border="0"></a>
+  <br/>
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Andreasp27/nft-open-heart">
 </p>
   
 
