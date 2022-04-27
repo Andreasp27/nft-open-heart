@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" src="https://ibb.co/xD0wDf8" alt="OpenHeart Logo">
+  <a href="https://imgbb.com/"><img src="https://i.ibb.co/FKMcK0q/Open-Heart-logo.png" alt="Open-Heart-logo" border="0"></a>
 </p>
   
 
