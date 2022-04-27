@@ -4,7 +4,7 @@
   
 
 # NFT-OpenHeart
->OpenHeart is a NFT Marketplace that provide several option from NFT Creator. OpenHeart comes with new features that can fit your NFT lifestyle. for now openheart is still in the development process in every side of the application features to make this app fully functioning.
+OpenHeart is a NFT Marketplace that provide several option from NFT Creator. OpenHeart comes with new features that can fit your NFT lifestyle. for now openheart is still in the development process in every side of the application features to make this app fully functioning.
 
 Our Team on this Project :
 - [Andreas Gibran Nethanel Paat](https://github.com/Andreasp27) (672019092)
@@ -44,4 +44,4 @@ Our Team on this Project :
 3. Edit your base url android studio project in ApiClient.java & HomeActivity.java
 ### Using our Hosting Service
 1. Edit the *BaseUrl* in `HomeActivity.java` change to `https://openheart.kecapy.com/public/`
-2. Edit the *BaseUrl* in `ApiClient.java` change to `https://openheart.kecapy.com/public/api`
+2. Edit the *BaseUrl* in `ApiClient.java` change to `https://openheart.kecapy.com/public/api/`
