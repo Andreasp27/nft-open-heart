@@ -1,6 +1,6 @@
 <p align="center">
-  <img width="200" src="https://ibb.co/xD0wDf8">
-</>
+  <img width="200" src="https://ibb.co/xD0wDf8" alt="OpenHear Logo">
+</p>
   
 
 # NFT-OpenHeart
