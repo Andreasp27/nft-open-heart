@@ -1,4 +1,7 @@
-![alt text](https://github.com/Andreas27/nft-open-heart/NFT/app/src/main/res/drawable/ic_logo1.xml?raw=true)
+<p align="center">
+  <img width="200" src="https://ibb.co/xD0wDf8">
+</>
+  
 
 # NFT-OpenHeart
 >OpenHeart is a NFT Marketplace that provide several option from NFT Creator. OpenHeart comes with new features that can fit your NFT lifestyle. for now openheart is still in the development process in every side of the application features to make this app fully functioning.
